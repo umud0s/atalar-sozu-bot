@@ -1,0 +1,16 @@
+[Unit]
+Description=Atalar sozu Telegram botu
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bot
+WorkingDirectory=/home/bot/atalar-sozu-bot
+EnvironmentFile=/home/bot/atalar-sozu-bot/.env
+ExecStart=/home/bot/atalar-sozu-bot/.venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
