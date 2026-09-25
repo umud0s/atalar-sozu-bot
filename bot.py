@@ -76,7 +76,13 @@ def normalize(text: str) -> str:
 
 
 def tokens(text: str) -> set[str]:
-    return {t for t in normalize(text).split() if len(t) > 1}
+    stop = {
+        "bir", "bu", "da", "de", "ve", "ile", "ucun", "sonra", "amma",
+        "men", "sen", "ki", "cox", "olan", "olsun", "hec", "artiq", "indi",
+        "ona", "bunu", "bele", "ele", "nece", "cunki", "lakin", "hem",
+        "qeder", "mene", "sene", "oz", "ozum", "idi", "imish",
+    }
+    return {t for t in normalize(text).split() if len(t) > 1 and t not in stop}
 
 
 def format_proverb(item: dict, sira: int | None = None) -> str:
@@ -102,12 +108,17 @@ def search_by_keyword(query: str, limit: int = 8) -> list[tuple[int, dict]]:
         hay_norm = normalize(haystack)
         hay_tokens = tokens(haystack)
         score = 0
-        if q_norm in hay_norm:
+        if len(q_norm) <= 3:
+            if q_norm in hay_tokens:
+                score += 8
+        elif q_norm in hay_norm:
             score += 8
         overlap = q_tokens & hay_tokens
         score += 3 * len(overlap)
         for word in q_tokens:
-            if any(word in t or t in word for t in hay_tokens if len(word) >= 3):
+            if len(word) < 4:
+                continue
+            if any(word in t or t in word for t in hay_tokens):
                 score += 1
         if score > 0:
             scored.append((score, item))
@@ -116,9 +127,53 @@ def search_by_keyword(query: str, limit: int = 8) -> list[tuple[int, dict]]:
     return scored[:limit]
 
 
-def search_by_story(story: str, limit: int = 5) -> list[tuple[int, dict]]:
-    """Hekayəni açar söz və mövzu kəsişməsinə görə qiymətləndirir."""
-    return search_by_keyword(story, limit=limit)
+def _triggered(words: set[str], triggers: set[str]) -> bool:
+    for word in words:
+        for trigger in triggers:
+            if word == trigger:
+                return True
+            if len(trigger) >= 4 and (word.startswith(trigger) or trigger.startswith(word)):
+                return True
+    return False
+
+
+def search_by_story(story: str, limit: int = 3) -> list[tuple[int, dict]]:
+    """Hekayədəki vəziyyəti mövzulara bağlayıb ən yaxın sözləri seçir."""
+    q_tokens = tokens(story)
+    if not q_tokens:
+        return []
+
+    situations = [
+        ({"sabah", "saxladim", "tehir", "gecikdim", "gecikdi"}, {"sabah", "vaxt"}),
+        ({"dost", "dostum", "yoldas", "terk", "buraxdi", "satdi"}, {"dost", "sadiq", "dar"}),
+        ({"qonsu", "qonsum", "dalasdiq"}, {"qonsu", "qonsuluq"}),
+        ({"yalan", "aldadi", "aldandim", "inanmadi"}, {"yalan", "etibar", "heqiqet"}),
+        ({"borc", "pul", "xercl", "xercler"}, {"borc", "qenaet", "pul"}),
+        ({"ana", "anam", "ata", "atam", "usaq", "ovlad"}, {"ana", "ata", "terbiye", "aile"}),
+        ({"qorxdum", "qorxu"}, {"qorxu", "igid"}),
+        ({"tek", "komek", "yanliz"}, {"birlik", "komek", "paylas"}),
+        ({"tembel", "islemedim", "zehmet"}, {"is", "zehmet", "emek"}),
+        ({"qezeb", "aciqlandim", "hirs"}, {"soz", "sus", "ehtiyat"}),
+        ({"sir", "sirri"}, {"sir", "soz"}),
+        ({"veten", "qurbet"}, {"veten", "el", "deyer"}),
+        ({"elm", "oxudum", "mekteb", "muellim"}, {"elm", "oyren"}),
+        ({"kusdum", "baris", "bagisla"}, {"baris", "bagis"}),
+        ({"xesis", "paylasmadim"}, {"paylas", "qenaet"}),
+    ]
+    wanted: set[str] = set()
+    for triggers, targets in situations:
+        if _triggered(q_tokens, triggers):
+            wanted |= targets
+
+    scored: list[tuple[int, dict]] = []
+    for score, item in search_by_keyword(story, limit=len(PROVERBS)):
+        hay = tokens(" ".join([item["text"], item["mena"], " ".join(item["acar"]), " ".join(item["movzu"])]))
+        extra = 4 * len(wanted & hay)
+        total = score + extra
+        if total >= 4:
+            scored.append((total, item))
+    scored.sort(key=lambda x: (-x[0], x[1]["id"]))
+    return scored[:limit]
 
 
 def main_menu_text() -> str:
