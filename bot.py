@@ -27,6 +27,7 @@ from telegram.ext import (
     MessageHandler,
     filters,
 )
+from telegram.request import HTTPXRequest
 
 load_dotenv()
 
@@ -258,7 +259,25 @@ async def on_error(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 def build_app(token: str) -> Application:
-    app = Application.builder().token(token).build()
+    request = HTTPXRequest(
+        connect_timeout=30.0,
+        read_timeout=30.0,
+        write_timeout=30.0,
+        pool_timeout=30.0,
+    )
+    updates = HTTPXRequest(
+        connect_timeout=30.0,
+        read_timeout=40.0,
+        write_timeout=30.0,
+        pool_timeout=30.0,
+    )
+    app = (
+        Application.builder()
+        .token(token)
+        .request(request)
+        .get_updates_request(updates)
+        .build()
+    )
 
     conv = ConversationHandler(
         entry_points=[
@@ -299,7 +318,11 @@ def main() -> None:
         )
     logger.info("Bot başladı. Atalar sözü sayı: %s", len(PROVERBS))
     application = build_app(token)
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    application.run_polling(
+        allowed_updates=Update.ALL_TYPES,
+        bootstrap_retries=-1,
+        timeout=20,
+    )
 
 
 if __name__ == "__main__":
