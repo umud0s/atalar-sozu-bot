@@ -1,7 +1,7 @@
 {
   "meta": {
     "dil": "az",
-    "say": 36,
+    "say": 80,
     "qeyd": "Xalq atalar sözləri. Mənalar qısa izahdır, dərs üçün."
   },
   "proverbs": [
@@ -9,253 +9,1147 @@
       "id": 1,
       "text": "Axtaran tapar, yoğuran yapar.",
       "mena": "Axtaran və zəhmət çəkən nəticəyə çatar.",
-      "acar": ["axtarmaq", "tapmaq", "zəhmət", "səy", "iş", "nəticə"],
-      "movzu": ["zəhmət", "uğur", "səbr"]
+      "acar": [
+        "axtarmaq",
+        "tapmaq",
+        "zəhmət",
+        "səy",
+        "iş",
+        "nəticə"
+      ],
+      "movzu": [
+        "zəhmət",
+        "uğur",
+        "səbr"
+      ]
     },
     {
       "id": 2,
       "text": "Axan su yolunu tapar.",
       "mena": "Həqiqi iradə və axın öz yolunu tapır.",
-      "acar": ["yol", "su", "iradə", "çətinlik", "həll"],
-      "movzu": ["səbr", "həll", "ümid"]
+      "acar": [
+        "yol",
+        "su",
+        "iradə",
+        "çətinlik",
+        "həll"
+      ],
+      "movzu": [
+        "səbr",
+        "həll",
+        "ümid"
+      ]
     },
     {
       "id": 3,
       "text": "Axşamın işini sabaha qoyma.",
       "mena": "İşini vaxtında gör, təxirə salma.",
-      "acar": ["vaxt", "təxir", "iş", "sabah", "intizam"],
-      "movzu": ["vaxt", "iş", "məsuliyyət"]
+      "acar": [
+        "vaxt",
+        "təxir",
+        "iş",
+        "sabah",
+        "intizam"
+      ],
+      "movzu": [
+        "vaxt",
+        "iş",
+        "məsuliyyət"
+      ]
     },
     {
       "id": 4,
       "text": "Bağa baxarsan bağ olar, baxmazsan dağ olar.",
       "mena": "Qayğı göstərməsən nəticə pozular.",
-      "acar": ["bağ", "qayğı", "baxmaq", "tərbiyə", "iş"],
-      "movzu": ["qayğı", "iş", "tərbiyə"]
+      "acar": [
+        "bağ",
+        "qayğı",
+        "baxmaq",
+        "tərbiyə",
+        "iş"
+      ],
+      "movzu": [
+        "qayğı",
+        "iş",
+        "tərbiyə"
+      ]
     },
     {
       "id": 5,
       "text": "Niyyətin hara, mənzilin ora.",
       "mena": "Niyyətin səni hədəfə aparır.",
-      "acar": ["niyyət", "məqsəd", "yol", "hədəf", "arzü"],
-      "movzu": ["niyyət", "məqsəd"]
+      "acar": [
+        "niyyət",
+        "məqsəd",
+        "yol",
+        "hədəf",
+        "arzü"
+      ],
+      "movzu": [
+        "niyyət",
+        "məqsəd"
+      ]
     },
     {
       "id": 6,
       "text": "Nə tökərsən aşına, o çıxar qaşığına.",
       "mena": "Nə əkərsən, onu biçərsən.",
-      "acar": ["nəticə", "əkmək", "davranış", "qarşılıq", "əməl"],
-      "movzu": ["ədalət", "nəticə"]
+      "acar": [
+        "nəticə",
+        "əkmək",
+        "davranış",
+        "qarşılıq",
+        "əməl"
+      ],
+      "movzu": [
+        "ədalət",
+        "nəticə"
+      ]
     },
     {
       "id": 7,
       "text": "Şirin dil ilanı yuvadan çıxardar.",
       "mena": "Yaxşı söz qapıları açar.",
-      "acar": ["dil", "söz", "nəzakət", "danışıq", "razılıq"],
-      "movzu": ["söz", "ünsiyyət"]
+      "acar": [
+        "dil",
+        "söz",
+        "nəzakət",
+        "danışıq",
+        "razılıq"
+      ],
+      "movzu": [
+        "söz",
+        "ünsiyyət"
+      ]
     },
     {
       "id": 8,
       "text": "Danışmaq gümüş, susmaq qızıldır.",
       "mena": "Yerində susmaq çox vaxt daha dəyərlidir.",
-      "acar": ["susmaq", "danışmaq", "söz", "ehtiyat", "sirr"],
-      "movzu": ["söz", "ehtiyat"]
+      "acar": [
+        "susmaq",
+        "danışmaq",
+        "söz",
+        "ehtiyat",
+        "sirr"
+      ],
+      "movzu": [
+        "söz",
+        "ehtiyat"
+      ]
     },
     {
       "id": 9,
       "text": "Sözü ağzında bişir, sonra de.",
       "mena": "Düşünmədən danışma.",
-      "acar": ["söz", "düşünmək", "danışmaq", "ehtiyat"],
-      "movzu": ["söz", "ağıl"]
+      "acar": [
+        "söz",
+        "düşünmək",
+        "danışmaq",
+        "ehtiyat"
+      ],
+      "movzu": [
+        "söz",
+        "ağıl"
+      ]
     },
     {
       "id": 10,
       "text": "Balıq başdan iylənər.",
       "mena": "Pozğunluq rəhbərdən, başdan başlayır.",
-      "acar": ["rəhbər", "baş", "səhv", "idarə", "nümunə"],
-      "movzu": ["rəhbərlik", "məsuliyyət"]
+      "acar": [
+        "rəhbər",
+        "baş",
+        "səhv",
+        "idarə",
+        "nümunə"
+      ],
+      "movzu": [
+        "rəhbərlik",
+        "məsuliyyət"
+      ]
     },
     {
       "id": 11,
       "text": "Var-dövlət tükənər, elm tükənməz.",
       "mena": "Bilik mal-dövlətdən qalıcıdır.",
-      "acar": ["elm", "bilik", "pul", "dövlət", "oxumaq"],
-      "movzu": ["elm", "dəyər"]
+      "acar": [
+        "elm",
+        "bilik",
+        "pul",
+        "dövlət",
+        "oxumaq"
+      ],
+      "movzu": [
+        "elm",
+        "dəyər"
+      ]
     },
     {
       "id": 12,
       "text": "Ağıllı bir dəfə aldanar.",
       "mena": "Ağıllı eyni səhvi təkrarlamaz.",
-      "acar": ["aldanmaq", "səhv", "təcrübə", "ağıl", "dərs"],
-      "movzu": ["ağıl", "təcrübə"]
+      "acar": [
+        "aldanmaq",
+        "səhv",
+        "təcrübə",
+        "ağıl",
+        "dərs"
+      ],
+      "movzu": [
+        "ağıl",
+        "təcrübə"
+      ]
     },
     {
       "id": 13,
       "text": "Saxla samanı, gələr zamanı.",
       "mena": "Ehtiyatlı ol, gün gələr lazım olar.",
-      "acar": ["ehtiyat", "qənaət", "gələcək", "saxlamaq"],
-      "movzu": ["ehtiyat", "qənaət"]
+      "acar": [
+        "ehtiyat",
+        "qənaət",
+        "gələcək",
+        "saxlamaq"
+      ],
+      "movzu": [
+        "ehtiyat",
+        "qənaət"
+      ]
     },
     {
       "id": 14,
       "text": "Əkən biçər.",
       "mena": "Zəhmət çəkənin haqqı var.",
-      "acar": ["əkmək", "biçmək", "zəhmət", "məhsul", "haqq"],
-      "movzu": ["zəhmət", "ədalət"]
+      "acar": [
+        "əkmək",
+        "biçmək",
+        "zəhmət",
+        "məhsul",
+        "haqq"
+      ],
+      "movzu": [
+        "zəhmət",
+        "ədalət"
+      ]
     },
     {
       "id": 15,
       "text": "Əl əli yuyar, əl də üzü.",
       "mena": "Kömək qarşılıqlıdır.",
-      "acar": ["kömək", "dost", "birlik", "qarşılıq", "əl"],
-      "movzu": ["dostluq", "birlik"]
+      "acar": [
+        "kömək",
+        "dost",
+        "birlik",
+        "qarşılıq",
+        "əl"
+      ],
+      "movzu": [
+        "dostluq",
+        "birlik"
+      ]
     },
     {
       "id": 16,
       "text": "Dost dar gündə tanınar.",
       "mena": "Həqiqi dost çətin vaxtda bilinər.",
-      "acar": ["dost", "çətinlik", "sınaq", "etibar"],
-      "movzu": ["dostluq", "etibar"]
+      "acar": [
+        "dost",
+        "çətinlik",
+        "sınaq",
+        "etibar"
+      ],
+      "movzu": [
+        "dostluq",
+        "etibar"
+      ]
     },
     {
       "id": 17,
       "text": "Hər şeyin təzəsi, dostun köhnəsi.",
       "mena": "Köhnə dost yeni tanışdan dəyərlidir.",
-      "acar": ["dost", "köhnə", "sadiqlik", "tanış"],
-      "movzu": ["dostluq"]
+      "acar": [
+        "dost",
+        "köhnə",
+        "sadiqlik",
+        "tanış"
+      ],
+      "movzu": [
+        "dostluq"
+      ]
     },
     {
       "id": 18,
       "text": "Anasına bax, qızını al.",
       "mena": "İnsanı kökünə, tərbiyəsinə görə tanı.",
-      "acar": ["ana", "qız", "ailə", "evlənmək", "tərbiyə"],
-      "movzu": ["ailə", "tərbiyə"]
+      "acar": [
+        "ana",
+        "qız",
+        "ailə",
+        "evlənmək",
+        "tərbiyə"
+      ],
+      "movzu": [
+        "ailə",
+        "tərbiyə"
+      ]
     },
     {
       "id": 19,
       "text": "Ata-ana sözünə baxmayan xoş gün görməz.",
       "mena": "Valideyn nəsihətinə qulaq asmaq gərəkdir.",
-      "acar": ["ata", "ana", "valideyn", "nəsihət", "hörmət"],
-      "movzu": ["ailə", "hörmət"]
+      "acar": [
+        "ata",
+        "ana",
+        "valideyn",
+        "nəsihət",
+        "hörmət"
+      ],
+      "movzu": [
+        "ailə",
+        "hörmət"
+      ]
     },
     {
       "id": 20,
       "text": "Uşaq sözün düzünü deyər.",
       "mena": "Uşaq ürəyindəki sözü gizlətməz.",
-      "acar": ["uşaq", "düzlük", "həqiqət", "söz"],
-      "movzu": ["həqiqət", "uşaq"]
+      "acar": [
+        "uşaq",
+        "düzlük",
+        "həqiqət",
+        "söz"
+      ],
+      "movzu": [
+        "həqiqət",
+        "uşaq"
+      ]
     },
     {
       "id": 21,
       "text": "İgid ölər, adı qalar.",
       "mena": "Yaxşı ad insandan sonra da yaşayır.",
-      "acar": ["igid", "ad", "şərəf", "xatirə", "ölüm"],
-      "movzu": ["şərəf", "ad"]
+      "acar": [
+        "igid",
+        "ad",
+        "şərəf",
+        "xatirə",
+        "ölüm"
+      ],
+      "movzu": [
+        "şərəf",
+        "ad"
+      ]
     },
     {
       "id": 22,
       "text": "Od düşdüyü yeri yandırar.",
       "mena": "Bəla düşdüyü yeri zədələyər.",
-      "acar": ["od", "bəla", "zərər", "yanğın", "təsir"],
-      "movzu": ["təhlükə", "nəticə"]
+      "acar": [
+        "od",
+        "bəla",
+        "zərər",
+        "yanğın",
+        "təsir"
+      ],
+      "movzu": [
+        "təhlükə",
+        "nəticə"
+      ]
     },
     {
       "id": 23,
       "text": "Meşəyə od düşəndə quru da yanar, yaş da.",
       "mena": "Böyük bəla günahsızı da vurar.",
-      "acar": ["bəla", "hamı", "zərər", "ədalətsizlik"],
-      "movzu": ["bəla", "cəmiyyət"]
+      "acar": [
+        "bəla",
+        "hamı",
+        "zərər",
+        "ədalətsizlik"
+      ],
+      "movzu": [
+        "bəla",
+        "cəmiyyət"
+      ]
     },
     {
       "id": 24,
       "text": "Qonaq süfrənin yaraşığıdır.",
       "mena": "Qonaqpərvərlik evin zinətidir.",
-      "acar": ["qonaq", "süfrə", "ev", "hörmət", "qonaqpərvərlik"],
-      "movzu": ["qonaqpərvərlik", "hörmət"]
+      "acar": [
+        "qonaq",
+        "süfrə",
+        "ev",
+        "hörmət",
+        "qonaqpərvərlik"
+      ],
+      "movzu": [
+        "qonaqpərvərlik",
+        "hörmət"
+      ]
     },
     {
       "id": 25,
       "text": "Rişxənd etmə qonşuna, gələr bir gün başına.",
       "mena": "Başqasına gülmə, eyni hal sənə də düşə bilər.",
-      "acar": ["qonşu", "gülmək", "rişxənd", "qarşılıq"],
-      "movzu": ["əxlaq", "qonşuluq"]
+      "acar": [
+        "qonşu",
+        "gülmək",
+        "rişxənd",
+        "qarşılıq"
+      ],
+      "movzu": [
+        "əxlaq",
+        "qonşuluq"
+      ]
     },
     {
       "id": 26,
       "text": "Zəhmət çəkməyən rahatlığın qədrini bilməz.",
       "mena": "Rahatlıq zəhmətdən sonra dadlıdır.",
-      "acar": ["zəhmət", "rahatlıq", "qədir", "iş"],
-      "movzu": ["zəhmət"]
+      "acar": [
+        "zəhmət",
+        "rahatlıq",
+        "qədir",
+        "iş"
+      ],
+      "movzu": [
+        "zəhmət"
+      ]
     },
     {
       "id": 27,
       "text": "Ac toyuq yuxuda darı görər.",
       "mena": "İnsan ehtiyac duyduğunu xəyal edir.",
-      "acar": ["aclıq", "arzü", "xəyal", "ehtiyac"],
-      "movzu": ["arzü", "ehtiyac"]
+      "acar": [
+        "aclıq",
+        "arzü",
+        "xəyal",
+        "ehtiyac"
+      ],
+      "movzu": [
+        "arzü",
+        "ehtiyac"
+      ]
     },
     {
       "id": 28,
       "text": "Bal tutan barmaq yalar.",
       "mena": "İşə yaxın olan ondan pay götürər.",
-      "acar": ["pay", "fayda", "iş", "imkan"],
-      "movzu": ["fayda", "imkan"]
+      "acar": [
+        "pay",
+        "fayda",
+        "iş",
+        "imkan"
+      ],
+      "movzu": [
+        "fayda",
+        "imkan"
+      ]
     },
     {
       "id": 29,
       "text": "Barlı ağacın başına dolanarlar.",
       "mena": "Faydalı olanın ətrafında adam çox olar.",
-      "acar": ["uğur", "fayda", "insan", "ətraf", "şöhrət"],
-      "movzu": ["uğur", "cəmiyyət"]
+      "acar": [
+        "uğur",
+        "fayda",
+        "insan",
+        "ətraf",
+        "şöhrət"
+      ],
+      "movzu": [
+        "uğur",
+        "cəmiyyət"
+      ]
     },
     {
       "id": 30,
       "text": "Qarğa qarğaya deyər üzün qaradır.",
       "mena": "Öz eybini görməyən başqasını qınayar.",
-      "acar": ["eyb", "tənqid", "ikiüzlülük", "qınamaq"],
-      "movzu": ["əxlaq", "tənqid"]
+      "acar": [
+        "eyb",
+        "tənqid",
+        "ikiüzlülük",
+        "qınamaq"
+      ],
+      "movzu": [
+        "əxlaq",
+        "tənqid"
+      ]
     },
     {
       "id": 31,
       "text": "Bir dəli quyuya bir daş atdı, qırx ağıllı çıxara bilmədi.",
       "mena": "Bir ağılsız işi düzəltmək çox çətindir.",
-      "acar": ["səhv", "dəli", "düzəltmək", "zərər", "tələsik"],
-      "movzu": ["ağıl", "səhv"]
+      "acar": [
+        "səhv",
+        "dəli",
+        "düzəltmək",
+        "zərər",
+        "tələsik"
+      ],
+      "movzu": [
+        "ağıl",
+        "səhv"
+      ]
     },
     {
       "id": 32,
       "text": "Kişinin sözü ilə işi bir olar.",
       "mena": "Söz veribsə, yerinə yetirməlidir.",
-      "acar": ["söz", "vəd", "etibar", "iş", "kişilik"],
-      "movzu": ["etibar", "söz"]
+      "acar": [
+        "söz",
+        "vəd",
+        "etibar",
+        "iş",
+        "kişilik"
+      ],
+      "movzu": [
+        "etibar",
+        "söz"
+      ]
     },
     {
       "id": 33,
       "text": "Yamanlığa yaxşılıq mərd kişinin işidir.",
       "mena": "Pisliyə yaxşılıqla cavab vermək mərdlikdir.",
-      "acar": ["yaxşılıq", "yamanlıq", "mərd", "əfv", "əxlaq"],
-      "movzu": ["əxlaq", "mərdlik"]
+      "acar": [
+        "yaxşılıq",
+        "yamanlıq",
+        "mərd",
+        "əfv",
+        "əxlaq"
+      ],
+      "movzu": [
+        "əxlaq",
+        "mərdlik"
+      ]
     },
     {
       "id": 34,
       "text": "Tikan olub ayağa batınca, gül ol yaxaya sancıl.",
       "mena": "Zərərverən yox, faydalı və sevimli ol.",
-      "acar": ["xarakter", "fayda", "davranış", "sevilmək"],
-      "movzu": ["əxlaq", "davranış"]
+      "acar": [
+        "xarakter",
+        "fayda",
+        "davranış",
+        "sevilmək"
+      ],
+      "movzu": [
+        "əxlaq",
+        "davranış"
+      ]
     },
     {
       "id": 35,
       "text": "Adam yıxıldığı yerdən qalxar.",
       "mena": "Uğursuzluqdan sonra ayağa durmaq gərəkdir.",
-      "acar": ["yıxılmaq", "qalxmaq", "uğursuzluq", "iradə", "yenidən"],
-      "movzu": ["iradə", "ümid"]
+      "acar": [
+        "yıxılmaq",
+        "qalxmaq",
+        "uğursuzluq",
+        "iradə",
+        "yenidən"
+      ],
+      "movzu": [
+        "iradə",
+        "ümid"
+      ]
     },
     {
       "id": 36,
       "text": "İşin özünə bax, sahibinə yox.",
       "mena": "İşi keyfiyyətinə görə qiymətləndir.",
-      "acar": ["iş", "keyfiyyət", "sahib"],
-      "movzu": ["iş", "ədalət"]
+      "acar": [
+        "iş",
+        "keyfiyyət",
+        "sahib"
+      ],
+      "movzu": [
+        "iş",
+        "ədalət"
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Dağ dağa qovuşmaz, insan insana qovuşar.",
+      "mena": "Ayrılıq əbədi deyil, insanlar yenə görüşər.",
+      "acar": [
+        "görüş",
+        "ayrılıq",
+        "insan",
+        "ümid"
+      ],
+      "movzu": [
+        "ümid",
+        "insan"
+      ]
+    },
+    {
+      "id": 38,
+      "text": "Dama-dama göl olar.",
+      "mena": "Az-az yığmaq böyük nəticə verir.",
+      "acar": [
+        "qənaət",
+        "səbir",
+        "az",
+        "yığmaq"
+      ],
+      "movzu": [
+        "səbir",
+        "qənaət"
+      ]
+    },
+    {
+      "id": 39,
+      "text": "Dayanan su tez iylənər.",
+      "mena": "Durğun qalan şey pozulur, hərəkət lazımdır.",
+      "acar": [
+        "hərəkət",
+        "durğunluq",
+        "iş"
+      ],
+      "movzu": [
+        "iş"
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Daş düşdüyü yerdə qalar.",
+      "mena": "Ağır söz və ağır iş asan qalxmır.",
+      "acar": [
+        "daş",
+        "ağır",
+        "nəticə",
+        "söz"
+      ],
+      "movzu": [
+        "nəticə"
+      ]
+    },
+    {
+      "id": 41,
+      "text": "Dalaşanda barışmağa üz saxla.",
+      "mena": "Dava etsən də, barışığın yolunu kəsmə.",
+      "acar": [
+        "dava",
+        "barışıq",
+        "hörmət"
+      ],
+      "movzu": [
+        "barışıq",
+        "əxlaq"
+      ]
+    },
+    {
+      "id": 42,
+      "text": "Danışıqlı söz dağlar aşar.",
+      "mena": "Yerində deyilən söz uzağa gedər.",
+      "acar": [
+        "söz",
+        "danışıq",
+        "təsir"
+      ],
+      "movzu": [
+        "söz"
+      ]
+    },
+    {
+      "id": 43,
+      "text": "Ya bil, ya da biləndən soruş.",
+      "mena": "Bilmirsənsə, biləndən öyrən.",
+      "acar": [
+        "öyrənmək",
+        "sual",
+        "bilik",
+        "elm"
+      ],
+      "movzu": [
+        "elm"
+      ]
+    },
+    {
+      "id": 44,
+      "text": "Yaxşı dost qardaşdan əzizdir.",
+      "mena": "Həqiqi dost qohumluqdan da yaxın ola bilər.",
+      "acar": [
+        "dost",
+        "qardaş",
+        "sadiqlik"
+      ],
+      "movzu": [
+        "dostluq"
+      ]
+    },
+    {
+      "id": 45,
+      "text": "Yaxşılıq yerdə qalmaz.",
+      "mena": "Edilən yaxşılıq qarşılıqsız qalmaz.",
+      "acar": [
+        "yaxşılıq",
+        "qarşılıq"
+      ],
+      "movzu": [
+        "əxlaq"
+      ]
+    },
+    {
+      "id": 46,
+      "text": "Yalan ayaq tutar, ancaq yeriməz.",
+      "mena": "Yalan bir az dayanar, amma uzun getməz.",
+      "acar": [
+        "yalan",
+        "həqiqət"
+      ],
+      "movzu": [
+        "həqiqət"
+      ]
+    },
+    {
+      "id": 47,
+      "text": "Yalançının evi yandı, heç kəs ona inanmadı.",
+      "mena": "Yalan danışan çətin anda inam tapmaz.",
+      "acar": [
+        "yalan",
+        "etibar",
+        "inanmaq"
+      ],
+      "movzu": [
+        "etibar"
+      ]
+    },
+    {
+      "id": 48,
+      "text": "Yanlış hesab Bağdaddan qayıdar.",
+      "mena": "Səhv gizlənməz, axırda üzə çıxar.",
+      "acar": [
+        "səhv",
+        "hesab",
+        "düzəltmək"
+      ],
+      "movzu": [
+        "səhv",
+        "ədalət"
+      ]
+    },
+    {
+      "id": 49,
+      "text": "Yeməyini yalqız yeyən yükü özü qaldırar.",
+      "mena": "Paylaşmayan çətin vaxtda tək qalar.",
+      "acar": [
+        "paylaşmaq",
+        "xəsislik",
+        "yük"
+      ],
+      "movzu": [
+        "paylaşmaq"
+      ]
+    },
+    {
+      "id": 50,
+      "text": "Yıxılanı vurmazlar.",
+      "mena": "Düşənə bir də zərbə vurmaq olmaz.",
+      "acar": [
+        "yıxılmaq",
+        "mərhəmət",
+        "kömək"
+      ],
+      "movzu": [
+        "əxlaq"
+      ]
+    },
+    {
+      "id": 51,
+      "text": "Yoldaşı yolda tanı.",
+      "mena": "Yoldaşın kim olduğu yolda bilinər.",
+      "acar": [
+        "yoldaş",
+        "yol",
+        "sınaq"
+      ],
+      "movzu": [
+        "dostluq"
+      ]
+    },
+    {
+      "id": 52,
+      "text": "Yağışdan qaçan doluya düşər.",
+      "mena": "Bir bəladan qaçanda daha böyüyünə düşmək olar.",
+      "acar": [
+        "bəla",
+        "qaçmaq",
+        "ehtiyat"
+      ],
+      "movzu": [
+        "ehtiyat"
+      ]
+    },
+    {
+      "id": 53,
+      "text": "Yaxşı at köhnə çulun altında da bilinər.",
+      "mena": "Dəyər zahiri köhnəlikdən gizlənmir.",
+      "acar": [
+        "dəyər",
+        "zahir",
+        "keyfiyyət"
+      ],
+      "movzu": [
+        "dəyər"
+      ]
+    },
+    {
+      "id": 54,
+      "text": "Yaxşı niyyət yarım dövlət deməkdir.",
+      "mena": "Düz niyyət işin yarısıdır.",
+      "acar": [
+        "niyyət",
+        "məqsəd"
+      ],
+      "movzu": [
+        "niyyət"
+      ]
+    },
+    {
+      "id": 55,
+      "text": "Yaxşı arvadlı ev cənnətdir.",
+      "mena": "Evdə hörmət və mehribanlıq olanda ev rahat olar.",
+      "acar": [
+        "ev",
+        "ailə",
+        "hörmət"
+      ],
+      "movzu": [
+        "ailə"
+      ]
+    },
+    {
+      "id": 56,
+      "text": "Yola çıxan yolda qalmaz.",
+      "mena": "Yola çıxan insan məqsədinə doğru gedər.",
+      "acar": [
+        "yol",
+        "məqsəd",
+        "iradə"
+      ],
+      "movzu": [
+        "məqsəd"
+      ]
+    },
+    {
+      "id": 57,
+      "text": "Yol ilə gedən yorulmaz.",
+      "mena": "Düz yolla gedənin əziyyəti az olar.",
+      "acar": [
+        "yol",
+        "düzlük"
+      ],
+      "movzu": [
+        "əxlaq"
+      ]
+    },
+    {
+      "id": 58,
+      "text": "Yolda yoldaş, evdə qardaş.",
+      "mena": "Yolda yoldaş, evdə qohum dayağındır.",
+      "acar": [
+        "yoldaş",
+        "qardaş",
+        "kömək"
+      ],
+      "movzu": [
+        "dostluq"
+      ]
+    },
+    {
+      "id": 59,
+      "text": "Yemə namərd çörəyini, axırda başına vurar.",
+      "mena": "Namərdin neməti sonra başa bəla olar.",
+      "acar": [
+        "namərd",
+        "çörək",
+        "etibar"
+      ],
+      "movzu": [
+        "etibar"
+      ]
+    },
+    {
+      "id": 60,
+      "text": "Yoxsulluğa düşməyən varlılığın qədrini bilməz.",
+      "mena": "Darlıq görməyən bolluğun qədrini bilməz.",
+      "acar": [
+        "yoxsulluq",
+        "varlılıq",
+        "qədir"
+      ],
+      "movzu": [
+        "dəyər"
+      ]
+    },
+    {
+      "id": 61,
+      "text": "Yırtıcı quş dimdiyindən bəllidir.",
+      "mena": "Zərər verən adam əməli ilə tanınar.",
+      "acar": [
+        "tanınmaq",
+        "zərər",
+        "xasiyyət"
+      ],
+      "movzu": [
+        "xasiyyət"
+      ]
+    },
+    {
+      "id": 62,
+      "text": "Ayağını yorğanına görə uzat.",
+      "mena": "Xərcini imkanına görə et.",
+      "acar": [
+        "qənaət",
+        "imkan",
+        "xərc",
+        "borc"
+      ],
+      "movzu": [
+        "qənaət"
+      ]
+    },
+    {
+      "id": 63,
+      "text": "Yeddi dəfə ölç, bir dəfə biç.",
+      "mena": "İşə başlamazdan əvvəl yaxşı düşün.",
+      "acar": [
+        "düşünmək",
+        "ehtiyat",
+        "tələsmək"
+      ],
+      "movzu": [
+        "ehtiyat"
+      ]
+    },
+    {
+      "id": 64,
+      "text": "Az olsun, saz olsun.",
+      "mena": "Çox yox, düzgün və keyfiyyətli olsun.",
+      "acar": [
+        "az",
+        "keyfiyyət",
+        "düz"
+      ],
+      "movzu": [
+        "dəyər"
+      ]
+    },
+    {
+      "id": 65,
+      "text": "Alma ağacından uzaq düşməz.",
+      "mena": "Övlad kökünə, tərbiyəsinə çəkir.",
+      "acar": [
+        "övlad",
+        "ata",
+        "ana",
+        "tərbiyə"
+      ],
+      "movzu": [
+        "ailə",
+        "tərbiyə"
+      ]
+    },
+    {
+      "id": 66,
+      "text": "Dilin sümüyü yoxdur.",
+      "mena": "Dil hər şeyi deyə bilər, ona görə sözə sahib ol.",
+      "acar": [
+        "dil",
+        "söz",
+        "ehtiyat"
+      ],
+      "movzu": [
+        "söz"
+      ]
+    },
+    {
+      "id": 67,
+      "text": "Ev alma, qonşu al.",
+      "mena": "Evin rahatlığı qonşudan çox asılıdır.",
+      "acar": [
+        "qonşu",
+        "ev",
+        "qonşuluq"
+      ],
+      "movzu": [
+        "qonşuluq"
+      ]
+    },
+    {
+      "id": 68,
+      "text": "Borclu ölər, borc qalar.",
+      "mena": "Borc sahibindən sonra da qalır.",
+      "acar": [
+        "borc",
+        "pul",
+        "məsuliyyət"
+      ],
+      "movzu": [
+        "məsuliyyət"
+      ]
+    },
+    {
+      "id": 69,
+      "text": "Ara sözü ev yıxar.",
+      "mena": "Araya girən söz ailəni və dostluğu dağıdır.",
+      "acar": [
+        "ara",
+        "söz",
+        "ailə",
+        "dava"
+      ],
+      "movzu": [
+        "ailə",
+        "söz"
+      ]
+    },
+    {
+      "id": 70,
+      "text": "Qurd tükünü dəyişər, huyunu dəyişməz.",
+      "mena": "Xasiyyət zahiri dəyişikliklə getmir.",
+      "acar": [
+        "xasiyyət",
+        "huy",
+        "dəyişmək"
+      ],
+      "movzu": [
+        "xasiyyət"
+      ]
+    },
+    {
+      "id": 71,
+      "text": "Ağac yaş ikən əyilər.",
+      "mena": "Tərbiyə vaxtında verilməlidir.",
+      "acar": [
+        "tərbiyə",
+        "uşaq",
+        "vaxt"
+      ],
+      "movzu": [
+        "tərbiyə"
+      ]
+    },
+    {
+      "id": 72,
+      "text": "İt hürər, karvan keçər.",
+      "mena": "Boş söz işi dayandırmır.",
+      "acar": [
+        "boş söz",
+        "iş",
+        "qınamaq"
+      ],
+      "movzu": [
+        "iş"
+      ]
+    },
+    {
+      "id": 73,
+      "text": "Tək əldən səs çıxmaz.",
+      "mena": "Böyük iş birliklə görülür.",
+      "acar": [
+        "birlik",
+        "kömək",
+        "tək"
+      ],
+      "movzu": [
+        "birlik"
+      ]
+    },
+    {
+      "id": 74,
+      "text": "Öz evin darı, özgə evin balından şirindir.",
+      "mena": "Öz azın özgənin çoxundan yaxşıdır.",
+      "acar": [
+        "ev",
+        "qənaət",
+        "vətən",
+        "qədir"
+      ],
+      "movzu": [
+        "dəyər"
+      ]
+    },
+    {
+      "id": 75,
+      "text": "El bir olsa, dağ oynadar.",
+      "mena": "Birlik böyük gücdür.",
+      "acar": [
+        "birlik",
+        "el",
+        "güc"
+      ],
+      "movzu": [
+        "birlik"
+      ]
+    },
+    {
+      "id": 76,
+      "text": "Qorxu adama yalan dedirdər.",
+      "mena": "Qorxu insanı düz sözdən yayındırır.",
+      "acar": [
+        "qorxu",
+        "yalan"
+      ],
+      "movzu": [
+        "həqiqət"
+      ]
+    },
+    {
+      "id": 77,
+      "text": "Malını yaxşı saxla, qonşunu oğru tutma.",
+      "mena": "Öz ehtiyatını gör, qonşunu günahlandırma.",
+      "acar": [
+        "qonşu",
+        "ehtiyat",
+        "günah"
+      ],
+      "movzu": [
+        "qonşuluq"
+      ]
+    },
+    {
+      "id": 78,
+      "text": "Əl beş barmaqdı, hərəsi bir boyda.",
+      "mena": "İnsanlar eyni deyil, fərqlilik təbiidir.",
+      "acar": [
+        "fərq",
+        "insan",
+        "ədalət"
+      ],
+      "movzu": [
+        "insan"
+      ]
+    },
+    {
+      "id": 79,
+      "text": "Bol çörəyin yoxdur, şirin dilin olsun.",
+      "mena": "Malın azdırsa, sözün yaxşı olsun.",
+      "acar": [
+        "dil",
+        "çörək",
+        "nəzakət"
+      ],
+      "movzu": [
+        "söz"
+      ]
+    },
+    {
+      "id": 80,
+      "text": "Adam adam sayəsində adam olar.",
+      "mena": "İnsan başqasının yanında yetişir.",
+      "acar": [
+        "insan",
+        "kömək",
+        "tərbiyə"
+      ],
+      "movzu": [
+        "birlik"
+      ]
     }
   ]
 }
