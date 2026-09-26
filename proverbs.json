@@ -434,7 +434,7 @@
     },
     {
       "id": 31,
-      "text": "Ac ? yanından qaç!",
+      "text": "Ac — yanından qaç!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yanindan",
@@ -642,7 +642,7 @@
         "elden"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -980,7 +980,7 @@
     },
     {
       "id": 69,
-      "text": "Adın nədir ? Daşdəmir, yumşalısan, yumşalı.",
+      "text": "Adın nədir? Daşdəmir, yumşalısan, yumşalı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "adin",
@@ -1120,12 +1120,12 @@
         "eliye"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
       "id": 79,
-      "text": "Adam var ? adamların naxşıdı, adam var ? eşşək ondan yaxşıdı.",
+      "text": "Adam var — adamların naxşıdı, adam var — eşşək ondan yaxşıdı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "adam",
@@ -1287,7 +1287,7 @@
     },
     {
       "id": 90,
-      "text": "Adamın dəlisi daşa güc elər, öküzün dəlisi ? başa.",
+      "text": "Adamın dəlisi daşa güc elər, öküzün dəlisi — başa.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "adamin",
@@ -1317,7 +1317,7 @@
     },
     {
       "id": 92,
-      "text": "Adamın düşməni ? öz dili.",
+      "text": "Adamın düşməni — öz dili.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "adamin",
@@ -1781,7 +1781,7 @@
     },
     {
       "id": 124,
-      "text": "Ağac əyildi ? sındı, igid əyildi ? öldü.",
+      "text": "Ağac əyildi — sındı, igid əyildi — öldü.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "agac",
@@ -1927,7 +1927,7 @@
     },
     {
       "id": 134,
-      "text": "Ağacı baltalayanda ?sapı məndəndir? demiş.",
+      "text": "Ağacı baltalayanda «sapı məndəndir» demiş.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "agaci",
@@ -2250,7 +2250,7 @@
     },
     {
       "id": 156,
-      "text": "Ağıllı kasıba dəli deyərlər, dövlətli dəliyə ?bəli? deyərlər.",
+      "text": "Ağıllı kasıba dəli deyərlər, dövlətli dəliyə «bəli» deyərlər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "agilli",
@@ -2456,7 +2456,7 @@
     },
     {
       "id": 170,
-      "text": "Ağır otur, ?ağa? desinlər.",
+      "text": "Ağır otur, «ağa» desinlər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "agir",
@@ -2961,7 +2961,7 @@
     },
     {
       "id": 205,
-      "text": "Axır ? axır, çıxar paxır.",
+      "text": "Axır — axır, çıxar paxır.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "axir",
@@ -3520,7 +3520,7 @@
     },
     {
       "id": 244,
-      "text": "Alçaqda yatma ? sel aparar, ucada yatma ? yel aparar.",
+      "text": "Alçaqda yatma — sel aparar, ucada yatma — yel aparar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "alcaqda",
@@ -3697,7 +3697,7 @@
     },
     {
       "id": 256,
-      "text": "?Allah? deyən namurad qalmaz.",
+      "text": "«Allah» deyən namurad qalmaz.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "allah",
@@ -4347,7 +4347,7 @@
     },
     {
       "id": 301,
-      "text": "Ana kimi yar olmaz ? vətən kimi dövlət-var.",
+      "text": "Ana kimi yar olmaz — vətən kimi dövlət-var.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "ana",
@@ -4406,7 +4406,7 @@
     },
     {
       "id": 305,
-      "text": "Analı quzu ? xınalı quzu.",
+      "text": "Analı quzu — xınalı quzu.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "anali",
@@ -4927,7 +4927,7 @@
     },
     {
       "id": 341,
-      "text": "Arxalıya arxa olma ? yamaq sayarlar, Arxasıza arxa ol ? dayaq sayarlar.",
+      "text": "Arxalıya arxa olma — yamaq sayarlar, Arxasıza arxa ol — dayaq sayarlar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "arxaliya",
@@ -5197,7 +5197,7 @@
     },
     {
       "id": 360,
-      "text": "Arsızın üzünə tüpürüblər, ?yağış yağır? demiş.",
+      "text": "Arsızın üzünə tüpürüblər, «yağış yağır» demiş.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "arsizin",
@@ -5227,7 +5227,7 @@
     },
     {
       "id": 362,
-      "text": "Artıq aş ? ya qarın ağrıdar, ya baş.",
+      "text": "Artıq aş — ya qarın ağrıdar, ya baş.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "artiq",
@@ -5403,7 +5403,7 @@
     },
     {
       "id": 374,
-      "text": "Arvadı ahıl gözüylə, atı ? cahıl gözüylə.",
+      "text": "Arvadı ahıl gözüylə, atı — cahıl gözüylə.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "arvadi",
@@ -5573,7 +5573,7 @@
     },
     {
       "id": 386,
-      "text": "Asta çal ? usta çal.",
+      "text": "Asta çal — usta çal.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "asta",
@@ -5600,7 +5600,7 @@
     },
     {
       "id": 388,
-      "text": "Asta vur ? rasta vur.",
+      "text": "Asta vur — rasta vur.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "asta",
@@ -5654,7 +5654,7 @@
     },
     {
       "id": 392,
-      "text": "Aşdır ? bişər, işdir ? düşər.",
+      "text": "Aşdır — bişər, işdir — düşər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "asdir",
@@ -5782,7 +5782,7 @@
     },
     {
       "id": 401,
-      "text": "Aşığın sözü qurtaranda ?yarım, yarım? çağırar.",
+      "text": "Aşığın sözü qurtaranda «yarım, yarım» çağırar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "asigin",
@@ -5990,7 +5990,7 @@
         "daha"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -6118,7 +6118,7 @@
     },
     {
       "id": 425,
-      "text": "At miniş öyrədər, don ? yeriş.",
+      "text": "At miniş öyrədər, don — yeriş.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "minis",
@@ -6657,7 +6657,7 @@
     },
     {
       "id": 462,
-      "text": "Ata çörəyi ? meydan çörəyi, oğul çörəyi ? zindan çörəyi.",
+      "text": "Ata çörəyi — meydan çörəyi, oğul çörəyi — zindan çörəyi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "ata",
@@ -7178,7 +7178,7 @@
     },
     {
       "id": 498,
-      "text": "Ayı kim gördü? ? Kor Mahmud.",
+      "text": "Ayı kim gördü? — Kor Mahmud.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "ayi",
@@ -7275,7 +7275,7 @@
         "beyensin"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -7397,7 +7397,7 @@
     },
     {
       "id": 513,
-      "text": "Ayı balasına ?ağappağım? deyər, kirpi balasına ? ?yumşağım?.",
+      "text": "Ayı balasına «ağappağım» deyər, kirpi balasına — «yumşağım».",
       "mena": "Xalq öyüdü.",
       "acar": [
         "ayi",
@@ -8284,7 +8284,7 @@
     },
     {
       "id": 574,
-      "text": "Baldızım ? çuvaldızım, hərdən gələr, sancar, gedər.",
+      "text": "Baldızım — çuvaldızım, hərdən gələr, sancar, gedər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "baldizim",
@@ -8342,7 +8342,7 @@
     },
     {
       "id": 578,
-      "text": "Balıq balığı udmasa ? dəryanı balıq tutar.",
+      "text": "Balıq balığı udmasa — dəryanı balıq tutar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "baliq",
@@ -8655,7 +8655,7 @@
         "bilmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -8688,7 +8688,7 @@
     },
     {
       "id": 602,
-      "text": "Başaçığın qaçacağı yer ? papaqçı dükanı.",
+      "text": "Başaçığın qaçacağı yer — papaqçı dükanı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "basacigin",
@@ -9077,7 +9077,7 @@
     },
     {
       "id": 629,
-      "text": "Bekarlıqdansa ? culfalıq.",
+      "text": "Bekarlıqdansa — culfalıq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bekarliqdansa",
@@ -9293,7 +9293,7 @@
     },
     {
       "id": 644,
-      "text": "Bəxşiş var ? xalvarla, hesab var ? dinarla.",
+      "text": "Bəxşiş var — xalvarla, hesab var — dinarla.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bexsis",
@@ -9321,7 +9321,7 @@
     },
     {
       "id": 646,
-      "text": "Bəla gələndə ?gəlirəm? deməz.",
+      "text": "Bəla gələndə «gəlirəm» deməz.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bela",
@@ -9420,7 +9420,7 @@
     },
     {
       "id": 653,
-      "text": "Bərəkət harda var? ? Böyüklü yerdə.",
+      "text": "Bərəkət harda var? — Böyüklü yerdə.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bereket",
@@ -10675,7 +10675,7 @@
     },
     {
       "id": 738,
-      "text": "Bir köçmək ? yüz talanmaq.",
+      "text": "Bir köçmək — yüz talanmaq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bir",
@@ -10803,7 +10803,7 @@
         "bir"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -10941,7 +10941,7 @@
     },
     {
       "id": 756,
-      "text": "Bir şəhərə getdin gördün hamı kor, sən də ? kor.",
+      "text": "Bir şəhərə getdin gördün hamı kor, sən də — kor.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bir",
@@ -11135,7 +11135,7 @@
     },
     {
       "id": 769,
-      "text": "Bir yaxşıdan ötrü ? ha gəzməsən yüz il gəz!",
+      "text": "Bir yaxşıdan ötrü — ha gəzməsən yüz il gəz!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bir",
@@ -11338,7 +11338,7 @@
     },
     {
       "id": 783,
-      "text": "Biri yeyər, biri baxar ? qiyamət onda qopar.",
+      "text": "Biri yeyər, biri baxar — qiyamət onda qopar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "biri",
@@ -11353,7 +11353,7 @@
     },
     {
       "id": 784,
-      "text": "Birin gör ? fikir elə, birin gör ? şükür elə.",
+      "text": "Birin gör — fikir elə, birin gör — şükür elə.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "birin",
@@ -11441,7 +11441,7 @@
     },
     {
       "id": 790,
-      "text": "Birənin qanın aldın ? canın aldın.",
+      "text": "Birənin qanın aldın — canın aldın.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "birenin",
@@ -11889,7 +11889,7 @@
     },
     {
       "id": 821,
-      "text": "Boş anbar, boş dağarcıq, ha ölç, ha ölç ? doldur!",
+      "text": "Boş anbar, boş dağarcıq, ha ölç, ha ölç — doldur!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "bos",
@@ -12340,7 +12340,7 @@
     },
     {
       "id": 852,
-      "text": "Bu ağıl məndə, o dua səndə ? səhərəcən yatarıq.",
+      "text": "Bu ağıl məndə, o dua səndə — səhərəcən yatarıq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "agil",
@@ -12538,7 +12538,7 @@
     },
     {
       "id": 866,
-      "text": "Bu ? hələ kamilləri, gör nədir cahilləri.",
+      "text": "Bu — hələ kamilləri, gör nədir cahilləri.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "hele",
@@ -13811,7 +13811,7 @@
     },
     {
       "id": 955,
-      "text": "Çağırram ? eldən ayıb, çağırmanam ? it itdi.",
+      "text": "Çağırram — eldən ayıb, çağırmanam — it itdi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "cagirram",
@@ -13821,7 +13821,7 @@
         "itdi"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -15350,7 +15350,7 @@
     },
     {
       "id": 1062,
-      "text": "Dadlı söz ? can arzusu, dadsız söz ? baş ağrısı.",
+      "text": "Dadlı söz — can arzusu, dadsız söz — baş ağrısı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dadli",
@@ -15395,7 +15395,7 @@
     },
     {
       "id": 1065,
-      "text": "Dağ ağrı çəkdi, nə doğdu? ? siçan.",
+      "text": "Dağ ağrı çəkdi, nə doğdu? — siçan.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dag",
@@ -15485,7 +15485,7 @@
     },
     {
       "id": 1071,
-      "text": "Dağ quşu dağa yaraşar, bağ quşu ? bağa!",
+      "text": "Dağ quşu dağa yaraşar, bağ quşu — bağa!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dag",
@@ -16220,7 +16220,7 @@
         "dediyini"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -16282,7 +16282,7 @@
     },
     {
       "id": 1126,
-      "text": "Deyirəm ? eldən ayıb, demənəm ? yandı canım.",
+      "text": "Deyirəm — eldən ayıb, demənəm — yandı canım.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "deyirem",
@@ -16292,7 +16292,7 @@
         "yandi"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -16488,7 +16488,7 @@
     },
     {
       "id": 1140,
-      "text": "Dəli ilə dövlətli ? ikisi də bildiyin elər.",
+      "text": "Dəli ilə dövlətli — ikisi də bildiyin elər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "deli",
@@ -16777,7 +16777,7 @@
     },
     {
       "id": 1160,
-      "text": "Dəm söhbət ? dəm ixtilat.",
+      "text": "Dəm söhbət — dəm ixtilat.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dem",
@@ -17063,7 +17063,7 @@
     },
     {
       "id": 1180,
-      "text": "Dərd var ? gələr keçər, dərd var ? dələr keçər.",
+      "text": "Dərd var — gələr keçər, dərd var — dələr keçər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "derd",
@@ -17421,7 +17421,7 @@
     },
     {
       "id": 1205,
-      "text": "Dəvə böyük ? ot yeyər, şahin kiçik ? ət yeyər.",
+      "text": "Dəvə böyük — ot yeyər, şahin kiçik — ət yeyər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "deve",
@@ -17466,7 +17466,7 @@
     },
     {
       "id": 1208,
-      "text": "Dəvə dedi: ?Hamamdan qalıram?. Dedilər: ?Görünür qıçından-paçandan?.",
+      "text": "Dəvə dedi: «Hamamdan qalıram». Dedilər: «Görünür qıçından-paçandan».",
       "mena": "Xalq öyüdü.",
       "acar": [
         "deve",
@@ -17730,7 +17730,7 @@
     },
     {
       "id": 1226,
-      "text": "Dəvəni andılar ? ya suya, ya oduna!",
+      "text": "Dəvəni andılar — ya suya, ya oduna!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "deveni",
@@ -18124,7 +18124,7 @@
     },
     {
       "id": 1253,
-      "text": "Dil var bal ? gətirər, dil var ? bəla gətirər.",
+      "text": "Dil var bal — gətirər, dil var — bəla gətirər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dil",
@@ -18153,7 +18153,7 @@
     },
     {
       "id": 1255,
-      "text": "Dil yarası ? il yarası.",
+      "text": "Dil yarası — il yarası.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dil",
@@ -18181,7 +18181,7 @@
     },
     {
       "id": 1257,
-      "text": "Dildir ? nə qoruğu var, nə qaytanı.",
+      "text": "Dildir — nə qoruğu var, nə qaytanı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dildir",
@@ -18496,7 +18496,7 @@
     },
     {
       "id": 1279,
-      "text": "Dişsiz ağız ? daşsız dəyirman.",
+      "text": "Dişsiz ağız — daşsız dəyirman.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dissiz",
@@ -18798,7 +18798,7 @@
     },
     {
       "id": 1300,
-      "text": "Don kimindi ? geyənin, at kimindi ? minənin.",
+      "text": "Don kimindi? geyənin, at kimindi? minənin.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "don",
@@ -19250,7 +19250,7 @@
     },
     {
       "id": 1331,
-      "text": "Dövlətdə ? dəvə, övladda ? nəvə.",
+      "text": "Dövlətdə — dəvə, övladda — nəvə.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "dovletde",
@@ -19458,7 +19458,7 @@
     },
     {
       "id": 1345,
-      "text": "Duz-çörək ? düz çörək.",
+      "text": "Duz-çörək — düz çörək.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "duz",
@@ -19929,7 +19929,7 @@
     },
     {
       "id": 1378,
-      "text": "El ağzı ? çuval ağzı.",
+      "text": "El ağzı — çuval ağzı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "agzi",
@@ -19937,7 +19937,7 @@
         "agzi"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -19949,7 +19949,7 @@
         "faldir"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -19963,7 +19963,7 @@
         "tutulmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -19978,7 +19978,7 @@
         "rengi"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -19992,7 +19992,7 @@
         "geder"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20006,7 +20006,7 @@
         "dusmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20020,7 +20020,7 @@
         "olmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20035,7 +20035,7 @@
         "yerinden"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20050,7 +20050,7 @@
         "geler"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20063,7 +20063,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20076,7 +20076,7 @@
         "atmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20090,7 +20090,7 @@
         "sigismaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20105,7 +20105,7 @@
         "eybini"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20118,7 +20118,7 @@
         "gorer"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20130,7 +20130,7 @@
         "terezidir"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20144,7 +20144,7 @@
         "atmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20157,7 +20157,7 @@
         "gucu"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20170,7 +20170,7 @@
         "qanadla"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20182,19 +20182,19 @@
         "taninar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
       "id": 1397,
-      "text": "El içində ? öl içində.",
+      "text": "El içində — öl içində.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "icinde",
         "icinde"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20223,7 +20223,7 @@
         "kec"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20249,7 +20249,7 @@
         "qalx"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20263,7 +20263,7 @@
         "vermez"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20278,7 +20278,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20292,7 +20292,7 @@
         "qoyar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20305,7 +20305,7 @@
         "taniyar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20318,7 +20318,7 @@
         "quruyar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20333,7 +20333,7 @@
         "bosar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20347,7 +20347,7 @@
         "bilmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20362,7 +20362,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20375,7 +20375,7 @@
         "kopurdu"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20390,7 +20390,7 @@
         "allahadi"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20404,7 +20404,7 @@
         "olmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20418,7 +20418,7 @@
         "sindirar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20433,7 +20433,7 @@
         "bilmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20448,7 +20448,7 @@
         "sanar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20462,7 +20462,7 @@
         "qalar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20476,12 +20476,12 @@
         "olmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
       "id": 1418,
-      "text": "Elin səsi ? haqq səsidi.",
+      "text": "Elin səsi — haqq səsidi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "elin",
@@ -20490,7 +20490,7 @@
         "sesidi"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20505,7 +20505,7 @@
         "duz"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -20577,7 +20577,7 @@
         "olub"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -21428,7 +21428,7 @@
     },
     {
       "id": 1484,
-      "text": "Ev kimindir? Oturanın! Söz kimindir? ? Götürənin.",
+      "text": "Ev kimindir? Oturanın! Söz kimindir? — Götürənin.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kimindir",
@@ -21521,7 +21521,7 @@
         "sevmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -21540,7 +21540,7 @@
     },
     {
       "id": 1492,
-      "text": "Evin yaraşığı uşaqdır, süfrənin yaraşığı ? qonaq.",
+      "text": "Evin yaraşığı uşaqdır, süfrənin yaraşığı — qonaq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "evin",
@@ -21600,7 +21600,7 @@
     },
     {
       "id": 1496,
-      "text": "Eybi kim deyər ? eybəcər.",
+      "text": "Eybi kim deyər — eybəcər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "eybi",
@@ -21759,7 +21759,7 @@
     },
     {
       "id": 1507,
-      "text": "Əgər varındı, aləm yarındı, əgər yoxundu ? elnən aran toxundu.",
+      "text": "Əgər varındı, aləm yarındı, əgər yoxundu — elnən aran toxundu.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "eger",
@@ -21769,7 +21769,7 @@
         "eger"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -22056,7 +22056,7 @@
     },
     {
       "id": 1528,
-      "text": "Əli boşa ?ağa uyur? deyərlər, əli doluya ?ağa buyur? deyərlər.",
+      "text": "Əli boşa «ağa uyur» deyərlər, əli doluya «ağa buyur» deyərlər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "eli",
@@ -22461,7 +22461,7 @@
         "tutar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -22508,7 +22508,7 @@
     },
     {
       "id": 1559,
-      "text": "Ər evi ? ədəb evi.",
+      "text": "Ər evi — ədəb evi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "evi",
@@ -22608,7 +22608,7 @@
     },
     {
       "id": 1566,
-      "text": "Ərsiz arvad ? cilovsuz at.",
+      "text": "Ərsiz arvad — cilovsuz at.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "ersiz",
@@ -23399,7 +23399,7 @@
     },
     {
       "id": 1621,
-      "text": "Əyrini tox gördüm, doğrunu ? ac.",
+      "text": "Əyrini tox gördüm, doğrunu — ac.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "eyrini",
@@ -24070,7 +24070,7 @@
     },
     {
       "id": 1667,
-      "text": "Gədaya borclu olma ? ya toyda istər, ya bayramda.",
+      "text": "Gədaya borclu olma — ya toyda istər, ya bayramda.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "gedaya",
@@ -24152,7 +24152,7 @@
         "sel"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -24461,7 +24461,7 @@
     },
     {
       "id": 1694,
-      "text": "Gödək atıldı vurdu uzunun başına; uzun dedi: ?əcəb yadıma saldın?.",
+      "text": "Gödək atıldı vurdu uzunun başına; uzun dedi: «əcəb yadıma saldın».",
       "mena": "Xalq öyüdü.",
       "acar": [
         "godek",
@@ -24491,7 +24491,7 @@
     },
     {
       "id": 1696,
-      "text": "Gördü ? hənək, görmədi ? gerçək.",
+      "text": "Gördü — hənək, görmədi — gerçək.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "gordu",
@@ -24976,7 +24976,7 @@
     },
     {
       "id": 1730,
-      "text": "Gözəl ? gözəl deyil, könül sevən gözəldi.",
+      "text": "Gözəl — gözəl deyil, könül sevən gözəldi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "gozel",
@@ -25269,7 +25269,7 @@
     },
     {
       "id": 1751,
-      "text": "Gündə ? gündə, bir gün səndə, bir gün məndə.",
+      "text": "Gündə — gündə, bir gün səndə, bir gün məndə.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "gunde",
@@ -25490,7 +25490,7 @@
     },
     {
       "id": 1766,
-      "text": "Hacılar Məkkəyə getdi ? qapıları açıq qoyun, gəldilər ? qapıları bağlayın.",
+      "text": "Hacılar Məkkəyə getdi — qapıları açıq qoyun, gəldilər — qapıları bağlayın.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "hacilar",
@@ -25922,7 +25922,7 @@
     },
     {
       "id": 1796,
-      "text": "Halvaçı qızı ? daha şirin.",
+      "text": "Halvaçı qızı — daha şirin.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "halvaci",
@@ -25966,7 +25966,7 @@
     },
     {
       "id": 1799,
-      "text": "Hamı deyir, mədrəbazın gözü çıxsın ? bilmirəm mədrəbaz kimdi.",
+      "text": "Hamı deyir, mədrəbazın gözü çıxsın — bilmirəm mədrəbaz kimdi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "hami",
@@ -26041,7 +26041,7 @@
     },
     {
       "id": 1804,
-      "text": "Haralısan? ? Hələ evlənməmişəm.",
+      "text": "Haralısan? — Hələ evlənməmişəm.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "haralisan",
@@ -27323,7 +27323,7 @@
     },
     {
       "id": 1892,
-      "text": "Hər şeyin erkəyi keçər, sözün ? dişisi.",
+      "text": "Hər şeyin erkəyi keçər, sözün — dişisi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "her",
@@ -29368,7 +29368,7 @@
     },
     {
       "id": 2034,
-      "text": "İlqar ? iman.",
+      "text": "İlqar — iman.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "lqar",
@@ -29506,7 +29506,7 @@
     },
     {
       "id": 2044,
-      "text": "İnək su içər ? süd olar, ilan su içər ? zəhər.",
+      "text": "İnək su içər — süd olar, ilan su içər — zəhər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "nek",
@@ -31382,7 +31382,7 @@
     },
     {
       "id": 2176,
-      "text": "Kasıb geyəndə, - hardandı, - deyərlər, varlı geyəndə ? mübarək.",
+      "text": "Kasıb geyəndə, - hardandı, - deyərlər, varlı geyəndə — mübarək.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kasib",
@@ -31516,7 +31516,7 @@
     },
     {
       "id": 2185,
-      "text": "Kasıbın günü ? itin günü.",
+      "text": "Kasıbın günü — itin günü.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kasibin",
@@ -31588,7 +31588,7 @@
     },
     {
       "id": 2190,
-      "text": "Kasıbın sözü ? yurğunun közü.",
+      "text": "Kasıbın sözü — yurğunun közü.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kasibin",
@@ -31647,7 +31647,7 @@
     },
     {
       "id": 2194,
-      "text": "Keçəl, başını yudunmu? ? Yudum da, daradım da.",
+      "text": "Keçəl, başını yudunmu? — Yudum da, daradım da.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kecel",
@@ -31924,7 +31924,7 @@
     },
     {
       "id": 2213,
-      "text": "Keçi sürünün qabağında gəlsə də, ?qoyun gəldi? deyirlər.",
+      "text": "Keçi sürünün qabağında gəlsə də, «qoyun gəldi» deyirlər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "keci",
@@ -32722,7 +32722,7 @@
     },
     {
       "id": 2268,
-      "text": "Kor kimdir? ? Nabələd.",
+      "text": "Kor kimdir? — Nabələd.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kor",
@@ -32810,7 +32810,7 @@
     },
     {
       "id": 2274,
-      "text": "Kor nə istər? ? İki göz! biri əyri, biri düz!",
+      "text": "Kor nə istər? — İki göz! biri əyri, biri düz!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kor",
@@ -32909,7 +32909,7 @@
     },
     {
       "id": 2281,
-      "text": "Kora verirsən ? mənə ver, şilə verirsən ? mənə ver.",
+      "text": "Kora verirsən — mənə ver, şilə verirsən — mənə ver.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "kora",
@@ -32982,7 +32982,7 @@
     },
     {
       "id": 2286,
-      "text": "Koroğlu deyibdi: ?basılanı kəsmə?.",
+      "text": "Koroğlu deyibdi: «basılanı kəsmə».",
       "mena": "Xalq öyüdü.",
       "acar": [
         "koroglu",
@@ -34015,7 +34015,7 @@
         "saxlar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -34155,7 +34155,7 @@
         "sumsunu"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -34385,7 +34385,7 @@
     },
     {
       "id": 2384,
-      "text": "Qar ili ? var ili.",
+      "text": "Qar ili — var ili.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qar",
@@ -35054,7 +35054,7 @@
     },
     {
       "id": 2430,
-      "text": "Qarı var ? arpa unundan aş elər, qarı var ? buğda unun daş elər.",
+      "text": "Qarı var — arpa unundan aş elər, qarı var — buğda unun daş elər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qari",
@@ -35069,7 +35069,7 @@
     },
     {
       "id": 2431,
-      "text": "Qarın başdan aşağıdı ? deyiblər.",
+      "text": "Qarın başdan aşağıdı — deyiblər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qarin",
@@ -35334,7 +35334,7 @@
     },
     {
       "id": 2449,
-      "text": "Qatıq süzülü ? şoru qalar, ayran süzülü ? nəyi qalar?",
+      "text": "Qatıq süzülü — şoru qalar, ayran süzülü — nəyi qalar?",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qatiq",
@@ -35854,7 +35854,7 @@
     },
     {
       "id": 2485,
-      "text": "Qələmin ucu ? qılıncın gücü.",
+      "text": "Qələmin ucu — qılıncın gücü.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qelemin",
@@ -36067,7 +36067,7 @@
     },
     {
       "id": 2500,
-      "text": "Qəribi vurmuşlar, ?Vay, vətən? demiş.",
+      "text": "Qəribi vurmuşlar, «Vay, vətən» demiş.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qeribi",
@@ -36297,7 +36297,7 @@
     },
     {
       "id": 2516,
-      "text": "Qılınc ? Misir, arvad ? yesir, döşənəcək ? həsir.",
+      "text": "Qılınc — Misir, arvad — yesir, döşənəcək — həsir.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qilinc",
@@ -36533,7 +36533,7 @@
     },
     {
       "id": 2532,
-      "text": "Qışın qarı ? yayın barı.",
+      "text": "Qışın qarı — yayın barı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qisin",
@@ -36547,7 +36547,7 @@
     },
     {
       "id": 2533,
-      "text": "Qız ağacı ? qoz ağacı, hər yetən bir selbə atar.",
+      "text": "Qız ağacı — qoz ağacı, hər yetən bir selbə atar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qiz",
@@ -36622,7 +36622,7 @@
     },
     {
       "id": 2538,
-      "text": "Qız evi ? naz evi.",
+      "text": "Qız evi — naz evi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qiz",
@@ -36681,7 +36681,7 @@
     },
     {
       "id": 2542,
-      "text": "Qız yükü ? duz yükü.",
+      "text": "Qız yükü — duz yükü.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qiz",
@@ -36769,7 +36769,7 @@
     },
     {
       "id": 2548,
-      "text": "Qızın isməti ? atanın dövləti.",
+      "text": "Qızın isməti — atanın dövləti.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qizin",
@@ -37119,7 +37119,7 @@
     },
     {
       "id": 2573,
-      "text": "Qocalıq soruşmaz ? gələr.",
+      "text": "Qocalıq soruşmaz — gələr.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qocaliq",
@@ -37332,7 +37332,7 @@
     },
     {
       "id": 2588,
-      "text": "Qonağa ?get? deməzlər, altından palazı çəkərlər.",
+      "text": "Qonağa «get» deməzlər, altından palazı çəkərlər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qonaga",
@@ -37644,7 +37644,7 @@
     },
     {
       "id": 2609,
-      "text": "Qonaqsan ? xoş gəlmisən, niyə əliboş gəlmisən?",
+      "text": "Qonaqsan — xoş gəlmisən, niyə əliboş gəlmisən?",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qonaqsan",
@@ -37702,7 +37702,7 @@
     },
     {
       "id": 2613,
-      "text": "Qonşu, qonşu! ? gəl savaşaq.",
+      "text": "Qonşu, qonşu! — gəl savaşaq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qonsu",
@@ -37863,7 +37863,7 @@
     },
     {
       "id": 2624,
-      "text": "Qonşum şah ? mən də şah.",
+      "text": "Qonşum şah — mən də şah.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qonsum",
@@ -37877,7 +37877,7 @@
     },
     {
       "id": 2625,
-      "text": "Qonşun tox ? sən də tox.",
+      "text": "Qonşun tox — sən də tox.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qonsun",
@@ -37993,7 +37993,7 @@
     },
     {
       "id": 2633,
-      "text": "Qorx payızdan ? qabağınca qış gəlir, Qorxma qışdan ? qabağınca yaz gəlir.",
+      "text": "Qorx payızdan — qabağınca qış gəlir, Qorxma qışdan — qabağınca yaz gəlir.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "qorx",
@@ -39436,7 +39436,7 @@
     },
     {
       "id": 2733,
-      "text": "Quzunun taxsırı ? qurdun acımasıdı.",
+      "text": "Quzunun taxsırı — qurdun acımasıdı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "quzunun",
@@ -39707,7 +39707,7 @@
     },
     {
       "id": 2752,
-      "text": "Lüleyin aftafa yerin tutar, girov qoyanda ? alan olmaz.",
+      "text": "Lüleyin aftafa yerin tutar, girov qoyanda — alan olmaz.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "luleyin",
@@ -40186,7 +40186,7 @@
     },
     {
       "id": 2785,
-      "text": "Məclisdə yerin tanı, deməsinlər ? dur burdan!",
+      "text": "Məclisdə yerin tanı, deməsinlər — dur burdan!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "meclisde",
@@ -40350,7 +40350,7 @@
     },
     {
       "id": 2796,
-      "text": "Mən qurd isəm ? alıram, mən çobanam ? vermirəm.",
+      "text": "Mən qurd isəm — alıram, mən çobanam — vermirəm.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "men",
@@ -40410,7 +40410,7 @@
     },
     {
       "id": 2800,
-      "text": "Mənə bax nə gündəyəm, yara bax ? nə sallanır.",
+      "text": "Mənə bax nə gündəyəm, yara bax — nə sallanır.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "mene",
@@ -42391,7 +42391,7 @@
     },
     {
       "id": 2937,
-      "text": "Niyyətin hara ? mənzilin ora.",
+      "text": "Niyyətin hara — mənzilin ora.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "niyyetin",
@@ -42592,7 +42592,7 @@
     },
     {
       "id": 2951,
-      "text": "O ? verdiyin and, bu da buyurduğun qulluq.",
+      "text": "O — verdiyin and, bu da buyurduğun qulluq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "verdiyin",
@@ -42850,7 +42850,7 @@
     },
     {
       "id": 2969,
-      "text": "Oğlan doğdum ? oydu məni, qız doğdum ? soydu məni.",
+      "text": "Oğlan doğdum — oydu məni, qız doğdum — soydu məni.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "oglan",
@@ -43277,7 +43277,7 @@
     },
     {
       "id": 2999,
-      "text": "Olanda göz qızarar, olmayanda ? üz.",
+      "text": "Olanda göz qızarar, olmayanda — üz.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "olanda",
@@ -44353,7 +44353,7 @@
     },
     {
       "id": 3073,
-      "text": "Örtülü bazar ? dostluğu pozar.",
+      "text": "Örtülü bazar — dostluğu pozar.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "ortulu",
@@ -44590,7 +44590,7 @@
         "eleye"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -45056,7 +45056,7 @@
         "surun"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -45709,7 +45709,7 @@
     },
     {
       "id": 3167,
-      "text": "Rahatlıq istəyən adam ? kar, kor, lal gərək.",
+      "text": "Rahatlıq istəyən adam — kar, kor, lal gərək.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "rahatliq",
@@ -46520,7 +46520,7 @@
     },
     {
       "id": 3224,
-      "text": "Sevindim ? quşum var! Quşum var! Aralığa çıxdı sərçə balası.",
+      "text": "Sevindim — quşum var! Quşum var! Aralığa çıxdı sərçə balası.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "sevindim",
@@ -47106,7 +47106,7 @@
         "sorusarlar"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -47434,7 +47434,7 @@
     },
     {
       "id": 3286,
-      "text": "Siyavuş qanıdı ? yatmaz.",
+      "text": "Siyavuş qanıdı — yatmaz.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "siyavus",
@@ -47636,7 +47636,7 @@
     },
     {
       "id": 3300,
-      "text": "Söhbət ki var, darı torbasıdı, deşilsə ? axacaq.",
+      "text": "Söhbət ki var, darı torbasıdı, deşilsə — axacaq.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "sohbet",
@@ -47651,7 +47651,7 @@
     },
     {
       "id": 3301,
-      "text": "Söhbətin şirin yerində moltanı gəldi: ?Allah saxlasun!?",
+      "text": "Söhbətin şirin yerində moltanı gəldi: «Allah saxlasun!»",
       "mena": "Xalq öyüdü.",
       "acar": [
         "sohbetin",
@@ -47918,7 +47918,7 @@
     },
     {
       "id": 3320,
-      "text": "Söz var ? gələr keçər, söz var ? dələr keçər.",
+      "text": "Söz var — gələr keçər, söz var — dələr keçər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "soz",
@@ -48344,7 +48344,7 @@
     },
     {
       "id": 3350,
-      "text": "Su girdi qaba ? oldu içməli.",
+      "text": "Su girdi qaba — oldu içməli.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "girdi",
@@ -49012,7 +49012,7 @@
     },
     {
       "id": 3397,
-      "text": "Şam bahadı ? korun nə vecinə.",
+      "text": "Şam bahadı — korun nə vecinə.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "sam",
@@ -49026,7 +49026,7 @@
     },
     {
       "id": 3398,
-      "text": "Şey qurdlayar ? duz səpərlər, duz qurdlayar ? nə səpərlər?!",
+      "text": "Şey qurdlayar — duz səpərlər, duz qurdlayar — nə səpərlər?!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "sey",
@@ -50434,7 +50434,7 @@
     },
     {
       "id": 3495,
-      "text": "Torpaq deyər: ? öldür məni, dirildim səni!",
+      "text": "Torpaq deyər: — öldür məni, dirildim səni!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "torpaq",
@@ -50449,7 +50449,7 @@
     },
     {
       "id": 3496,
-      "text": "Torpaq deyər: ? Sən mənə tər ver, mən sənə zər verim!",
+      "text": "Torpaq deyər: — Sən mənə tər ver, mən sənə zər verim!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "torpaq",
@@ -50795,7 +50795,7 @@
     },
     {
       "id": 3520,
-      "text": "Turac əti yemisən? ? uçducağın görmüşəm.",
+      "text": "Turac əti yemisən? — uçducağın görmüşəm.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "turac",
@@ -50839,7 +50839,7 @@
     },
     {
       "id": 3523,
-      "text": "Tutulmamış oğru ? xandan-bəydən doğru.",
+      "text": "Tutulmamış oğru — xandan-bəydən doğru.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "tutulmamis",
@@ -52082,7 +52082,7 @@
         "geler"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -52450,7 +52450,7 @@
     },
     {
       "id": 3635,
-      "text": "Verərsən pendir ? elərəm kəndir, Verərsən aş ? elərəm baş.",
+      "text": "Verərsən pendir — elərəm kəndir, Verərsən aş — elərəm baş.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "verersen",
@@ -52696,7 +52696,7 @@
     },
     {
       "id": 3652,
-      "text": "Vurram ölər, kiş deyərəm ? getməz.",
+      "text": "Vurram ölər, kiş deyərəm — getməz.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "vurram",
@@ -52795,7 +52795,7 @@
     },
     {
       "id": 3659,
-      "text": "Ya lələ şələni basar, ya şələ ? lələni.",
+      "text": "Ya lələ şələni basar, ya şələ — lələni.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "lele",
@@ -53219,7 +53219,7 @@
     },
     {
       "id": 3688,
-      "text": "Yaxşı niyyət ? yarım dövlət.",
+      "text": "Yaxşı niyyət — yarım dövlət.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaxsi",
@@ -53233,7 +53233,7 @@
     },
     {
       "id": 3689,
-      "text": "Yaxşı oğul ? ata bağı, pis oğul ürək dağıdı.",
+      "text": "Yaxşı oğul — ata bağı, pis oğul ürək dağıdı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaxsi",
@@ -53248,7 +53248,7 @@
     },
     {
       "id": 3690,
-      "text": "Yaxşı olanda ? xanımdan, pis olanda ? qaravaşdan.",
+      "text": "Yaxşı olanda — xanımdan, pis olanda — qaravaşdan.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaxsi",
@@ -53303,12 +53303,12 @@
         "gezer"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
       "id": 3694,
-      "text": "Yaxşı saxla aşığı; bədnamçıdı ? el gəzər.",
+      "text": "Yaxşı saxla aşığı; bədnamçıdı — el gəzər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaxsi",
@@ -53318,7 +53318,7 @@
         "gezer"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -53366,7 +53366,7 @@
     },
     {
       "id": 3698,
-      "text": "Yaxşılığa yamanlıq ? kor eşşəyə samanlıq!",
+      "text": "Yaxşılığa yamanlıq — kor eşşəyə samanlıq!",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaxsiliga",
@@ -53806,7 +53806,7 @@
     },
     {
       "id": 3729,
-      "text": "Yaman qonşu, kor oğul: qov yanından ? qadadı.",
+      "text": "Yaman qonşu, kor oğul: qov yanından — qadadı.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaman",
@@ -53916,7 +53916,7 @@
     },
     {
       "id": 3737,
-      "text": "Yandırdığın yovşan, ağlatdığın ? dovşan.",
+      "text": "Yandırdığın yovşan, ağlatdığın — dovşan.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yandirdigin",
@@ -53930,7 +53930,7 @@
     },
     {
       "id": 3738,
-      "text": "Yanıq mal, hara gedirsən? ? Yandırmağa.",
+      "text": "Yanıq mal, hara gedirsən? — Yandırmağa.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaniq",
@@ -54117,7 +54117,7 @@
     },
     {
       "id": 3751,
-      "text": "Yaraşığın yaraşığı ? bəzəknən.",
+      "text": "Yaraşığın yaraşığı — bəzəknən.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yarasigin",
@@ -54437,7 +54437,7 @@
     },
     {
       "id": 3773,
-      "text": "Yaz əkinçi ? qış dilənçi.",
+      "text": "Yaz əkinçi — qış dilənçi.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yaz",
@@ -54942,7 +54942,7 @@
     },
     {
       "id": 3808,
-      "text": "Yersiz gəldi ? yerli, qaç.",
+      "text": "Yersiz gəldi — yerli, qaç.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yersiz",
@@ -55567,7 +55567,7 @@
         "cixma"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ]
     },
     {
@@ -55934,7 +55934,7 @@
     },
     {
       "id": 3877,
-      "text": "Yüknən gələn taynan gedər, taynan gələn ? vaynan gedər.",
+      "text": "Yüknən gələn taynan gedər, taynan gələn — vaynan gedər.",
       "mena": "Xalq öyüdü.",
       "acar": [
         "yuknen",
