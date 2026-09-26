@@ -340,38 +340,77 @@ async def post_daily_to_channel(context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("Kanala günün sözü göndərildi: %s", day.isoformat())
 
 
-async def show_topics(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+def topic_items(name: str) -> list[dict]:
+    return [item for item in PROVERBS if name in item["movzu"]]
+
+
+def topic_menu_markup() -> InlineKeyboardMarkup:
     rows = []
     row = []
     for index, name in enumerate(TOPICS):
-        row.append(InlineKeyboardButton(name, callback_data=f"t:{index}"))
+        count = len(topic_items(name))
+        row.append(InlineKeyboardButton(f"{name} ({count})", callback_data=f"t:{index}:0"))
         if len(row) == 2:
             rows.append(row)
             row = []
     if row:
         rows.append(row)
-    await update.message.reply_text(
-        "Mövzu seç.",
-        reply_markup=InlineKeyboardMarkup(rows),
-    )
+    return InlineKeyboardMarkup(rows)
+
+
+def topic_page(name: str, page: int, page_size: int = 15) -> tuple[str, int, int]:
+    found = topic_items(name)
+    total = len(found)
+    pages = max(1, (total + page_size - 1) // page_size)
+    page = max(0, min(page, pages - 1))
+    start = page * page_size
+    chunk = found[start : start + page_size]
+    lines = [
+        f"Mövzu: {name}",
+        f"{total} atalar sözü. Səhifə {page + 1}/{pages}.",
+        "",
+    ]
+    for number, item in enumerate(chunk, start=start + 1):
+        lines.append(format_proverb(item, sira=number))
+        lines.append("")
+    return "\n".join(lines).strip(), page, pages
+
+
+def topic_nav(index: int, page: int, pages: int) -> InlineKeyboardMarkup:
+    nav = []
+    if page > 0:
+        nav.append(InlineKeyboardButton("← Geri", callback_data=f"t:{index}:{page - 1}"))
+    if page + 1 < pages:
+        nav.append(InlineKeyboardButton("İrəli →", callback_data=f"t:{index}:{page + 1}"))
+    rows = []
+    if nav:
+        rows.append(nav)
+    rows.append([InlineKeyboardButton("Mövzular", callback_data="t:menu")])
+    return InlineKeyboardMarkup(rows)
+
+
+async def show_topics(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    await update.message.reply_text("Mövzu seç.", reply_markup=topic_menu_markup())
     return ConversationHandler.END
 
 
 async def on_topic(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
     await query.answer()
+    data = query.data or ""
+    if data == "t:menu":
+        await query.edit_message_text("Mövzu seç.", reply_markup=topic_menu_markup())
+        return
+    parts = data.split(":")
     try:
-        index = int((query.data or "").split(":", 1)[1])
+        index = int(parts[1])
+        page = int(parts[2]) if len(parts) > 2 else 0
         name = TOPICS[index]
     except (IndexError, ValueError):
         await query.message.reply_text("Bu mövzu tapılmadı.", reply_markup=MENU_KEYBOARD)
         return
-    found = [item for item in PROVERBS if name in item["movzu"]][:5]
-    lines = [f"Mövzu: {name}", ""]
-    for number, item in enumerate(found, start=1):
-        lines.append(format_proverb(item, sira=number))
-        lines.append("")
-    await query.message.reply_text("\n".join(lines).strip(), reply_markup=MENU_KEYBOARD)
+    text, page, pages = topic_page(name, page)
+    await query.edit_message_text(text, reply_markup=topic_nav(index, page, pages))
 
 
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -468,7 +507,7 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("tesaduf", random_proverb))
     app.add_handler(CommandHandler("movzu", show_topics))
     app.add_handler(CommandHandler("gun", daily_proverb))
-    app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:\d+$"))
+    app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_error_handler(on_error)
     return app
