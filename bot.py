@@ -12,18 +12,18 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from telegram import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
+    InlineQueryResultArticle,
+    InputTextMessageContent,
     ReplyKeyboardMarkup,
     ReplyKeyboardRemove,
     Update,
 )
 from telegram.ext import (
     Application,
-    CallbackQueryHandler,
     CommandHandler,
     ContextTypes,
     ConversationHandler,
+    InlineQueryHandler,
     MessageHandler,
     filters,
 )
@@ -202,7 +202,8 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/tesaduf — təsadüfi atalar sözü\n"
         "/legv — axtarışı dayandır\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
-        "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum."
+        "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum.\n\n"
+        "İstənilən söhbətdə @AtalarSozleri_bot yaz, arxasınca açar söz əlavə et və nəticəni ora göndər."
     )
     await update.message.reply_text(text, reply_markup=MENU_KEYBOARD)
     return ConversationHandler.END
@@ -305,6 +306,24 @@ async def menu_text_router(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     return ConversationHandler.END
 
 
+async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = (update.inline_query.query or "").strip()
+    if query:
+        found = [item for _score, item in search_by_keyword(query, limit=8)]
+    else:
+        found = random.sample(PROVERBS, k=min(5, len(PROVERBS)))
+    results = [
+        InlineQueryResultArticle(
+            id=str(item["id"]),
+            title=item["text"],
+            description=item["mena"],
+            input_message_content=InputTextMessageContent(format_proverb(item)),
+        )
+        for item in found
+    ]
+    await update.inline_query.answer(results, cache_time=5, is_personal=False)
+
+
 async def on_error(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.exception("Xəta: %s", context.error)
     if isinstance(update, Update) and update.effective_message:
@@ -357,6 +376,7 @@ def build_app(token: str) -> Application:
     )
 
     app.add_handler(conv)
+    app.add_handler(InlineQueryHandler(inline_query))
     app.add_handler(CommandHandler("komek", help_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
     app.add_handler(CommandHandler("tesaduf", random_proverb))
