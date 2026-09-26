@@ -63,14 +63,18 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
     resize_keyboard=True,
 )
 
-TOPICS = sorted(
-    {
-        topic
-        for item in PROVERBS
-        for topic in item["movzu"]
-        if sum(topic in other["movzu"] for other in PROVERBS) >= 3
-    }
-)
+TOPICS = [
+    "Əxlaq",
+    "Tərbiyə",
+    "Ağıl",
+    "Dostluq",
+    "Ailə",
+    "İş",
+    "Ortaqlıq",
+    "Bərəkət",
+    "Adət-ənənə",
+    "El",
+]
 
 
 def normalize(text: str) -> str:
