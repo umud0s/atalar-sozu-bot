@@ -76,6 +76,7 @@ QUIZ_KEYBOARD = ReplyKeyboardMarkup(
 
 TOPICS = [
     "Əxlaq",
+    "Nəsihət",
     "Tərbiyə",
     "Təhsil",
     "Ağıl",
