@@ -8,7 +8,7 @@ import logging
 import os
 import random
 import re
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -51,6 +51,8 @@ def load_proverbs() -> list[dict]:
 
 
 PROVERBS = load_proverbs()
+CHANNEL = "@atalarimizinsozu"
+BAKI = timezone(timedelta(hours=4))
 
 MENU_KEYBOARD = ReplyKeyboardMarkup(
     [
@@ -312,15 +314,25 @@ async def handle_story(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
     return ConversationHandler.END
 
 
-async def daily_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    bakı = timezone(timedelta(hours=4))
-    today = datetime.now(bakı).date()
-    item = PROVERBS[today.toordinal() % len(PROVERBS)]
-    await update.message.reply_text(
-        f"Günün sözü, {today.strftime('%d.%m.%Y')}:\n\n" + format_proverb(item),
-        reply_markup=MENU_KEYBOARD,
+def daily_text(day: datetime.date | None = None) -> str:
+    day = day or datetime.now(BAKI).date()
+    item = PROVERBS[day.toordinal() % len(PROVERBS)]
+    return (
+        f"Günün sözü, {day.strftime('%d.%m.%Y')}:\n\n"
+        + format_proverb(item)
+        + "\n\nDaha çoxu üçün: @AtalarSozleri_bot"
     )
+
+
+async def daily_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    await update.message.reply_text(daily_text(), reply_markup=MENU_KEYBOARD)
     return ConversationHandler.END
+
+
+async def post_daily_to_channel(context: ContextTypes.DEFAULT_TYPE) -> None:
+    day = datetime.now(BAKI).date()
+    await context.bot.send_message(chat_id=CHANNEL, text=daily_text(day))
+    logger.info("Kanala günün sözü göndərildi: %s", day.isoformat())
 
 
 async def show_topics(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -465,6 +477,15 @@ def main() -> None:
         )
     logger.info("Bot başladı. Atalar sözü sayı: %s", len(PROVERBS))
     application = build_app(token)
+    if application.job_queue is None:
+        logger.error("Günlük göndəriş işə düşmədi.")
+    else:
+        application.job_queue.run_daily(
+            post_daily_to_channel,
+            time=time(9, 0, tzinfo=BAKI),
+            name="gunun-sozu",
+        )
+        logger.info("Kanal: %s, hər gün 09:00", CHANNEL)
     application.run_polling(
         allowed_updates=Update.ALL_TYPES,
         bootstrap_retries=-1,
