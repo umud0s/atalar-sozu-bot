@@ -12,6 +12,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from telegram import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
     InlineQueryResultArticle,
     InputTextMessageContent,
     ReplyKeyboardMarkup,
@@ -20,6 +22,7 @@ from telegram import (
 )
 from telegram.ext import (
     Application,
+    CallbackQueryHandler,
     CommandHandler,
     ContextTypes,
     ConversationHandler,
@@ -51,9 +54,19 @@ PROVERBS = load_proverbs()
 MENU_KEYBOARD = ReplyKeyboardMarkup(
     [
         ["🔑 Açar söz", "📖 Hekayə"],
-        ["🎲 Təsadüfi", "ℹ️ Kömək"],
+        ["🎲 Təsadüfi", "📚 Mövzular"],
+        ["ℹ️ Kömək"],
     ],
     resize_keyboard=True,
+)
+
+TOPICS = sorted(
+    {
+        topic
+        for item in PROVERBS
+        for topic in item["movzu"]
+        if sum(topic in other["movzu"] for other in PROVERBS) >= 3
+    }
 )
 
 
@@ -183,7 +196,8 @@ def main_menu_text() -> str:
         "Nə etmək istəyirsən?\n"
         "• Açar söz — bir söz yaz, uyğun atalar sözünü tapım.\n"
         "• Hekayə — vəziyyəti danış, uyğun atalar sözünü deyim.\n"
-        "• Təsadüfi — təsadüfi bir atalar sözü oxu."
+        "• Təsadüfi — təsadüfi bir atalar sözü oxu.\n"
+        "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu."
     )
 
 
@@ -200,6 +214,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/acar — açar sözlə axtarış\n"
         "/hekaye — hekayəyə uyğun atalar sözü\n"
         "/tesaduf — təsadüfi atalar sözü\n"
+        "/movzu — mövzuya görə bax\n"
         "/legv — axtarışı dayandır\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
         "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum.\n\n"
@@ -255,6 +270,8 @@ async def route_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int 
         return await ask_story(update, context)
     if text in {"🎲 Təsadüfi", "Təsadüfi"}:
         return await random_proverb(update, context)
+    if text in {"📚 Mövzular", "Mövzular"}:
+        return await show_topics(update, context)
     if text in {"ℹ️ Kömək", "Kömək"}:
         return await help_cmd(update, context)
     return None
@@ -288,6 +305,40 @@ async def handle_story(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
     )
     await update.message.reply_text(text, reply_markup=MENU_KEYBOARD)
     return ConversationHandler.END
+
+
+async def show_topics(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    rows = []
+    row = []
+    for index, name in enumerate(TOPICS):
+        row.append(InlineKeyboardButton(name, callback_data=f"t:{index}"))
+        if len(row) == 2:
+            rows.append(row)
+            row = []
+    if row:
+        rows.append(row)
+    await update.message.reply_text(
+        "Mövzu seç.",
+        reply_markup=InlineKeyboardMarkup(rows),
+    )
+    return ConversationHandler.END
+
+
+async def on_topic(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    await query.answer()
+    try:
+        index = int((query.data or "").split(":", 1)[1])
+        name = TOPICS[index]
+    except (IndexError, ValueError):
+        await query.message.reply_text("Bu mövzu tapılmadı.", reply_markup=MENU_KEYBOARD)
+        return
+    found = [item for item in PROVERBS if name in item["movzu"]][:5]
+    lines = [f"Mövzu: {name}", ""]
+    for number, item in enumerate(found, start=1):
+        lines.append(format_proverb(item, sira=number))
+        lines.append("")
+    await query.message.reply_text("\n".join(lines).strip(), reply_markup=MENU_KEYBOARD)
 
 
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -371,6 +422,7 @@ def build_app(token: str) -> Application:
             CommandHandler("komek", help_cmd),
             CommandHandler("help", help_cmd),
             CommandHandler("tesaduf", random_proverb),
+            CommandHandler("movzu", show_topics),
         ],
         allow_reentry=True,
     )
@@ -380,6 +432,8 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("komek", help_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
     app.add_handler(CommandHandler("tesaduf", random_proverb))
+    app.add_handler(CommandHandler("movzu", show_topics))
+    app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:\d+$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_error_handler(on_error)
     return app
