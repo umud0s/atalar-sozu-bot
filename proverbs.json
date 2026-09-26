@@ -167,7 +167,7 @@
         "oxumaq"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ]
     },
     {
@@ -254,7 +254,7 @@
         "tanış"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ]
     },
     {
@@ -1409,7 +1409,7 @@
         "zəhmət"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ]
     },
     {
@@ -1421,7 +1421,7 @@
         "öyrənmək"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ]
     },
     {
@@ -1471,7 +1471,7 @@
         "xasiyyət"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ]
     },
     {
@@ -1599,7 +1599,7 @@
         "etibar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ]
     },
     {
@@ -1816,7 +1816,7 @@
         "sadiqlik"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ]
     },
     {
@@ -3144,7 +3144,7 @@
         "oyrenir"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 231
     },
@@ -4070,7 +4070,7 @@
         "geler"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 295
     },
@@ -4085,7 +4085,7 @@
         "yene"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 296
     },
@@ -4339,7 +4339,7 @@
         "ayaq"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 313
     },
@@ -4874,7 +4874,7 @@
         "usaqlar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 350
     },
@@ -5097,7 +5097,7 @@
         "biler"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 366
     },
@@ -5350,7 +5350,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 384
     },
@@ -6385,7 +6385,7 @@
         "dusub"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 456
     },
@@ -7464,7 +7464,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 531
     },
@@ -8737,7 +8737,7 @@
         "bicibler"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 621
     },
@@ -9309,7 +9309,7 @@
         "kirpi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 661
     },
@@ -9726,7 +9726,7 @@
         "gelib"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 690
     },
@@ -10035,7 +10035,7 @@
         "qessab"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 711
     },
@@ -10133,7 +10133,7 @@
         "yemez"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 718
     },
@@ -10147,7 +10147,7 @@
         "yoxdu"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 719
     },
@@ -10374,7 +10374,7 @@
         "olmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 735
     },
@@ -11597,7 +11597,7 @@
         "oxu"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 820
     },
@@ -11955,7 +11955,7 @@
         "bugda"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 845
     },
@@ -13435,7 +13435,7 @@
         "dostluq"
       ],
       "movzu": [
-        "Bərəkət"
+        "Dostluq"
       ],
       "id": 950
     },
@@ -13536,7 +13536,7 @@
         "acmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 957
     },
@@ -13551,7 +13551,7 @@
         "oler"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 958
     },
@@ -13565,7 +13565,7 @@
         "ister"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 959
     },
@@ -13579,7 +13579,7 @@
         "saralar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 960
     },
@@ -13592,7 +13592,7 @@
         "alacaqlidir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 961
     },
@@ -13605,7 +13605,7 @@
         "dovletlener"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 962
     },
@@ -14375,7 +14375,7 @@
         "ikimizden"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1016
     },
@@ -14843,7 +14843,7 @@
         "babam"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1049
     },
@@ -15362,7 +15362,7 @@
         "saxlar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1085
     },
@@ -15432,7 +15432,7 @@
         "gormeyib"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1090
     },
@@ -16045,7 +16045,7 @@
         "boyuk"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1133
     },
@@ -17635,7 +17635,7 @@
         "gelir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 1244
     },
@@ -18092,7 +18092,7 @@
         "gulab"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1276
     },
@@ -18211,7 +18211,7 @@
         "cignayar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1284
     },
@@ -18454,7 +18454,7 @@
         "oyrenir"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 1301
     },
@@ -19612,7 +19612,7 @@
         "oyren"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 1382
     },
@@ -20480,7 +20480,7 @@
         "oyrener"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 1443
     },
@@ -20712,7 +20712,7 @@
         "ikisi"
       ],
       "movzu": [
-        "Bərəkət"
+        "Dostluq"
       ],
       "id": 1459
     },
@@ -20727,7 +20727,7 @@
         "sende"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 1460
     },
@@ -20755,7 +20755,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 1462
     },
@@ -20770,7 +20770,7 @@
         "yurd"
       ],
       "movzu": [
-        "El"
+        "Dostluq"
       ],
       "id": 1463
     },
@@ -20799,7 +20799,7 @@
         "yarmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 1465
     },
@@ -20813,7 +20813,7 @@
         "gulmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 1466
     },
@@ -20828,7 +20828,7 @@
         "kimsen"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 1467
     },
@@ -21558,7 +21558,7 @@
         "aglamaz"
       ],
       "movzu": [
-        "Ağıl"
+        "Ailə"
       ],
       "id": 1518
     },
@@ -23157,7 +23157,7 @@
         "qonaq"
       ],
       "movzu": [
-        "Adət-ənənə"
+        "Ailə"
       ],
       "id": 1632
     },
@@ -23330,7 +23330,7 @@
         "edebsizden"
       ],
       "movzu": [
-        "Ağıl"
+        "Tərbiyə"
       ],
       "id": 1644
     },
@@ -23487,7 +23487,7 @@
         "olma"
       ],
       "movzu": [
-        "Əxlaq"
+        "İş"
       ],
       "id": 1655
     },
@@ -23502,7 +23502,7 @@
         "quraqliq"
       ],
       "movzu": [
-        "Əxlaq"
+        "İş"
       ],
       "id": 1656
     },
@@ -23711,7 +23711,7 @@
         "xeyratina"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 1671
     },
@@ -24672,7 +24672,7 @@
         "edebine"
       ],
       "movzu": [
-        "Əxlaq"
+        "Tərbiyə"
       ],
       "id": 1738
     },
@@ -25636,7 +25636,7 @@
         "ister"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 1805
     },
@@ -26322,7 +26322,7 @@
         "borcdandi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 1853
     },
@@ -28396,7 +28396,7 @@
         "asandi"
       ],
       "movzu": [
-        "Əxlaq"
+        "İş"
       ],
       "id": 1999
     },
@@ -28779,7 +28779,7 @@
         "basqa"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 2027
     },
@@ -29581,7 +29581,7 @@
         "eyleyim"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2083
     },
@@ -30481,7 +30481,7 @@
         "calar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2147
     },
@@ -30627,7 +30627,7 @@
         "olar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2157
     },
@@ -31266,7 +31266,7 @@
         "bos"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 2202
     },
@@ -33557,7 +33557,7 @@
         "borclu"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 2363
     },
@@ -34359,7 +34359,7 @@
         "bahalanib"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 2419
     },
@@ -34489,7 +34489,7 @@
         "qalar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 2428
     },
@@ -34593,7 +34593,7 @@
         "yurdda"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ],
       "id": 2435
     },
@@ -34891,7 +34891,7 @@
         "tanir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 2456
     },
@@ -35679,7 +35679,7 @@
         "yuz"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 2512
     },
@@ -35965,7 +35965,7 @@
         "evvel"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2532
     },
@@ -36094,7 +36094,7 @@
         "xuda"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 2541
     },
@@ -36300,7 +36300,7 @@
         "balasini"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2555
     },
@@ -36750,7 +36750,7 @@
         "dedi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2586
     },
@@ -37165,7 +37165,7 @@
         "yazar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2615
     },
@@ -37178,7 +37178,7 @@
         "itidir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2616
     },
@@ -37193,7 +37193,7 @@
         "bilmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2617
     },
@@ -37208,7 +37208,7 @@
         "gemiren"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2618
     },
@@ -37222,7 +37222,7 @@
         "gucu"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2619
     },
@@ -37349,7 +37349,7 @@
         "olmayandi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 2628
     },
@@ -37462,7 +37462,7 @@
         "olmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 2636
     },
@@ -37691,7 +37691,7 @@
         "qizin"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2652
     },
@@ -37791,7 +37791,7 @@
         "calar"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 2659
     },
@@ -40679,7 +40679,7 @@
         "bilikdi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2860
     },
@@ -40810,7 +40810,7 @@
         "zorla"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2869
     },
@@ -40823,7 +40823,7 @@
         "balalar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2870
     },
@@ -40909,7 +40909,7 @@
         "qalib"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ],
       "id": 2876
     },
@@ -40936,7 +40936,7 @@
         "bekmez"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 2878
     },
@@ -41454,7 +41454,7 @@
         "ayaginin"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2914
     },
@@ -41499,7 +41499,7 @@
         "velleylide"
       ],
       "movzu": [
-        "Əxlaq"
+        "Təhsil"
       ],
       "id": 2917
     },
@@ -41559,7 +41559,7 @@
         "ister"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2921
     },
@@ -41632,7 +41632,7 @@
         "bacim"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 2926
     },
@@ -43390,7 +43390,7 @@
         "acindan"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3048
     },
@@ -43404,7 +43404,7 @@
         "alacaqli"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 3049
     },
@@ -43434,7 +43434,7 @@
         "bel"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 3051
     },
@@ -45194,7 +45194,7 @@
         "yukler"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 3174
     },
@@ -45581,7 +45581,7 @@
         "pozar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 3201
     },
@@ -45595,7 +45595,7 @@
         "qalmaz"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 3202
     },
@@ -45607,7 +45607,7 @@
         "olmaz"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 3203
     },
@@ -45693,7 +45693,7 @@
         "gozeldir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3209
     },
@@ -46615,7 +46615,7 @@
         "yeyer"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3273
     },
@@ -46630,7 +46630,7 @@
         "yeyer"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3274
     },
@@ -47059,7 +47059,7 @@
         "yuxu"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 3304
     },
@@ -47729,7 +47729,7 @@
         "serce"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3351
     },
@@ -48620,7 +48620,7 @@
         "yari"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ağıl"
       ],
       "id": 3412
     },
@@ -48893,7 +48893,7 @@
         "bey"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3431
     },
@@ -48977,7 +48977,7 @@
         "edebdendir"
       ],
       "movzu": [
-        "Ağıl"
+        "Tərbiyə"
       ],
       "id": 3437
     },
@@ -49326,7 +49326,7 @@
         "xeber"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3462
     },
@@ -49585,7 +49585,7 @@
         "ayagi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3481
     },
@@ -50011,7 +50011,7 @@
         "coxdu"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 3511
     },
@@ -50294,7 +50294,7 @@
         "qederdir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 3531
     },
@@ -50709,7 +50709,7 @@
         "ver"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 3560
     },
@@ -51547,7 +51547,7 @@
         "oyrener"
       ],
       "movzu": [
-        "Ağıl"
+        "Təhsil"
       ],
       "id": 3618
     },
@@ -52767,7 +52767,7 @@
         "xeberi"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3703
     },
@@ -52782,7 +52782,7 @@
         "inanmazlar"
       ],
       "movzu": [
-        "Ağıl"
+        "Ailə"
       ],
       "id": 3704
     },
@@ -52980,7 +52980,7 @@
         "taniyar"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 3718
     },
@@ -53700,7 +53700,7 @@
         "senindir"
       ],
       "movzu": [
-        "Əxlaq"
+        "Ailə"
       ],
       "id": 3769
     },
@@ -55145,7 +55145,7 @@
         "yurdundan"
       ],
       "movzu": [
-        "Əxlaq"
+        "El"
       ],
       "id": 3870
     },
@@ -55519,7 +55519,7 @@
         "dilenci"
       ],
       "movzu": [
-        "Əxlaq"
+        "İş"
       ],
       "id": 3896
     },
@@ -56033,7 +56033,7 @@
         "eleyer"
       ],
       "movzu": [
-        "Ağıl"
+        "Dostluq"
       ],
       "id": 3932
     },
@@ -56177,7 +56177,7 @@
         "cix"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 3942
     },
@@ -56336,7 +56336,7 @@
         "olmaz"
       ],
       "movzu": [
-        "Əxlaq"
+        "Dostluq"
       ],
       "id": 3953
     },
@@ -57178,7 +57178,7 @@
         "odemez"
       ],
       "movzu": [
-        "Əxlaq"
+        "Bərəkət"
       ],
       "id": 4012
     },

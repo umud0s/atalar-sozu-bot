@@ -66,6 +66,7 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
 TOPICS = [
     "Əxlaq",
     "Tərbiyə",
+    "Təhsil",
     "Ağıl",
     "Dostluq",
     "Ailə",
