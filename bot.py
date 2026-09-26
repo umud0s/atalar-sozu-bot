@@ -63,6 +63,16 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True,
 )
+QUIZ_KEYBOARD = ReplyKeyboardMarkup(
+    [
+        ["⏭ Pas"],
+        ["🔑 Açar söz", "📖 Hekayə"],
+        ["🎲 Təsadüfi", "📚 Mövzular"],
+        ["🌅 Günün sözü", "🧩 Quiz"],
+        ["ℹ️ Kömək"],
+    ],
+    resize_keyboard=True,
+)
 
 TOPICS = [
     "Əxlaq",
@@ -317,7 +327,22 @@ def make_quiz(item: dict) -> tuple[str, str] | None:
 
 
 def quiz_prompt(shown: str) -> str:
-    return f"«{shown}»\n\nÇatışmayan sözü tamamla."
+    return (
+        f"«{shown}»\n\n"
+        "Çatışmayan sözü tamamla.\n"
+        "Bilmirsənsə, Pas düyməsinə bas."
+    )
+
+
+def quiz_izah(item: dict) -> str:
+    if item["mena"] == "Xalq öyüdü.":
+        return "Bu atalar sözünün izahı onun öz mənasındadır."
+    return item["mena"]
+
+
+def clear_quiz(context: ContextTypes.DEFAULT_TYPE) -> None:
+    for key in ("quiz_word", "quiz_item", "quiz_shown"):
+        context.user_data.pop(key, None)
 
 
 def answers_match(guess: str, expected: str) -> bool:
@@ -345,7 +370,7 @@ async def ask_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         context.user_data["quiz_item"] = item
         context.user_data["quiz_word"] = hidden
         context.user_data["quiz_shown"] = shown
-        await update.message.reply_text(quiz_prompt(shown), reply_markup=MENU_KEYBOARD)
+        await update.message.reply_text(quiz_prompt(shown), reply_markup=QUIZ_KEYBOARD)
         return QUIZ
     await update.message.reply_text("Quiz hazırlanmadı. Bir az sonra yenə yoxla.", reply_markup=MENU_KEYBOARD)
     return ConversationHandler.END
@@ -362,24 +387,27 @@ async def handle_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
     if not expected or not item:
         return await ask_quiz(update, context)
     if answers_match(guess, expected):
-        mena = item["mena"]
-        if mena == "Xalq öyüdü.":
-            izah = "Bu atalar sözünün izahı onun öz mənasındadır."
-        else:
-            izah = mena
-        context.user_data.pop("quiz_word", None)
-        context.user_data.pop("quiz_item", None)
-        context.user_data.pop("quiz_shown", None)
+        clear_quiz(context)
         await update.message.reply_text(
             "Düzdür. Təbrik edirəm.\n\n"
             f"«{item['text']}»\n"
-            f"İzah: {izah}",
+            f"İzah: {quiz_izah(item)}",
+            reply_markup=MENU_KEYBOARD,
+        )
+        return ConversationHandler.END
+    if guess in {"⏭ Pas", "Pas", "pas"} or normalize(guess) == "pas":
+        clear_quiz(context)
+        await update.message.reply_text(
+            "Pas.\n\n"
+            f"Çatışmayan söz: {expected}\n"
+            f"«{item['text']}»\n"
+            f"İzah: {quiz_izah(item)}",
             reply_markup=MENU_KEYBOARD,
         )
         return ConversationHandler.END
     await update.message.reply_text(
         "Səhvdir. Çatışmayan sözü bir daha yaz.\n\n" + quiz_prompt(shown),
-        reply_markup=MENU_KEYBOARD,
+        reply_markup=QUIZ_KEYBOARD,
     )
     return QUIZ
 
