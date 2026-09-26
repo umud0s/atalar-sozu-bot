@@ -39,7 +39,7 @@ LOGGING_FORMAT = "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
 logging.basicConfig(format=LOGGING_FORMAT, level=logging.INFO)
 logger = logging.getLogger("atalar")
 
-ACAR, HEKAYE = range(2)
+ACAR, HEKAYE, QUIZ = range(3)
 
 DATA_PATH = Path(__file__).with_name("proverbs.json")
 
@@ -58,7 +58,8 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
     [
         ["🔑 Açar söz", "📖 Hekayə"],
         ["🎲 Təsadüfi", "📚 Mövzular"],
-        ["🌅 Günün sözü", "ℹ️ Kömək"],
+        ["🌅 Günün sözü", "🧩 Quiz"],
+        ["ℹ️ Kömək"],
     ],
     resize_keyboard=True,
 )
@@ -206,7 +207,8 @@ def main_menu_text() -> str:
         "• Hekayə — vəziyyəti danış, uyğun atalar sözünü deyim.\n"
         "• Təsadüfi — təsadüfi bir atalar sözü oxu.\n"
         "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu.\n"
-        "• Günün sözü — bu gün hamı üçün eyni bir atalar sözü."
+        "• Günün sözü — bu gün hamı üçün eyni bir atalar sözü.\n"
+        "• Quiz — çatışmayan sözü tamamla."
     )
 
 
@@ -225,6 +227,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/tesaduf — təsadüfi atalar sözü\n"
         "/movzu — mövzuya görə bax\n"
         "/gun — günün atalar sözü\n"
+        "/quiz — çatışmayan sözü tamamla\n"
         "/legv — axtarışı dayandır\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
         "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum.\n\n"
@@ -272,6 +275,115 @@ def result_text(title: str, results: list[tuple[int, dict]], empty_hint: str) ->
     return "\n".join(lines).strip()
 
 
+QUIZ_STOP = {
+    "bir", "bu", "da", "de", "ve", "ile", "ucun", "sonra", "amma", "ki",
+    "cox", "olan", "olsun", "hec", "artiq", "indi", "ona", "bunu", "bele",
+    "ele", "nece", "cunki", "lakin", "hem", "qeder", "mene", "sene", "oz",
+    "ozum", "idi", "imish", "olan", "gore", "kimi", "hara", "ne", "kim",
+    "her", "var", "yox", "deyil", "ile", "sonra",
+}
+QUIZ_WORD = re.compile(r"[0-9A-Za-zƏəIıÖöÜüĞğŞşÇçİ]+")
+
+
+def _quiz_word(item: dict) -> re.Match[str] | None:
+    text = item["text"]
+    found = list(QUIZ_WORD.finditer(text))
+    acar = {normalize(word) for word in item.get("acar") or []}
+    best: tuple[int, re.Match[str]] | None = None
+    for index, match in enumerate(found):
+        raw = match.group()
+        key = normalize(raw)
+        if len(key) < 3 or key in QUIZ_STOP:
+            continue
+        score = len(key) + index
+        if key in acar or any(len(a) >= 4 and (key.startswith(a) or a.startswith(key)) for a in acar):
+            score += 8
+        if key.endswith(("maz", "mez")):
+            score -= 7
+        elif len(key) <= 9 and key.endswith(("ar", "er", "ir", "ur")):
+            score -= 5
+        if best is None or score > best[0]:
+            best = (score, match)
+    return None if best is None else best[1]
+
+
+def make_quiz(item: dict) -> tuple[str, str] | None:
+    match = _quiz_word(item)
+    if match is None:
+        return None
+    hidden = match.group()
+    shown = item["text"][: match.start()] + "……" + item["text"][match.end() :]
+    return shown, hidden
+
+
+def quiz_prompt(shown: str) -> str:
+    return f"«{shown}»\n\nÇatışmayan sözü tamamla."
+
+
+def answers_match(guess: str, expected: str) -> bool:
+    got = normalize(guess)
+    want = normalize(expected)
+    if not got or not want:
+        return False
+    if got == want:
+        return True
+    parts = got.split()
+    if len(parts) <= 3 and want in parts:
+        return True
+    if len(got) >= 3 and len(want) >= 3 and abs(len(got) - len(want)) <= 3:
+        return got.startswith(want) or want.startswith(got)
+    return False
+
+
+async def ask_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    for _ in range(30):
+        item = random.choice(PROVERBS)
+        made = make_quiz(item)
+        if made is None:
+            continue
+        shown, hidden = made
+        context.user_data["quiz_item"] = item
+        context.user_data["quiz_word"] = hidden
+        context.user_data["quiz_shown"] = shown
+        await update.message.reply_text(quiz_prompt(shown), reply_markup=MENU_KEYBOARD)
+        return QUIZ
+    await update.message.reply_text("Quiz hazırlanmadı. Bir az sonra yenə yoxla.", reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def handle_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    routed = await route_menu(update, context)
+    if routed is not None:
+        return routed
+    guess = (update.message.text or "").strip()
+    expected = context.user_data.get("quiz_word", "")
+    shown = context.user_data.get("quiz_shown", "")
+    item = context.user_data.get("quiz_item")
+    if not expected or not item:
+        return await ask_quiz(update, context)
+    if answers_match(guess, expected):
+        mena = item["mena"]
+        if mena == "Xalq öyüdü.":
+            izah = "Bu atalar sözünün izahı onun öz mənasındadır."
+        else:
+            izah = mena
+        context.user_data.pop("quiz_word", None)
+        context.user_data.pop("quiz_item", None)
+        context.user_data.pop("quiz_shown", None)
+        await update.message.reply_text(
+            "Düzdür. Təbrik edirəm.\n\n"
+            f"«{item['text']}»\n"
+            f"İzah: {izah}",
+            reply_markup=MENU_KEYBOARD,
+        )
+        return ConversationHandler.END
+    await update.message.reply_text(
+        "Səhvdir. Çatışmayan sözü bir daha yaz.\n\n" + quiz_prompt(shown),
+        reply_markup=MENU_KEYBOARD,
+    )
+    return QUIZ
+
+
 async def route_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int | None:
     text = (update.message.text or "").strip()
     if text in {"🔑 Açar söz", "Açar söz"}:
@@ -286,6 +398,8 @@ async def route_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int 
         return await daily_proverb(update, context)
     if text in {"ℹ️ Kömək", "Kömək"}:
         return await help_cmd(update, context)
+    if text in {"🧩 Quiz", "Quiz"}:
+        return await ask_quiz(update, context)
     return None
 
 
@@ -483,10 +597,13 @@ def build_app(token: str) -> Application:
             CommandHandler("hekaye", ask_story),
             MessageHandler(filters.Regex(r"^(🔑 Açar söz|Açar söz)$"), ask_keyword),
             MessageHandler(filters.Regex(r"^(📖 Hekayə|Hekayə)$"), ask_story),
+            CommandHandler("quiz", ask_quiz),
+            MessageHandler(filters.Regex(r"^(🧩 Quiz|Quiz)$"), ask_quiz),
         ],
         states={
             ACAR: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_keyword)],
             HEKAYE: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_story)],
+            QUIZ: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_quiz)],
         },
         fallbacks=[
             CommandHandler("legv", cancel),
@@ -496,6 +613,7 @@ def build_app(token: str) -> Application:
             CommandHandler("tesaduf", random_proverb),
             CommandHandler("movzu", show_topics),
             CommandHandler("gun", daily_proverb),
+            CommandHandler("quiz", ask_quiz),
         ],
         allow_reentry=True,
     )
@@ -507,6 +625,7 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("tesaduf", random_proverb))
     app.add_handler(CommandHandler("movzu", show_topics))
     app.add_handler(CommandHandler("gun", daily_proverb))
+    app.add_handler(CommandHandler("quiz", ask_quiz))
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_error_handler(on_error)
