@@ -8,6 +8,7 @@ import logging
 import os
 import random
 import re
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -55,7 +56,7 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
     [
         ["🔑 Açar söz", "📖 Hekayə"],
         ["🎲 Təsadüfi", "📚 Mövzular"],
-        ["ℹ️ Kömək"],
+        ["🌅 Günün sözü", "ℹ️ Kömək"],
     ],
     resize_keyboard=True,
 )
@@ -197,7 +198,8 @@ def main_menu_text() -> str:
         "• Açar söz — bir söz yaz, uyğun atalar sözünü tapım.\n"
         "• Hekayə — vəziyyəti danış, uyğun atalar sözünü deyim.\n"
         "• Təsadüfi — təsadüfi bir atalar sözü oxu.\n"
-        "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu."
+        "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu.\n"
+        "• Günün sözü — bu gün hamı üçün eyni bir atalar sözü."
     )
 
 
@@ -215,6 +217,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/hekaye — hekayəyə uyğun atalar sözü\n"
         "/tesaduf — təsadüfi atalar sözü\n"
         "/movzu — mövzuya görə bax\n"
+        "/gun — günün atalar sözü\n"
         "/legv — axtarışı dayandır\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
         "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum.\n\n"
@@ -272,6 +275,8 @@ async def route_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int 
         return await random_proverb(update, context)
     if text in {"📚 Mövzular", "Mövzular"}:
         return await show_topics(update, context)
+    if text in {"🌅 Günün sözü", "Günün sözü"}:
+        return await daily_proverb(update, context)
     if text in {"ℹ️ Kömək", "Kömək"}:
         return await help_cmd(update, context)
     return None
@@ -304,6 +309,17 @@ async def handle_story(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
         "Bu hekayəyə yaxın atalar sözü tapılmadı. Bir az daha konkret yaz: kim, nə oldu, nə hiss etdin.",
     )
     await update.message.reply_text(text, reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def daily_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    bakı = timezone(timedelta(hours=4))
+    today = datetime.now(bakı).date()
+    item = PROVERBS[today.toordinal() % len(PROVERBS)]
+    await update.message.reply_text(
+        f"Günün sözü, {today.strftime('%d.%m.%Y')}:\n\n" + format_proverb(item),
+        reply_markup=MENU_KEYBOARD,
+    )
     return ConversationHandler.END
 
 
@@ -423,6 +439,7 @@ def build_app(token: str) -> Application:
             CommandHandler("help", help_cmd),
             CommandHandler("tesaduf", random_proverb),
             CommandHandler("movzu", show_topics),
+            CommandHandler("gun", daily_proverb),
         ],
         allow_reentry=True,
     )
@@ -433,6 +450,7 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("help", help_cmd))
     app.add_handler(CommandHandler("tesaduf", random_proverb))
     app.add_handler(CommandHandler("movzu", show_topics))
+    app.add_handler(CommandHandler("gun", daily_proverb))
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:\d+$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_error_handler(on_error)
