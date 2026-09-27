@@ -2615,7 +2615,7 @@
     {
       "id": 181,
       "text": "Ağzım yaradır, sulaya bilmərəm.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Dərdim var, amma əlac eləyə bilmirəm.",
       "acar": [
         "agzim",
         "yaradir",
@@ -2629,7 +2629,7 @@
     {
       "id": 182,
       "text": "Ağzımı bir aş yandırsın aş ola; başımı bir daş yarsın ki, daş ola.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Zərər dəyəcəksə, dəyərli bir şeydən gəlsin.",
       "acar": [
         "agzimi",
         "bir",
@@ -2644,7 +2644,7 @@
     {
       "id": 183,
       "text": "Ağzından sifdə çıxardanda gümüş çıxart, amma heç dinməsən qızıldı.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Danışanda gümüş kimi danış, susanda qızıl olarsan.",
       "acar": [
         "agzindan",
         "sifde",
@@ -2659,7 +2659,7 @@
     {
       "id": 184,
       "text": "Ağzuva bax, tikə götür.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağzının tutumundan artıq tikə götürmə.",
       "acar": [
         "agzuva",
         "bax",
@@ -2673,7 +2673,7 @@
     {
       "id": 185,
       "text": "Ağladan yanına get, güldürən yanına getmə.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Səni düz yola çəkən yana get, yaltağın yanına yox.",
       "acar": [
         "agladan",
         "yanina",
@@ -2688,7 +2688,7 @@
     {
       "id": 186,
       "text": "Ağladım başarmadım, güldüm günümü keçirdim.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağlamaq işi bitirmədi, gülməklə günü keçirdim.",
       "acar": [
         "agladim",
         "basarmadim",
@@ -2703,7 +2703,7 @@
     {
       "id": 187,
       "text": "Ağladırsa fələk, bir gün güldürər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Tale ağladırsa, bir gün də güldürər.",
       "acar": [
         "agladirsa",
         "felek",
@@ -2718,7 +2718,7 @@
     {
       "id": 188,
       "text": "Ağlama ölü üçün, ağla dəli üçün.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ölü üçün yox, dəli üçün ağla; dəlinin dərdi ölümdən ağırdır.",
       "acar": [
         "aglama",
         "olu",
@@ -2733,7 +2733,7 @@
     {
       "id": 189,
       "text": "Ağlamaq ilən gözlərim verməsə də, almayacaq.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağlamaqla itən geri gəlmir.",
       "acar": [
         "aglamaq",
         "ilen",
@@ -2748,7 +2748,7 @@
     {
       "id": 190,
       "text": "Ağlamaqla gülmək bacı-qardaşdı.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağlamaqla gülmək yan-yanadır, biri o birinin ardınca gəlir.",
       "acar": [
         "aglamaqla",
         "gulmek",
@@ -2762,7 +2762,7 @@
     {
       "id": 191,
       "text": "Ağlamaqla kişi qeyrətsiz olar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Kişi ağlamaqla qeyrətini itirər.",
       "acar": [
         "aglamaqla",
         "kisi",
@@ -2776,7 +2776,7 @@
     {
       "id": 192,
       "text": "Ağlamayan uşağa süd verməzlər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Səsini çıxarmayanın haqqını verməzlər.",
       "acar": [
         "aglamayan",
         "usaga",
@@ -2790,7 +2790,7 @@
     {
       "id": 193,
       "text": "Ağlarsa anam ağlar, qalanı yalan ağlar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Əsl ağlayan anadır, qalanının ağlaması sözdür.",
       "acar": [
         "aglarsa",
         "anam",
@@ -2805,7 +2805,7 @@
     {
       "id": 194,
       "text": "Ağlayanda elə ağla əzizi ölmüş kimi, Güləndə elə gül əzizi gəlmiş kimi.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağlayanda da, güləndə də ürəkdən elə.",
       "acar": [
         "aglayanda",
         "ele",
@@ -2820,7 +2820,7 @@
     {
       "id": 195,
       "text": "Ağlayanda imam üçün də ağla, yezid üçün də.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağlayırsansa, birtərəfli ağlama, hər iki yana da haqq ver.",
       "acar": [
         "aglayanda",
         "imam",
@@ -2835,7 +2835,7 @@
     {
       "id": 196,
       "text": "Ağlayanın bir dərdi var, gülənin beş.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ağlayan bir dərddən ağlar, gülüş isə çox dərdi gizlədir.",
       "acar": [
         "aglayanin",
         "bir",
@@ -2850,7 +2850,7 @@
     {
       "id": 197,
       "text": "Ağlayışın bilməyən ölüsün murdarlayar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Adəti bilməyən yas işini də korlayır.",
       "acar": [
         "aglayisin",
         "bilmeyen",
@@ -2864,7 +2864,7 @@
     {
       "id": 198,
       "text": "Ağrımayan baş yastıq istəməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Dərdi olmayan dərman da istəməz.",
       "acar": [
         "agrimayan",
         "bas",
@@ -2878,7 +2878,7 @@
     {
       "id": 199,
       "text": "Ah-vayla çıxar kasıbın canı, elə deyər: - Allah kərimdir!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Kasıbın canı ah-vayla çıxır, yenə Allah kərimdir deyir.",
       "acar": [
         "vayla",
         "cixar",
@@ -2893,7 +2893,7 @@
     {
       "id": 200,
       "text": "Ahıl öküz cütə getməsə, uşaqlar acından qırılar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yaşlı işləməsə, evdəkilər ac qalar.",
       "acar": [
         "ahil",
         "okuz",
@@ -2908,7 +2908,7 @@
     {
       "id": 201,
       "text": "Ax, mənim kisəm, minnətsiz yesəm.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Öz kisəmdən yesəm, kimsəyə minnət qalmaram.",
       "acar": [
         "menim",
         "kisem",
@@ -2922,7 +2922,7 @@
     {
       "id": 202,
       "text": "Axacaq qan damarda durmaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Olacaq işin qarşısı alınmaz.",
       "acar": [
         "axacaq",
         "qan",
@@ -2936,7 +2936,7 @@
     {
       "id": 203,
       "text": "Axar su gedər, qalmaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axan su durmur; fürsət də qalmaz.",
       "acar": [
         "axar",
         "geder",
@@ -2949,7 +2949,7 @@
     {
       "id": 204,
       "text": "Axar su murdarlıq götürməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axan su çirkabı saxlamır.",
       "acar": [
         "axar",
         "murdarliq",
@@ -2962,7 +2962,7 @@
     {
       "id": 205,
       "text": "Axır — axır, çıxar paxır.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Uzadıb-uzadıb sonda pis qoxu, biabırçılıq çıxar.",
       "acar": [
         "axir",
         "axir",
@@ -2976,7 +2976,7 @@
     {
       "id": 206,
       "text": "Axırın gəlsin, bez köynək!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Köhnə köynəkdə olsa da, sona çat.",
       "acar": [
         "axirin",
         "gelsin",
@@ -2990,7 +2990,7 @@
     {
       "id": 207,
       "text": "Axmaq başın cəfasını ayaqlar çəkər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axmaq başın əziyyətini ayaqlar çəkir.",
       "acar": [
         "axmaq",
         "basin",
@@ -3005,7 +3005,7 @@
     {
       "id": 208,
       "text": "Axmaq it aya hürər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axmaq hər şeyə, aya da hürər.",
       "acar": [
         "axmaq",
         "aya",
@@ -3018,7 +3018,7 @@
     {
       "id": 209,
       "text": "Axmaq özünə düşməndi, özgəyə necə dost olar?!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Özünə düşmən olan özgəyə dost ola bilməz.",
       "acar": [
         "axmaq",
         "ozune",
@@ -3033,7 +3033,7 @@
     {
       "id": 210,
       "text": "Axsaq at yüyrək olar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axsaq at da yüyürək ola bilər; nöqsana görə yazma.",
       "acar": [
         "axsaq",
         "yuyrek",
@@ -3046,7 +3046,7 @@
     {
       "id": 211,
       "text": "Axsaq eşşəyin kor nalbəndi olar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yaramaz yaramaza rast gələr.",
       "acar": [
         "axsaq",
         "esseyin",
@@ -3061,7 +3061,7 @@
     {
       "id": 212,
       "text": "Axsaq qoyuna nə dağ, nə aran?",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axsaq qoyuna dağ da, aran da eyni əziyyətdir.",
       "acar": [
         "axsaq",
         "qoyuna",
@@ -3075,7 +3075,7 @@
     {
       "id": 213,
       "text": "Axşam axıra, sabah naxıra.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axşam günü bağlamaq, sabah işə çıxmaq üçündür.",
       "acar": [
         "axsam",
         "axira",
@@ -3089,7 +3089,7 @@
     {
       "id": 214,
       "text": "Axşamdan sonra gələn qonağın yeyəcəyi soğandır.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Gec gələn qonağa süfrədən ancaq soğan qalar.",
       "acar": [
         "axsamdan",
         "sonra",
@@ -3104,7 +3104,7 @@
     {
       "id": 215,
       "text": "Axşamın xeyrindənsə sabahın şəri.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Gecənin xoş sözündənsə, sabahın çətin işi yaxşıdır.",
       "acar": [
         "axsamin",
         "xeyrindense",
@@ -3118,7 +3118,7 @@
     {
       "id": 216,
       "text": "Axşamın sirrini dan bilər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Gecənin sirri səhər aydın olar.",
       "acar": [
         "axsamin",
         "sirrini",
@@ -3132,7 +3132,7 @@
     {
       "id": 217,
       "text": "Axtaxana böyüdü, dağda dana böyüdü, sən niyə böyümədin?!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Hər şey böyüyür, sən niyə böyümədin.",
       "acar": [
         "axtaxana",
         "boyudu",
@@ -3147,7 +3147,7 @@
     {
       "id": 218,
       "text": "Axtaran tapar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Axtaran tapar.",
       "acar": [
         "axtaran",
         "tapar"
@@ -3159,7 +3159,7 @@
     {
       "id": 219,
       "text": "Axtarmağınan deyil, rast gəlməyinəndir.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Hər şey axtarmaqla deyil, rast gəlməklə olur.",
       "acar": [
         "axtarmaginan",
         "deyil",
@@ -3173,7 +3173,7 @@
     {
       "id": 220,
       "text": "Axund özü elər, özgəyə öyüd verər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Özü eləyir, başqasına nəsihət verir.",
       "acar": [
         "axund",
         "ozu",
@@ -3188,7 +3188,7 @@
     {
       "id": 221,
       "text": "Al almaya daş atan çox olar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Bar verən ağaca daş atan çox olar.",
       "acar": [
         "almaya",
         "das",
@@ -3203,7 +3203,7 @@
     {
       "id": 222,
       "text": "Al qapıda, sat qapıda.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Aldığın qapıda sat; alış-verişi açıq elə.",
       "acar": [
         "qapida",
         "sat",
@@ -3216,7 +3216,7 @@
     {
       "id": 223,
       "text": "Al ver deyiblər, al vermə deməyiblər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Al-ver deyiblər, alıb verməmək yox.",
       "acar": [
         "ver",
         "deyibler",
@@ -3230,7 +3230,7 @@
     {
       "id": 224,
       "text": "Alacağım olsun, alaqarğada olsun.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Haqqım qayıtsın, harada olsa da olsun.",
       "acar": [
         "alacagim",
         "olsun",
@@ -3244,7 +3244,7 @@
     {
       "id": 225,
       "text": "Alan aldanmaz, satan aldanar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Alan aldanmaz, satan aldanar.",
       "acar": [
         "alan",
         "aldanmaz",
@@ -3258,7 +3258,7 @@
     {
       "id": 226,
       "text": "Alacağı bir piltədi, pambığın batmanın soruşur.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Xırda alışa görə böyük-böyük ölçür.",
       "acar": [
         "alacagi",
         "bir",
@@ -3273,7 +3273,7 @@
     {
       "id": 227,
       "text": "Aldığı bir iynədi, dəmirin batmanın yoxlayır.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Az şeyə görə çox araşdırır.",
       "acar": [
         "aldigi",
         "bir",
@@ -3288,7 +3288,7 @@
     {
       "id": 228,
       "text": "Aldım qoz, satdım qoz, mənə qaldı çaqqaçuq.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Aldım-satdım, mənə ancaq səs-küy qaldı.",
       "acar": [
         "aldim",
         "qoz",
@@ -3303,7 +3303,7 @@
     {
       "id": 229,
       "text": "Alıcı quş dimdiyindən bilinər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yırtıcı quş dimdiyindən bilinir.",
       "acar": [
         "alici",
         "qus",
@@ -3317,7 +3317,7 @@
     {
       "id": 230,
       "text": "Alma arvadın dulunu, dalınca gələr qulunu.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Dul qadını alanda malı da arxasınca gəlir.",
       "acar": [
         "alma",
         "arvadin",
@@ -3332,7 +3332,7 @@
     {
       "id": 231,
       "text": "Almaq aldanmaqdı, vermək hünərdi.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Almaq aldanmaqdır, vermək hünərdir.",
       "acar": [
         "almaq",
         "aldanmaqdi",
@@ -3346,7 +3346,7 @@
     {
       "id": 232,
       "text": "Ala it çaqqalın dayısıdı.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yaramaz yaramaza qohumdur.",
       "acar": [
         "ala",
         "caqqalin",
@@ -3359,7 +3359,7 @@
     {
       "id": 233,
       "text": "Ala it gedər, qara it gələr.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Biri gedər, o biri gələr; dəyişən addır, cins eynidir.",
       "acar": [
         "ala",
         "geder",
@@ -3373,7 +3373,7 @@
     {
       "id": 234,
       "text": "Ala itin balası qara olar, yanılsa boynu ala olar, hürəndə anası kimi hürər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Balası rəngcə ayrı görünər, amma hürəndə anasına çəkir.",
       "acar": [
         "ala",
         "itin",
@@ -3388,7 +3388,7 @@
     {
       "id": 235,
       "text": "Ala qarğa olmağı bəs deyil, həkimlik də eləyir.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Öz işini bilmir, üstəlik həkimlik də edir.",
       "acar": [
         "ala",
         "qarga",
@@ -3403,7 +3403,7 @@
     {
       "id": 236,
       "text": "Ala qarğa şux tərlanı bəyənməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Özündən yaxşını paxıllıqla bəyənmir.",
       "acar": [
         "ala",
         "qarga",
@@ -3418,7 +3418,7 @@
     {
       "id": 237,
       "text": "Ala qayada bostan ura olub, kəliyin dərən yoxdu.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Məhsul var, yığan yoxdur.",
       "acar": [
         "ala",
         "qayada",
@@ -3433,7 +3433,7 @@
     {
       "id": 238,
       "text": "Alça mənim, gilas mənim, tut mənim, gavalıda da gözüm var.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Hamısı mənimdir, qalanında da gözüm var; tamahın sonu yoxdur.",
       "acar": [
         "alca",
         "menim",
@@ -3448,7 +3448,7 @@
     {
       "id": 239,
       "text": "Alçaq ata hamı minər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Özünü ucuz tutanın üstünə hər kəs çıxar.",
       "acar": [
         "alcaq",
         "ata",
@@ -3462,7 +3462,7 @@
     {
       "id": 240,
       "text": "Alçaq dağa qar yağmaz?!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Alçaq dağın da payına qar düşər.",
       "acar": [
         "alcaq",
         "daga",
@@ -3476,7 +3476,7 @@
     {
       "id": 241,
       "text": "Alçaq yer igidi xor göstərər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Alçaq mühit igidi xor göstərər.",
       "acar": [
         "alcaq",
         "yer",
@@ -3491,7 +3491,7 @@
     {
       "id": 242,
       "text": "Alçaq yerdə təpəcik özün dağ sanar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Kiçik yerdə balaca təpə özünü dağ sanar.",
       "acar": [
         "alcaq",
         "yerde",
@@ -3506,7 +3506,7 @@
     {
       "id": 243,
       "text": "Alçaq uçan ucaya qonar, uca uçan alçaq qonar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Alçaq uçan yüksəyə qonar, yüksək uçan alçağa enər.",
       "acar": [
         "alcaq",
         "ucan",
@@ -3521,7 +3521,7 @@
     {
       "id": 244,
       "text": "Alçaqda yatma — sel aparar, ucada yatma — yel aparar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Nə çox alçaqda yat, nə çox ucada; hər iki uc təhlükəlidir.",
       "acar": [
         "alcaqda",
         "yatma",
@@ -3536,7 +3536,7 @@
     {
       "id": 245,
       "text": "Aləm aləm ilədir, keçəl qız da xalamla.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Hər kəsin öz tayısı var.",
       "acar": [
         "alem",
         "alem",
@@ -3551,7 +3551,7 @@
     {
       "id": 246,
       "text": "Aləmə it hürər, bizə Mazandaran çaqqalı.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Aləmə it hürür, bizə çaqqal; bizim bəlamız onunkundan kiçikdir.",
       "acar": [
         "aleme",
         "hurer",
@@ -3566,7 +3566,7 @@
     {
       "id": 247,
       "text": "Aləmə oğruyam, sənə ki doğruyam.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Özgəyə qarşı oğrudur, özünə qarşı doğru.",
       "acar": [
         "aleme",
         "ogruyam",
@@ -3580,7 +3580,7 @@
     {
       "id": 248,
       "text": "Allahın işi alah satmaqdı, istər ata tök, istər eşşəgə.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahın işinə qarışma; pay ata da düşər, eşşəyə də.",
       "acar": [
         "allahin",
         "isi",
@@ -3595,7 +3595,7 @@
     {
       "id": 249,
       "text": "Allah bir, söz bir.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah bir, verilən söz də birdir.",
       "acar": [
         "allah",
         "bir",
@@ -3609,7 +3609,7 @@
     {
       "id": 250,
       "text": "Allah bir qapını bağlayanda bir qapını açar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Bir qapı bağlananda başqa qapı açılır.",
       "acar": [
         "allah",
         "bir",
@@ -3624,7 +3624,7 @@
     {
       "id": 251,
       "text": "Allah böyüklərin xasiyyətini kəssin.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Böyüyün pis xasiyyəti kiçiyə əziyyətdir.",
       "acar": [
         "allah",
         "boyuklerin",
@@ -3638,7 +3638,7 @@
     {
       "id": 252,
       "text": "Allah bu əli o ələ möhtac eləməsin.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Bu əl o ələ möhtac olmasın.",
       "acar": [
         "allah",
         "eli",
@@ -3653,7 +3653,7 @@
     {
       "id": 253,
       "text": "Allah buynuzsuz qoçun qisasın buynuzlu qoçda qoymaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Buynuzsuzun haqqı buynuzludan alınar.",
       "acar": [
         "allah",
         "buynuzsuz",
@@ -3668,7 +3668,7 @@
     {
       "id": 254,
       "text": "Allah dağına baxar qar yağdırar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah hər dağa öz halına görə qar yağdırar.",
       "acar": [
         "allah",
         "dagina",
@@ -3683,7 +3683,7 @@
     {
       "id": 255,
       "text": "Allah demiş: səndən hərəkət, məndən bərəkət.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Səndən hərəkət, Allahdan bərəkət.",
       "acar": [
         "allah",
         "demis",
@@ -3698,7 +3698,7 @@
     {
       "id": 256,
       "text": "«Allah» deyən namurad qalmaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah deyən muradına çatar.",
       "acar": [
         "allah",
         "deyen",
@@ -3712,7 +3712,7 @@
     {
       "id": 257,
       "text": "Allah dərdi çəkənə verir.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah dərdi onu çəkə bilənə verir.",
       "acar": [
         "allah",
         "derdi",
@@ -3726,7 +3726,7 @@
     {
       "id": 258,
       "text": "Allah dəvəyə qanad versəydi, dam-divarı yıxardı.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Hər kəsə gücü qədər verilir; dəvəyə qanad olsaydı, hər yeri dağıdard.",
       "acar": [
         "allah",
         "deveye",
@@ -3741,7 +3741,7 @@
     {
       "id": 259,
       "text": "Allah əli hamı əldən ucadır.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahın əli hər əldən ucadır.",
       "acar": [
         "allah",
         "eli",
@@ -3756,7 +3756,7 @@
     {
       "id": 260,
       "text": "Allah əsilsizə düşürtməsin.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah adamı əsilsizə möhtac eləməsin.",
       "acar": [
         "allah",
         "esilsize",
@@ -3769,7 +3769,7 @@
     {
       "id": 261,
       "text": "Allah əyməyəni bəndə əyə bilməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah əyməyəni bəndə əyə bilməz.",
       "acar": [
         "allah",
         "eymeyeni",
@@ -3784,7 +3784,7 @@
     {
       "id": 262,
       "text": "Allah haqqı nahaqqa verməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah haqqı haqsıza verməz.",
       "acar": [
         "allah",
         "haqqi",
@@ -3798,7 +3798,7 @@
     {
       "id": 263,
       "text": "Allah ilanın əməlin bilib, ayağın qarnında yaradıb.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Xasiyyətinə görə quruluşu da ona oxşar.",
       "acar": [
         "allah",
         "ilanin",
@@ -3813,7 +3813,7 @@
     {
       "id": 264,
       "text": "Allah istəyən danaya qurd dəyməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahın saxladığına qurd dəyməz.",
       "acar": [
         "allah",
         "isteyen",
@@ -3828,7 +3828,7 @@
     {
       "id": 265,
       "text": "Allah kasıbdan kəsər, varlıya verər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Qismət bəzən kasıbdan alınıb varlıya düşür.",
       "acar": [
         "allah",
         "kasibdan",
@@ -3843,7 +3843,7 @@
     {
       "id": 266,
       "text": "Allah kərimdi, quyusu dərindi.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah kərimdir, amma quyusu dərindir.",
       "acar": [
         "allah",
         "kerimdi",
@@ -3857,7 +3857,7 @@
     {
       "id": 267,
       "text": "Allah qarğa deyil ki, göz oya.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah zərər vermək üçün yaranmayıb.",
       "acar": [
         "allah",
         "qarga",
@@ -3872,7 +3872,7 @@
     {
       "id": 268,
       "text": "Allah qonağının öz qisməti var.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Qonağın öz qisməti var.",
       "acar": [
         "allah",
         "qonaginin",
@@ -3901,7 +3901,7 @@
     {
       "id": 270,
       "text": "Allah möminə hər şeyi bağışlar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah möminə hər şeyi bağışlar.",
       "acar": [
         "allah",
         "momine",
@@ -3916,7 +3916,7 @@
     {
       "id": 271,
       "text": "Allah ona qotur versin, dırnaq verməsin.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Qaşınan dərd versin, qaşıyacaq dırnaq verməsin.",
       "acar": [
         "allah",
         "ona",
@@ -3931,7 +3931,7 @@
     {
       "id": 272,
       "text": "Allah sağ gözü sol gözə möhtac eyləməsin.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Sağ göz sol gözə möhtac olmasın.",
       "acar": [
         "allah",
         "sag",
@@ -3946,7 +3946,7 @@
     {
       "id": 273,
       "text": "Allah saxlayanı qurd yeməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahın saxladığını qurd yeməz.",
       "acar": [
         "allah",
         "saxlayani",
@@ -3960,7 +3960,7 @@
     {
       "id": 274,
       "text": "Allah tənbəli sevməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah tənbəli sevməz.",
       "acar": [
         "allah",
         "tenbeli",
@@ -3973,7 +3973,7 @@
     {
       "id": 275,
       "text": "Allah var, rəhmi də var.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah var, rəhmi də var.",
       "acar": [
         "allah",
         "var",
@@ -3987,7 +3987,7 @@
     {
       "id": 276,
       "text": "Allah verəndə bacadan da tökər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah verəndə gözlənilməz yerdən də tökər.",
       "acar": [
         "allah",
         "verende",
@@ -4001,7 +4001,7 @@
     {
       "id": 277,
       "text": "Allah verəndə yox yerdən də verər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah verəndə yox yerdən də verər.",
       "acar": [
         "allah",
         "verende",
@@ -4016,7 +4016,7 @@
     {
       "id": 278,
       "text": "Allah verəndə peyğəmbər də üstünə bir çəngə atar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah verəndə üstünə bir də əlavə gəlir.",
       "acar": [
         "allah",
         "verende",
@@ -4031,7 +4031,7 @@
     {
       "id": 279,
       "text": "Allah verib Pirim koxaya; arvad qısır, qızı boğaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Qismət tərsinə düşüb: arvad sonsuzdur, qız boğazdır.",
       "acar": [
         "allah",
         "verib",
@@ -4046,7 +4046,7 @@
     {
       "id": 280,
       "text": "Allah verməyənə peyğəmbər neyləsin?!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah verməyəni peyğəmbər də verə bilməz.",
       "acar": [
         "allah",
         "vermeyene",
@@ -4060,7 +4060,7 @@
     {
       "id": 281,
       "text": "Allah verməz qara quluna, o da qalar vuruna-vuruna.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allah verməyincə adam ömrü boyu vurulub qalar.",
       "acar": [
         "allah",
         "vermez",
@@ -4075,7 +4075,7 @@
     {
       "id": 282,
       "text": "Allah vuran ağacın səsi çıxmaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahın vurduğu bəlanın səsi çıxmaz.",
       "acar": [
         "allah",
         "vuran",
@@ -4090,7 +4090,7 @@
     {
       "id": 283,
       "text": "Allah yolunda yox, şeytan yolunda çox.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Xeyir yolunda az, şər yolunda çox adam gedər.",
       "acar": [
         "allah",
         "yolunda",
@@ -4105,7 +4105,7 @@
     {
       "id": 284,
       "text": "Allaha da özünü pilov yeyən tanıt.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yoxsulluğunu gizlət, özünü dolu göstər.",
       "acar": [
         "allaha",
         "ozunu",
@@ -4120,7 +4120,7 @@
     {
       "id": 285,
       "text": "Allaha inanmayana bəndələr də inanmaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allaha inanmayana adamlar da inanmaz.",
       "acar": [
         "allaha",
         "inanmayana",
@@ -4134,7 +4134,7 @@
     {
       "id": 286,
       "text": "Allahdan buyruq, ağzıma quyruq.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Buyruq gələn kimi söz də ağzıma gəlir.",
       "acar": [
         "allahdan",
         "buyruq",
@@ -4148,7 +4148,7 @@
     {
       "id": 287,
       "text": "Allahdan gizlin deyil, bəndədən nə gizlin.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahdan gizli deyilsə, bəndədən necə gizlədəsən.",
       "acar": [
         "allahdan",
         "gizlin",
@@ -4163,7 +4163,7 @@
     {
       "id": 288,
       "text": "Allahdan qorxmaz, bəndədən utanmaz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahdan qorxmayan bəndədən də utanmaz.",
       "acar": [
         "allahdan",
         "qorxmaz",
@@ -4177,7 +4177,7 @@
     {
       "id": 289,
       "text": "Allahdan nə gəlsə xoşdur.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahdan gələn hər şey xoşdur.",
       "acar": [
         "allahdan",
         "gelse",
@@ -4190,7 +4190,7 @@
     {
       "id": 290,
       "text": "Allahın bəd nəzərdən xəbəri yoxdur.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Göz dəyməsi hesaba sığmır, işi alt-üst edir.",
       "acar": [
         "allahin",
         "bed",
@@ -4205,7 +4205,7 @@
     {
       "id": 291,
       "text": "Allahın yarası da var, çarası da.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahın vurduğu yaranın çarəsi də var.",
       "acar": [
         "allahin",
         "yarasi",
@@ -4219,7 +4219,7 @@
     {
       "id": 292,
       "text": "Allahsız yerdə otur, böyüksüz yerdə oturma.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Allahsız yerdə oturmaq olar, böyüksüz yerdə oturma.",
       "acar": [
         "allahsiz",
         "yerde",
@@ -4234,7 +4234,7 @@
     {
       "id": 293,
       "text": "Alma öz ağacından uzaq düşməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Alma ağacından uzaq düşməz; övlad soyuna çəkir.",
       "acar": [
         "alma",
         "agacindan",
@@ -4248,7 +4248,7 @@
     {
       "id": 294,
       "text": "Almanı at göyə, yerə gəlincə ya qismət.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Alma yerə düşənə qədər qismət dəyişə bilər.",
       "acar": [
         "almani",
         "goye",
@@ -4263,7 +4263,7 @@
     {
       "id": 295,
       "text": "Alovdan çıxdıq, yalova düşdük.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Bir bəladan qurtarıb o birinə düşdük.",
       "acar": [
         "alovdan",
         "cixdiq",
@@ -4277,7 +4277,7 @@
     {
       "id": 296,
       "text": "Alt daşı ağır olar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yükün ağırını altdakı çəkir.",
       "acar": [
         "alt",
         "dasi",
@@ -4291,7 +4291,7 @@
     {
       "id": 297,
       "text": "Altın həsir, üstün həsir, yat, yetim, tərləyəsən!",
-      "mena": "Xalq öyüdü.",
+      "mena": "Yetimin altı da həsirdir, üstü də; rahatlığı yoxdur.",
       "acar": [
         "altin",
         "hesir",
@@ -4306,7 +4306,7 @@
     {
       "id": 298,
       "text": "Altın görmədiyin qabdan su içmə.",
-      "mena": "Xalq öyüdü.",
+      "mena": "İçini bilmədiyin qabdan su içmə.",
       "acar": [
         "altin",
         "gormediyin",
@@ -4320,7 +4320,7 @@
     {
       "id": 299,
       "text": "Aman deyənə əl qaldırmazlar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Aman deyənə əl qaldırılmaz.",
       "acar": [
         "aman",
         "deyene",
@@ -4333,7 +4333,7 @@
     {
       "id": 300,
       "text": "Ana bala ucundan canını oda yaxar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ana balası üçün canını oda yaxar.",
       "acar": [
         "ana",
         "bala",
@@ -4348,7 +4348,7 @@
     {
       "id": 301,
       "text": "Ana kimi yar olmaz — vətən kimi dövlət-var.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ana kimi dost olmaz, vətən kimi var-dövlət olmaz.",
       "acar": [
         "ana",
         "kimi",
@@ -4363,7 +4363,7 @@
     {
       "id": 302,
       "text": "Ana uşağa aş gətirər, analıq yaş.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Doğma ana aş gətirər, ögey ana ancaq göz yaşı.",
       "acar": [
         "ana",
         "usaga",
@@ -4378,7 +4378,7 @@
     {
       "id": 303,
       "text": "Anadan əziz yenə anadır.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anadan əziz yenə ana olur.",
       "acar": [
         "anadan",
         "eziz",
@@ -4392,7 +4392,7 @@
     {
       "id": 304,
       "text": "Analı qızın özü böyüyər, anasız qızın sözü.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Analı qızın özü böyüyər, anasızın ancaq sözü gəzər.",
       "acar": [
         "anali",
         "qizin",
@@ -4407,7 +4407,7 @@
     {
       "id": 305,
       "text": "Analı quzu — xınalı quzu.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anası olan quzu bəzənmiş quzu kimidir.",
       "acar": [
         "anali",
         "quzu",
@@ -4421,7 +4421,7 @@
     {
       "id": 306,
       "text": "Anam doğub, bacıma güc düşüb.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Doğulanın yükü bacının üstünə düşüb.",
       "acar": [
         "anam",
         "dogub",
@@ -4436,7 +4436,7 @@
     {
       "id": 307,
       "text": "Anam elə çox bilir, kündəni xırda tökür, Atam elə az bilir, ikisini birdən bükür.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Çox bildiyini deyən xəmiri xırda kəsir, az bilən ikisini bir yerdə bükür.",
       "acar": [
         "anam",
         "ele",
@@ -4451,7 +4451,7 @@
     {
       "id": 308,
       "text": "Ananın ərköyün oğlu hambal olar.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ərköyün böyüyən oğul sonda hambal olar.",
       "acar": [
         "ananin",
         "erkoyun",
@@ -4466,7 +4466,7 @@
     {
       "id": 309,
       "text": "Ananın səbri tükənməz olur.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Ananın səbri tükənmir.",
       "acar": [
         "ananin",
         "sebri",
@@ -4480,7 +4480,7 @@
     {
       "id": 310,
       "text": "Anası çıxan ağacı qızı budaq-budaq gəzər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Soyun xasiyyəti budaqlara da keçir.",
       "acar": [
         "anasi",
         "cixan",
@@ -4495,7 +4495,7 @@
     {
       "id": 311,
       "text": "Anasına bax qızını al, qırağına bax bezini al.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Qızı anasına baxıb al, bezi qırağına baxıb al.",
       "acar": [
         "anasina",
         "bax",
@@ -4510,7 +4510,7 @@
     {
       "id": 312,
       "text": "Anasından ayrı düşən quzunu qurd yeyər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anasından ayrı düşən quzunu qurd yeyər.",
       "acar": [
         "anasindan",
         "ayri",
@@ -4525,7 +4525,7 @@
     {
       "id": 313,
       "text": "Anasından qabaq düşən qulunu qurd yeyər.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Vaxtından əvvəl anasından ayrılan bala qurd yeyər.",
       "acar": [
         "anasindan",
         "qabaq",
@@ -4540,7 +4540,7 @@
     {
       "id": 314,
       "text": "Anasızın gördüyü iş danlaqsız bitməz.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anasızın işi tənəsiz qurtarmaz.",
       "acar": [
         "anasizin",
         "gorduyu",
@@ -4554,7 +4554,7 @@
     {
       "id": 315,
       "text": "Andın iki başı olur.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Andın iki başı var; içən də, alan da bağlanır.",
       "acar": [
         "andin",
         "iki",
@@ -4568,7 +4568,7 @@
     {
       "id": 316,
       "text": "Andına inanıram, xoruzun da quyruğu görünür.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Andına inanıram, amma görünən əlamət əksini deyir.",
       "acar": [
         "andina",
         "inaniram",
@@ -4583,7 +4583,7 @@
     {
       "id": 317,
       "text": "Anladıq - yel dəyirmanı, bəs bunun suyu hanı?",
-      "mena": "Xalq öyüdü.",
+      "mena": "Adı yel dəyirmanıdır, bəs suyu haradadır; şərti yoxdur.",
       "acar": [
         "anladiq",
         "yel",
@@ -4598,7 +4598,7 @@
     {
       "id": 318,
       "text": "Anlamaza hörmət elərsən, deyər: məndən qorxdu.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anlamayana hörmət etsən, qorxdun sanar.",
       "acar": [
         "anlamaza",
         "hormet",
@@ -4613,7 +4613,7 @@
     {
       "id": 319,
       "text": "Anlayan özü qanar, anlamayana yüz qandır.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anlayan özü anlayar, anlamayana yüz dəfə desən də çatmaz.",
       "acar": [
         "anlayan",
         "ozu",
@@ -4628,7 +4628,7 @@
     {
       "id": 320,
       "text": "Anlayana da can qurban, anlamayana da, dad yarımçıq əlindən.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Həm anlayanın, həm anlamayanın dərdini çəkirsən.",
       "acar": [
         "anlayana",
         "can",
@@ -4643,7 +4643,7 @@
     {
       "id": 321,
       "text": "Anlayana qul ol, anlamayana ağa da olma.",
-      "mena": "Xalq öyüdü.",
+      "mena": "Anlayana qul ol, anlamayana ağa da olma.",
       "acar": [
         "anlayana",
         "qul",
