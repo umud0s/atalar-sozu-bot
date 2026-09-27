@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import os
@@ -42,6 +43,8 @@ logger = logging.getLogger("atalar")
 ACAR, HEKAYE, QUIZ = range(3)
 
 DATA_PATH = Path(__file__).with_name("proverbs.json")
+STATS_PATH = Path(__file__).with_name("quiz_stats.json")
+_stats_lock = asyncio.Lock()
 
 
 def load_proverbs() -> list[dict]:
@@ -219,7 +222,7 @@ def main_menu_text() -> str:
         "• Təsadüfi — təsadüfi bir atalar sözü oxu.\n"
         "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu.\n"
         "• Günün sözü — bu gün hamı üçün eyni bir atalar sözü.\n"
-        "• Quiz — çatışmayan sözü tamamla."
+        "• Quiz — çatışmayan sözü tamamla. Cavabdan sonra sənin statistikən görünür."
     )
 
 
@@ -341,6 +344,28 @@ def quiz_izah(item: dict) -> str:
     return item["mena"]
 
 
+def stat_line(row: dict) -> str:
+    return f"Statistika: düzgün {row['duz']}, səhv {row['sehv']}, pas {row['pas']}"
+
+
+async def add_quiz_stat(user_id: int, kind: str) -> dict:
+    async with _stats_lock:
+        if STATS_PATH.exists():
+            try:
+                data = json.loads(STATS_PATH.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                data = {}
+        else:
+            data = {}
+        row = data.get(str(user_id)) or {"duz": 0, "sehv": 0, "pas": 0}
+        row[kind] = int(row.get(kind, 0)) + 1
+        data[str(user_id)] = row
+        temporary = STATS_PATH.with_suffix(".json.tmp")
+        temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        temporary.replace(STATS_PATH)
+        return row
+
+
 def clear_quiz(context: ContextTypes.DEFAULT_TYPE) -> None:
     for key in ("quiz_word", "quiz_item", "quiz_shown"):
         context.user_data.pop(key, None)
@@ -387,27 +412,35 @@ async def handle_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
     item = context.user_data.get("quiz_item")
     if not expected or not item:
         return await ask_quiz(update, context)
+    user_id = update.effective_user.id if update.effective_user else 0
     if answers_match(guess, expected):
         clear_quiz(context)
+        row = await add_quiz_stat(user_id, "duz")
         await update.message.reply_text(
             "Düzdür. Təbrik edirəm.\n\n"
             f"«{item['text']}»\n"
-            f"İzah: {quiz_izah(item)}",
+            f"İzah: {quiz_izah(item)}\n\n"
+            f"{stat_line(row)}",
             reply_markup=MENU_KEYBOARD,
         )
         return ConversationHandler.END
     if guess in {"⏭ Pas", "Pas", "pas"} or normalize(guess) == "pas":
         clear_quiz(context)
+        row = await add_quiz_stat(user_id, "pas")
         await update.message.reply_text(
             "Pas.\n\n"
             f"Çatışmayan söz: {expected}\n"
             f"«{item['text']}»\n"
-            f"İzah: {quiz_izah(item)}",
+            f"İzah: {quiz_izah(item)}\n\n"
+            f"{stat_line(row)}",
             reply_markup=MENU_KEYBOARD,
         )
         return ConversationHandler.END
+    row = await add_quiz_stat(user_id, "sehv")
     await update.message.reply_text(
-        "Səhvdir. Çatışmayan sözü bir daha yaz.\n\n" + quiz_prompt(shown),
+        "Səhvdir. Çatışmayan sözü bir daha yaz.\n\n"
+        + quiz_prompt(shown)
+        + f"\n\n{stat_line(row)}",
         reply_markup=QUIZ_KEYBOARD,
     )
     return QUIZ

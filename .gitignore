@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 venv/
 *.log
+quiz_stats.json
+quiz_stats.json.tmp
