@@ -3147,7 +3147,7 @@
     {
       "id": 218,
       "text": "Axtaran tapar.",
-      "mena": "Axtaran tapar.",
+      "mena": "Səylə arayan adam istədiyinə gec-tez çatır.",
       "acar": [
         "axtaran",
         "tapar"
@@ -3244,7 +3244,7 @@
     {
       "id": 225,
       "text": "Alan aldanmaz, satan aldanar.",
-      "mena": "Alan aldanmaz, satan aldanar.",
+      "mena": "Alıcı malı seçib götürür, zərəri çox vaxt satıcı çəkir.",
       "acar": [
         "alan",
         "aldanmaz",
@@ -3769,7 +3769,7 @@
     {
       "id": 261,
       "text": "Allah əyməyəni bəndə əyə bilməz.",
-      "mena": "Allah əyməyəni bəndə əyə bilməz.",
+      "mena": "Tanrının qoruduğu adamı insan sındıra bilmir.",
       "acar": [
         "allah",
         "eymeyeni",
@@ -3901,7 +3901,7 @@
     {
       "id": 270,
       "text": "Allah möminə hər şeyi bağışlar.",
-      "mena": "Allah möminə hər şeyi bağışlar.",
+      "mena": "Ürəkdən inanan adamın xətası bağışlanır.",
       "acar": [
         "allah",
         "momine",
@@ -3960,7 +3960,7 @@
     {
       "id": 274,
       "text": "Allah tənbəli sevməz.",
-      "mena": "Allah tənbəli sevməz.",
+      "mena": "Tənbəlliyin xeyri yoxdur, onu nə Tanrı sevir, nə insan.",
       "acar": [
         "allah",
         "tenbeli",
@@ -3973,7 +3973,7 @@
     {
       "id": 275,
       "text": "Allah var, rəhmi də var.",
-      "mena": "Allah var, rəhmi də var.",
+      "mena": "Ən çətin gündə də mərhəmət qapısı bağlanmır.",
       "acar": [
         "allah",
         "var",
@@ -4001,7 +4001,7 @@
     {
       "id": 277,
       "text": "Allah verəndə yox yerdən də verər.",
-      "mena": "Allah verəndə yox yerdən də verər.",
+      "mena": "Ruzi gözlənilməz yerdən də gəlir.",
       "acar": [
         "allah",
         "verende",
@@ -4510,7 +4510,7 @@
     {
       "id": 312,
       "text": "Anasından ayrı düşən quzunu qurd yeyər.",
-      "mena": "Anasından ayrı düşən quzunu qurd yeyər.",
+      "mena": "Ailəsindən, elindən ayrı düşən adam qorunmasız qalır.",
       "acar": [
         "anasindan",
         "ayri",
@@ -4643,7 +4643,7 @@
     {
       "id": 321,
       "text": "Anlayana qul ol, anlamayana ağa da olma.",
-      "mena": "Anlayana qul ol, anlamayana ağa da olma.",
+      "mena": "Sözdən anlayan adama tabe olmaq ayıb deyil, anlamayana isə başçı olmağa da dəyməz.",
       "acar": [
         "anlayana",
         "qul",
@@ -4901,7 +4901,7 @@
     {
       "id": 339,
       "text": "Arxadan vuran namərddir.",
-      "mena": "Arxadan vuran namərddir.",
+      "mena": "Arxadan zərbə vurmaq qorxaq və alçaq adamın işidir.",
       "acar": [
         "arxadan",
         "vuran",
@@ -5025,7 +5025,7 @@
     {
       "id": 348,
       "text": "Arif adam tərif istəməz.",
-      "mena": "Arif adam tərif istəməz.",
+      "mena": "Bilikli adam özünü göstərməyə ehtiyac duymur.",
       "acar": [
         "arif",
         "adam",
@@ -5170,7 +5170,7 @@
     {
       "id": 358,
       "text": "Arsız kişidən ərsiz arvad yaxşıdır.",
-      "mena": "Arsız kişidən ərsiz arvad yaxşıdır.",
+      "mena": "Həyasız kişi ilə yaşamaqdansa, qadının tək qalması yaxşıdır.",
       "acar": [
         "arsiz",
         "kisiden",
@@ -5434,7 +5434,7 @@
     {
       "id": 376,
       "text": "Arvadın deyingəni kişini tez qocaldar.",
-      "mena": "Arvadın deyingəni kişini tez qocaldar.",
+      "mena": "Evdə bitib-tükənməyən deyinmə kişinin ömrünü yeyir.",
       "acar": [
         "arvadin",
         "deyingeni",
@@ -5519,7 +5519,7 @@
     {
       "id": 382,
       "text": "Aslanın balası aslan olar.",
-      "mena": "Aslanın balası aslan olar.",
+      "mena": "Övlad nəslinin xasiyyətini götürür.",
       "acar": [
         "aslanin",
         "balasi",
@@ -5533,7 +5533,7 @@
     {
       "id": 383,
       "text": "Aslanın böyüyü-kiçiyi olmaz.",
-      "mena": "Aslanın böyüyü-kiçiyi olmaz.",
+      "mena": "Cəsarət yaşa baxmır, igidin kiçiyi də igiddir.",
       "acar": [
         "aslanin",
         "boyuyu",
@@ -5547,7 +5547,7 @@
     {
       "id": 384,
       "text": "Aslanın qorxusu qarıncadan olar.",
-      "mena": "Aslanın qorxusu qarıncadan olar.",
+      "mena": "Ən güclü adam da xırda bildiyi təhlükədən ehtiyat edir.",
       "acar": [
         "aslanin",
         "qorxusu",
@@ -6568,7 +6568,7 @@
     {
       "id": 456,
       "text": "Atlı ilə atsız bir deyil.",
-      "mena": "Atlı ilə atsız bir deyil.",
+      "mena": "İmkanı olanla olmayanın vəziyyəti eyni olmur.",
       "acar": [
         "atli",
         "ile",
@@ -6837,7 +6837,7 @@
     {
       "id": 474,
       "text": "Atalar sözü hikmətdir.",
-      "mena": "Atalar sözü hikmətdir.",
+      "mena": "Atalar sözlərində nəsillərin təcrübəsi və müdrikliyi var.",
       "acar": [
         "atalar",
         "sozu",
@@ -6865,7 +6865,7 @@
     {
       "id": 476,
       "text": "Atalar sözünə baxan geri qalmaz.",
-      "mena": "Atalar sözünə baxan geri qalmaz.",
+      "mena": "Atalar sözünə qulaq asan adam səhv yola düşmür.",
       "acar": [
         "atalar",
         "sozune",
@@ -7095,7 +7095,7 @@
     {
       "id": 492,
       "text": "Ay həmişə bulud altında qalmaz.",
-      "mena": "Ay həmişə bulud altında qalmaz.",
+      "mena": "Pis günlər keçir, insanın yenə üzü gülür.",
       "acar": [
         "hemise",
         "bulud",
@@ -7325,7 +7325,7 @@
     {
       "id": 508,
       "text": "Ayağını yorğanına görə uzat.",
-      "mena": "Ayağını yorğanına görə uzat.",
+      "mena": "Xərcini gəlirinə, istəyini imkanına görə qur.",
       "acar": [
         "ayagini",
         "yorganina",
@@ -7605,7 +7605,7 @@
     {
       "id": 527,
       "text": "Az tamah çox bəla gətirər.",
-      "mena": "Az tamah çox bəla gətirər.",
+      "mena": "Kiçik bir acgözlük böyük dərdə səbəb olur.",
       "acar": [
         "tamah",
         "cox",
@@ -7705,7 +7705,7 @@
     {
       "id": 534,
       "text": "Azı bilməyən çoxu heç bilməz.",
-      "mena": "Azı bilməyən çoxu heç bilməz.",
+      "mena": "Kiçik işin qədrini bilməyən böyük işin öhdəsindən gələ bilmir.",
       "acar": [
         "azi",
         "bilmeyen",
@@ -8188,7 +8188,7 @@
     {
       "id": 567,
       "text": "Bal yedin, bəlaya düşdün.",
-      "mena": "Bal yedin, bəlaya düşdün.",
+      "mena": "Şirin görünən ləzzətin ardınca dərd də gəlir.",
       "acar": [
         "bal",
         "yedin",
@@ -8229,7 +8229,7 @@
     {
       "id": 570,
       "text": "Bala baldan şirindir.",
-      "mena": "Bala baldan şirindir.",
+      "mena": "Nəvə insana öz övladından da əziz olur.",
       "acar": [
         "bala",
         "baldan",
@@ -8470,7 +8470,7 @@
     {
       "id": 587,
       "text": "Bar verən ağacı kəsməzlər.",
-      "mena": "Bar verən ağacı kəsməzlər.",
+      "mena": "Xeyir verən adamı qoruyurlar, ona zərər vurmurlar.",
       "acar": [
         "bar",
         "veren",
@@ -8484,7 +8484,7 @@
     {
       "id": 588,
       "text": "Barlı ağaca daş atarlar.",
-      "mena": "Barlı ağaca daş atarlar.",
+      "mena": "Uğur qazanan adam paxıllığa, hücuma daha çox tuş gəlir.",
       "acar": [
         "barli",
         "agaca",
@@ -8512,7 +8512,7 @@
     {
       "id": 590,
       "text": "Barsız ağaca daş atmazlar.",
-      "mena": "Barsız ağaca daş atmazlar.",
+      "mena": "Heç nəyə yaramayan adamla heç kəs uğraşmır.",
       "acar": [
         "barsiz",
         "agaca",
@@ -8631,7 +8631,7 @@
     {
       "id": 598,
       "text": "Baş sağ olsun, papaq tapılar.",
-      "mena": "Baş sağ olsun, papaq tapılar.",
+      "mena": "Can salamat olsun, itən mal yenə qazanılır.",
       "acar": [
         "bas",
         "sag",
@@ -8675,7 +8675,7 @@
     {
       "id": 601,
       "text": "Başa gələn dildən gəlir.",
-      "mena": "Başa gələn dildən gəlir.",
+      "mena": "Dərdin çoxunu insan öz dili ilə başına açır.",
       "acar": [
         "basa",
         "gelen",
@@ -8991,7 +8991,7 @@
     {
       "id": 623,
       "text": "Bayquş xarabalığı gülüstana dəyişməz.",
-      "mena": "Bayquş xarabalığı gülüstana dəyişməz.",
+      "mena": "Pis adam ən gözəl yeri də öz xarabasına dəyişməz.",
       "acar": [
         "bayqus",
         "xarabaligi",
@@ -9135,7 +9135,7 @@
     {
       "id": 633,
       "text": "Belə yatan öküz yük götürməz.",
-      "mena": "Belə yatan öküz yük götürməz.",
+      "mena": "Bu cür tənbəllikdən iş çıxmaz.",
       "acar": [
         "bele",
         "yatan",
@@ -9309,7 +9309,7 @@
     {
       "id": 645,
       "text": "Bəla bəla gətirər.",
-      "mena": "Bəla bəla gətirər.",
+      "mena": "Bir bədbəxtlik çox vaxt ardınca başqasını gətirir.",
       "acar": [
         "bela",
         "bela",
@@ -9745,7 +9745,7 @@
     {
       "id": 675,
       "text": "Bilən az deyər, bilməyən yüz.",
-      "mena": "Bilən az deyər, bilməyən yüz.",
+      "mena": "Bilikli adam az və yerində danışır, bilməyən isə çox danışır.",
       "acar": [
         "bilen",
         "deyer",
@@ -9789,7 +9789,7 @@
     {
       "id": 678,
       "text": "Bilənlə bilməyən tay olmaz.",
-      "mena": "Bilənlə bilməyən tay olmaz.",
+      "mena": "Bilikli adamla cahili bir tutmaq olmaz.",
       "acar": [
         "bilenle",
         "bilmeyen",
@@ -9860,7 +9860,7 @@
     {
       "id": 683,
       "text": "Bilsəydim, dərdim iki olmazdı.",
-      "mena": "Bilsəydim, dərdim iki olmazdı.",
+      "mena": "Peşmançılıq sonradan gəlir, əvvəlcədən bilsəydin, dərdin azalardı.",
       "acar": [
         "bilseydim",
         "derdim",
@@ -10039,7 +10039,7 @@
     {
       "id": 695,
       "text": "Bir buğda əkməsən, min buğda biçməzsən.",
-      "mena": "Bir buğda əkməsən, min buğda biçməzsən.",
+      "mena": "Zəhmət çəkməyən adam bəhrə görmür.",
       "acar": [
         "bir",
         "bugda",
@@ -10487,7 +10487,7 @@
     {
       "id": 725,
       "text": "Bir gül ilə bahar olmaz.",
-      "mena": "Bir gül ilə bahar olmaz.",
+      "mena": "Bir uğurla iş bitmir, tək bir əlamət hələ nəticə deyil.",
       "acar": [
         "bir",
         "gul",
@@ -10590,7 +10590,7 @@
     {
       "id": 732,
       "text": "Bir igidin payı iki igidi ac qoyar.",
-      "mena": "Bir igidin payı iki igidi ac qoyar.",
+      "mena": "Haqqı artıq alan bir nəfər başqalarını məhrum qoyur.",
       "acar": [
         "bir",
         "igidin",
@@ -10690,7 +10690,7 @@
     {
       "id": 739,
       "text": "Bir küllükdə iki xoruz banlamaz.",
-      "mena": "Bir küllükdə iki xoruz banlamaz.",
+      "mena": "Bir yerdə iki başçı yola getmir.",
       "acar": [
         "bir",
         "kullukde",
@@ -10749,7 +10749,7 @@
     {
       "id": 743,
       "text": "Bir qoyundan iki dəri çıxmaz.",
-      "mena": "Bir qoyundan iki dəri çıxmaz.",
+      "mena": "Bir mənbədən olduğundan artıq qazanc götürmək olmaz.",
       "acar": [
         "bir",
         "qoyundan",
@@ -10764,7 +10764,7 @@
     {
       "id": 744,
       "text": "Bir qoz üçün daş atılmaz.",
-      "mena": "Bir qoz üçün daş atılmaz.",
+      "mena": "Xırda mənfəət üçün böyük zəhmətə girməyə dəyməz.",
       "acar": [
         "bir",
         "qoz",
@@ -10882,7 +10882,7 @@
     {
       "id": 752,
       "text": "Bir sözün min bir budağı var.",
-      "mena": "Bir sözün min bir budağı var.",
+      "mena": "Hər sözün çox mənası, çox yozumu ola bilir.",
       "acar": [
         "bir",
         "sozun",
@@ -10972,7 +10972,7 @@
     {
       "id": 758,
       "text": "Bir talada iki axsaq ceyran olmaz.",
-      "mena": "Bir talada iki axsaq ceyran olmaz.",
+      "mena": "Eyni eybi olan iki adam bir yerdə uzun dolana bilmir.",
       "acar": [
         "bir",
         "talada",
@@ -10987,7 +10987,7 @@
     {
       "id": 759,
       "text": "Bir təpə yıxılar, bir dərə dolar.",
-      "mena": "Bir təpə yıxılar, bir dərə dolar.",
+      "mena": "Birinin itirdiyi başqasının qazancına çevrilir.",
       "acar": [
         "bir",
         "tepe",
@@ -11017,7 +11017,7 @@
     {
       "id": 761,
       "text": "Bir tikənin qırx il haqqı var.",
-      "mena": "Bir tikənin qırx il haqqı var.",
+      "mena": "Ən kiçik yaxşılığın da haqqı illərlə unudulmur.",
       "acar": [
         "bir",
         "tikenin",
@@ -11062,7 +11062,7 @@
     {
       "id": 764,
       "text": "Bir ürəkdə iki sevgi olmaz.",
-      "mena": "Bir ürəkdə iki sevgi olmaz.",
+      "mena": "Ürək eyni anda iki adama bağlana bilmir.",
       "acar": [
         "bir",
         "urekde",
@@ -11603,7 +11603,7 @@
     {
       "id": 801,
       "text": "Bizə gələn bizə oxşar.",
-      "mena": "Bizə gələn bizə oxşar.",
+      "mena": "Bizim aramıza gələn adam bizim adət-xasiyyətimizi götürür.",
       "acar": [
         "bize",
         "gelen",
@@ -11777,7 +11777,7 @@
     {
       "id": 813,
       "text": "Borcdan qorxan qapısını gen açmaz.",
-      "mena": "Borcdan qorxan qapısını gen açmaz.",
+      "mena": "Borcdan qorxan adam əlini geniş açıb israf etmir.",
       "acar": [
         "borcdan",
         "qorxan",
@@ -11792,7 +11792,7 @@
     {
       "id": 814,
       "text": "Borcla alınan eşşək su yolunda ölər.",
-      "mena": "Borcla alınan eşşək su yolunda ölər.",
+      "mena": "Borcla alınan şey sahibinə xeyir vermir.",
       "acar": [
         "borcla",
         "alinan",
@@ -11848,7 +11848,7 @@
     {
       "id": 818,
       "text": "Borcunu verən dövlətlənər.",
-      "mena": "Borcunu verən dövlətlənər.",
+      "mena": "Borcunu vaxtında qaytaran adamın etibarı və malı artır.",
       "acar": [
         "borcunu",
         "veren",
@@ -11876,7 +11876,7 @@
     {
       "id": 820,
       "text": "Bostançının sovqatı kəlik olar.",
-      "mena": "Bostançının sovqatı kəlik olar.",
+      "mena": "Hər kəs öz sənətinin məhsulundan pay verir.",
       "acar": [
         "bostancinin",
         "sovqati",
@@ -11949,7 +11949,7 @@
     {
       "id": 825,
       "text": "Boş damardan qan çıxmaz.",
-      "mena": "Boş damardan qan çıxmaz.",
+      "mena": "Heç nəyi olmayan adamdan heç nə almaq olmaz.",
       "acar": [
         "bos",
         "damardan",
@@ -12062,7 +12062,7 @@
     {
       "id": 833,
       "text": "Boyunduruqdan qaçan öküzü kəsərlər.",
-      "mena": "Boyunduruqdan qaçan öküzü kəsərlər.",
+      "mena": "Öz yükündən qaçan adam daha ağır cəza ilə üzləşir.",
       "acar": [
         "boyunduruqdan",
         "qacan",
@@ -12091,7 +12091,7 @@
     {
       "id": 835,
       "text": "Böhtana düşən odsuz yanar.",
-      "mena": "Böhtana düşən odsuz yanar.",
+      "mena": "Nahaq yerə ləkələnən adam ən ağır dərdi çəkir.",
       "acar": [
         "bohtana",
         "dusen",
@@ -12150,7 +12150,7 @@
     {
       "id": 839,
       "text": "Böyük ağacın kölgəsi də böyük olar.",
-      "mena": "Böyük ağacın kölgəsi də böyük olar.",
+      "mena": "Böyük adamın himayəsi də, təsiri də geniş olur.",
       "acar": [
         "boyuk",
         "agacin",
@@ -12282,7 +12282,7 @@
     {
       "id": 848,
       "text": "Böyüklərdə zor olar, yalan olmaz.",
-      "mena": "Böyüklərdə zor olar, yalan olmaz.",
+      "mena": "Böyüyün gücü ola bilər, amma ona yalan yaraşmır.",
       "acar": [
         "boyuklerde",
         "zor",
@@ -12326,7 +12326,7 @@
     {
       "id": 851,
       "text": "Böyüyün üzünə ağ olanı torpaq götürməz.",
-      "mena": "Böyüyün üzünə ağ olanı torpaq götürməz.",
+      "mena": "Ağsaqqalın sözündən çıxıb onu xəcalətli qoyan adamın axırı xeyir olmur.",
       "acar": [
         "boyuyun",
         "uzune",
@@ -12356,7 +12356,7 @@
     {
       "id": 853,
       "text": "Bu arşına bez verməzlər.",
-      "mena": "Bu arşına bez verməzlər.",
+      "mena": "Bu qiymətə, bu şərtlə razılaşan olmaz.",
       "acar": [
         "arsina",
         "bez",
@@ -12384,7 +12384,7 @@
     {
       "id": 855,
       "text": "Bu darı o aclığa çatmaz.",
-      "mena": "Bu darı o aclığa çatmaz.",
+      "mena": "Bu qədər az şey böyük ehtiyacı ödəmir.",
       "acar": [
         "dari",
         "acliga",
@@ -12439,7 +12439,7 @@
     {
       "id": 859,
       "text": "Bu evin işığı o evə düşməz.",
-      "mena": "Bu evin işığı o evə düşməz.",
+      "mena": "Bir evin xeyri başqa evə keçmir.",
       "acar": [
         "evin",
         "isigi",
@@ -12482,7 +12482,7 @@
     {
       "id": 862,
       "text": "Bu gün sən deyirsən, sabah sənə deyərlər.",
-      "mena": "Bu gün sən deyirsən, sabah sənə deyərlər.",
+      "mena": "Bu gün başqasını qınayan adam sabah özü qınaq obyektinə çevrilir.",
       "acar": [
         "gun",
         "sen",
@@ -12511,7 +12511,7 @@
     {
       "id": 864,
       "text": "Bu günün sabahı var.",
-      "mena": "Bu günün sabahı var.",
+      "mena": "Hər işin sonrası var, bu günü düşünəndə sabahı da unutma.",
       "acar": [
         "gunun",
         "sabahi",
@@ -12783,7 +12783,7 @@
     {
       "id": 883,
       "text": "Bulaq öz gözünü kor istəməz.",
-      "mena": "Bulaq öz gözünü kor istəməz.",
+      "mena": "Heç kəs öz ruzisinin mənbəyini qurutmaq istəmir.",
       "acar": [
         "bulaq",
         "gozunu",
@@ -12824,7 +12824,7 @@
     {
       "id": 886,
       "text": "Burda dilənir, orda zəkat verir.",
-      "mena": "Burda dilənir, orda zəkat verir.",
+      "mena": "Bir yerdə yoxsulluq göstərən adam başqa yerdə səxavət satır.",
       "acar": [
         "burda",
         "dilenir",
@@ -12897,7 +12897,7 @@
     {
       "id": 891,
       "text": "Büdrəməyən yıxılmaz.",
-      "mena": "Büdrəməyən yıxılmaz.",
+      "mena": "Ehtiyatla addım atan adam yıxılmır.",
       "acar": [
         "budremeyen",
         "yixilmaz"
@@ -13050,7 +13050,7 @@
     {
       "id": 902,
       "text": "Can candan ayrıdır.",
-      "mena": "Can candan ayrıdır.",
+      "mena": "Hər kəsin öz canı, öz qayğısı var.",
       "acar": [
         "can",
         "candan",
@@ -13063,7 +13063,7 @@
     {
       "id": 903,
       "text": "Can de, can eşit.",
-      "mena": "Can de, can eşit.",
+      "mena": "Xoş söz deyən adam xoş söz eşidir.",
       "acar": [
         "can",
         "can",
@@ -13105,7 +13105,7 @@
     {
       "id": 906,
       "text": "Can şirin olur.",
-      "mena": "Can şirin olur.",
+      "mena": "Hər kəs öz canını əziz tutur.",
       "acar": [
         "can",
         "sirin",
@@ -13235,7 +13235,7 @@
     {
       "id": 915,
       "text": "Canımı da alsan, gülə-gülə al.",
-      "mena": "Canımı da alsan, gülə-gülə al.",
+      "mena": "Sevdiyin adamın verdiyi əziyyət də şirin görünür.",
       "acar": [
         "canimi",
         "alsan",
@@ -13669,7 +13669,7 @@
     {
       "id": 945,
       "text": "Cücə nənəsindən süd görməyib.",
-      "mena": "Cücə nənəsindən süd görməyib.",
+      "mena": "Belə adam ailədən heç bir tərbiyə görməyib.",
       "acar": [
         "cuce",
         "nenesinden",
@@ -13871,7 +13871,7 @@
     {
       "id": 959,
       "text": "Çala-çala çalağan olar.",
-      "mena": "Çala-çala çalağan olar.",
+      "mena": "İnsan bir işi təkrarladıqca onun ustası olur.",
       "acar": [
         "cala",
         "cala",
@@ -14148,7 +14148,7 @@
     {
       "id": 978,
       "text": "Çərçi başındakını da satar.",
-      "mena": "Çərçi başındakını da satar.",
+      "mena": "Alverçi qazanc üçün hər şeyini satmağa hazırdır.",
       "acar": [
         "cerci",
         "basindakini",
@@ -14243,7 +14243,7 @@
     {
       "id": 985,
       "text": "Çıxan qan damarda qalmaz.",
-      "mena": "Çıxan qan damarda qalmaz.",
+      "mena": "Edilən iş, deyilən söz geri qaytarılmır.",
       "acar": [
         "cixan",
         "qan",
@@ -14271,7 +14271,7 @@
     {
       "id": 987,
       "text": "Çıxmayan cana umud çoxdur.",
-      "mena": "Çıxmayan cana umud çoxdur.",
+      "mena": "Ümid insanı son nəfəsə qədər tərk etmir.",
       "acar": [
         "cixmayan",
         "cana",
@@ -14341,7 +14341,7 @@
     {
       "id": 992,
       "text": "Çirkaba daş atma, üstünə sıçrar.",
-      "mena": "Çirkaba daş atma, üstünə sıçrar.",
+      "mena": "Pis adamla uğraşsan, onun pisliyi sənə də sıçrayır.",
       "acar": [
         "cirkaba",
         "das",
@@ -14575,7 +14575,7 @@
     {
       "id": 1008,
       "text": "Çox bilən quş dimdiyindən tələyə düşər.",
-      "mena": "Çox bilən quş dimdiyindən tələyə düşər.",
+      "mena": "Özünə çox güvənən hiyləgər öz fəndinin qurbanı olur.",
       "acar": [
         "cox",
         "bilen",
@@ -14678,7 +14678,7 @@
     {
       "id": 1015,
       "text": "Çox gülən çox da ağlar.",
-      "mena": "Çox gülən çox da ağlar.",
+      "mena": "Həddən artıq şənlikdən sonra kədər gəlir.",
       "acar": [
         "cox",
         "gulen",
@@ -14692,7 +14692,7 @@
     {
       "id": 1016,
       "text": "Çox hürən it tutmaz.",
-      "mena": "Çox hürən it tutmaz.",
+      "mena": "Çox hədələyən adam iş görmür.",
       "acar": [
         "cox",
         "huren",
@@ -14705,7 +14705,7 @@
     {
       "id": 1017,
       "text": "Çox istəyən azdan da olur.",
-      "mena": "Çox istəyən azdan da olur.",
+      "mena": "Çox istəyən adam əlindəki azı da itirir.",
       "acar": [
         "cox",
         "isteyen",
@@ -14734,7 +14734,7 @@
     {
       "id": 1019,
       "text": "Çox qoyundan çox quzu olar.",
-      "mena": "Çox qoyundan çox quzu olar.",
+      "mena": "Böyük sərmayədən böyük qazanc gəlir.",
       "acar": [
         "cox",
         "qoyundan",
@@ -14809,7 +14809,7 @@
     {
       "id": 1024,
       "text": "Çoxluğa daş atılmaz.",
-      "mena": "Çoxluğa daş atılmaz.",
+      "mena": "Çoxluğun, camaatın üstünə getmək olmaz.",
       "acar": [
         "coxluga",
         "das",
@@ -14998,7 +14998,7 @@
     {
       "id": 1037,
       "text": "Çöməlməmiş hürə bilmir.",
-      "mena": "Çöməlməmiş hürə bilmir.",
+      "mena": "Hələ ayağa qalxmamış böyük-böyük danışır.",
       "acar": [
         "comelmemis",
         "hure",
@@ -15025,7 +15025,7 @@
     {
       "id": 1039,
       "text": "Çörək basan ayağa düşər.",
-      "mena": "Çörək basan ayağa düşər.",
+      "mena": "Çörəyə hörmət etməyən adam aşağı düşür.",
       "acar": [
         "corek",
         "basan",
@@ -15257,7 +15257,7 @@
     {
       "id": 1055,
       "text": "Dadanan dayanmaz.",
-      "mena": "Dadanan dayanmaz.",
+      "mena": "Bir şeyə alışan adam ondan asanlıqla əl çəkmir.",
       "acar": [
         "dadanan",
         "dayanmaz"
@@ -15412,7 +15412,7 @@
     {
       "id": 1066,
       "text": "Dağ başından duman əskik olmaz.",
-      "mena": "Dağ başından duman əskik olmaz.",
+      "mena": "Uca yerdə olan adamın başı qayğıdan ayrılmır.",
       "acar": [
         "dag",
         "basindan",
@@ -15851,7 +15851,7 @@
     {
       "id": 1096,
       "text": "Daş qayaya rast gəlib.",
-      "mena": "Daş qayaya rast gəlib.",
+      "mena": "Özündən güclüsü ilə qarşılaşıb.",
       "acar": [
         "das",
         "qayaya",
@@ -15966,7 +15966,7 @@
     {
       "id": 1104,
       "text": "Davada halva paylamazlar.",
-      "mena": "Davada halva paylamazlar.",
+      "mena": "Döyüşdə, çətin anda nəzakət gözləmək olmaz.",
       "acar": [
         "davada",
         "halva",
@@ -16197,7 +16197,7 @@
     {
       "id": 1120,
       "text": "Deməsən eşitməzsən.",
-      "mena": "Deməsən eşitməzsən.",
+      "mena": "Sözünü deməyən adam cavab da almır.",
       "acar": [
         "demesen",
         "esitmezsen"
@@ -16254,7 +16254,7 @@
     {
       "id": 1124,
       "text": "Deşikli muncuq yerdə qalmaz.",
-      "mena": "Deşikli muncuq yerdə qalmaz.",
+      "mena": "Bir işə yarayan şey yerdə qalmır, onu tez götürürlər.",
       "acar": [
         "desikli",
         "muncuq",
@@ -16474,7 +16474,7 @@
     {
       "id": 1139,
       "text": "Dəli qız bir naxış bilər.",
-      "mena": "Dəli qız bir naxış bilər.",
+      "mena": "Ağılsız adam bir işi öyrənib həmişə onu təkrarlayır.",
       "acar": [
         "deli",
         "qiz",
@@ -16604,7 +16604,7 @@
     {
       "id": 1148,
       "text": "Dəlinin başında qoz ağacı bitməz.",
-      "mena": "Dəlinin başında qoz ağacı bitməz.",
+      "mena": "Ağılsız adamdan xeyir gözləmək olmaz.",
       "acar": [
         "delinin",
         "basinda",
@@ -16619,7 +16619,7 @@
     {
       "id": 1149,
       "text": "Dəlinin nə toyu olsun, nə yası.",
-      "mena": "Dəlinin nə toyu olsun, nə yası.",
+      "mena": "Ağılsız adam xeyirdə də, şərdə də yük olur.",
       "acar": [
         "delinin",
         "toyu",
@@ -16633,7 +16633,7 @@
     {
       "id": 1150,
       "text": "Dəlinin yadına daş salma.",
-      "mena": "Dəlinin yadına daş salma.",
+      "mena": "Ağılsız adama pis fikir vermə, o, dərhal həyata keçirir.",
       "acar": [
         "delinin",
         "yadina",
@@ -16647,7 +16647,7 @@
     {
       "id": 1151,
       "text": "Dəliyə daş atma, öz başın yarılar.",
-      "mena": "Dəliyə daş atma, öz başın yarılar.",
+      "mena": "Ağılsızla dava edən adam özü zərər görür.",
       "acar": [
         "deliye",
         "das",
@@ -16705,7 +16705,7 @@
     {
       "id": 1155,
       "text": "Dəlləkliyi bizim başımızda öyrənir.",
-      "mena": "Dəlləkliyi bizim başımızda öyrənir.",
+      "mena": "Təcrübəsiz adam sənətini başqalarının hesabına öyrənir.",
       "acar": [
         "dellekliyi",
         "bizim",
@@ -16748,7 +16748,7 @@
     {
       "id": 1158,
       "text": "Dəmir döyülə-döyülə polad olur.",
-      "mena": "Dəmir döyülə-döyülə polad olur.",
+      "mena": "İnsan çətinlikdən keçdikcə bərkiyir.",
       "acar": [
         "demir",
         "doyule",
@@ -16792,7 +16792,7 @@
     {
       "id": 1161,
       "text": "Dəmiri kürədən dəmir çıxardar.",
-      "mena": "Dəmiri kürədən dəmir çıxardar.",
+      "mena": "Çətin işin öhdəsindən yalnız onun ustası gəlir.",
       "acar": [
         "demiri",
         "kureden",
@@ -16952,7 +16952,7 @@
     {
       "id": 1172,
       "text": "Dərd çəkənə görədir.",
-      "mena": "Dərd çəkənə görədir.",
+      "mena": "Dərdin ağırlığı onu çəkənin dözümünə görədir.",
       "acar": [
         "derd",
         "cekene",
@@ -16979,7 +16979,7 @@
     {
       "id": 1174,
       "text": "Dərd dərdə bənzəməz.",
-      "mena": "Dərd dərdə bənzəməz.",
+      "mena": "Hər dərdin öz ağırlığı, öz çarəsi var.",
       "acar": [
         "derd",
         "derde",
@@ -16992,7 +16992,7 @@
     {
       "id": 1175,
       "text": "Dərd gedər, yeri boş qalmaz.",
-      "mena": "Dərd gedər, yeri boş qalmaz.",
+      "mena": "Bir dərd keçir, yerini başqası tutur.",
       "acar": [
         "derd",
         "geder",
@@ -17007,7 +17007,7 @@
     {
       "id": 1176,
       "text": "Dərd getməz, dəyişər.",
-      "mena": "Dərd getməz, dəyişər.",
+      "mena": "Dərd tam getmir, sadəcə şəklini dəyişir.",
       "acar": [
         "derd",
         "getmez",
@@ -17049,7 +17049,7 @@
     {
       "id": 1179,
       "text": "Dərdi çəkən bilər.",
-      "mena": "Dərdi çəkən bilər.",
+      "mena": "Dərdin ağırlığını yalnız onu yaşayan anlayır.",
       "acar": [
         "derdi",
         "ceken",
@@ -17092,7 +17092,7 @@
     {
       "id": 1182,
       "text": "Dərdini dərd bilənə söylə.",
-      "mena": "Dərdini dərd bilənə söylə.",
+      "mena": "Dərdini onu anlayan adama aç.",
       "acar": [
         "derdini",
         "derd",
@@ -17120,7 +17120,7 @@
     {
       "id": 1184,
       "text": "Dərdli deyingən olar.",
-      "mena": "Dərdli deyingən olar.",
+      "mena": "Dərdi olan adam tez əsəbiləşir, çox deyinir.",
       "acar": [
         "derdli",
         "deyingen",
@@ -17191,7 +17191,7 @@
     {
       "id": 1189,
       "text": "Dərin çay səssiz axar.",
-      "mena": "Dərin çay səssiz axar.",
+      "mena": "Dərin bilikli adam səs-küy salmır.",
       "acar": [
         "derin",
         "cay",
@@ -17205,7 +17205,7 @@
     {
       "id": 1190,
       "text": "Dərin su bulanmaz.",
-      "mena": "Dərin su bulanmaz.",
+      "mena": "Ağıllı, təmkinli adam xırda şeydən pozulmur.",
       "acar": [
         "derin",
         "bulanmaz"
@@ -17305,7 +17305,7 @@
     {
       "id": 1197,
       "text": "Dərzi öz yırtığını yamamaz.",
-      "mena": "Dərzi öz yırtığını yamamaz.",
+      "mena": "Hamıya kömək edən usta öz işinə vaxt tapmır.",
       "acar": [
         "derzi",
         "yirtigini",
@@ -17658,7 +17658,7 @@
     {
       "id": 1221,
       "text": "Dəvədən böyük fil də var.",
-      "mena": "Dəvədən böyük fil də var.",
+      "mena": "Özünü ən böyük sanma, səndən böyüyü də var.",
       "acar": [
         "deveden",
         "boyuk",
@@ -17716,7 +17716,7 @@
     {
       "id": 1225,
       "text": "Dəvəni eşşəyin quyruğuna bağlama.",
-      "mena": "Dəvəni eşşəyin quyruğuna bağlama.",
+      "mena": "Böyük işi kiçik adamın ixtiyarına vermə.",
       "acar": [
         "deveni",
         "esseyin",
@@ -17833,7 +17833,7 @@
     {
       "id": 1233,
       "text": "Dəvətsiz gələn döşəksiz oturar.",
-      "mena": "Dəvətsiz gələn döşəksiz oturar.",
+      "mena": "Çağırılmadan gələn adama hörmət göstərilmir.",
       "acar": [
         "devetsiz",
         "gelen",
@@ -17876,7 +17876,7 @@
     {
       "id": 1236,
       "text": "Dəyirmana gedəndən sonra ulaq verən çox olar.",
-      "mena": "Dəyirmana gedəndən sonra ulaq verən çox olar.",
+      "mena": "Kömək lazım olanda tapılmır, iş bitəndən sonra təklif edən çox olur.",
       "acar": [
         "deyirmana",
         "gedenden",
@@ -18209,7 +18209,7 @@
     {
       "id": 1259,
       "text": "Dilini saxlayan başını saxlar.",
-      "mena": "Dilini saxlayan başını saxlar.",
+      "mena": "Danışığına sahib olan adam başını bəladan qoruyur.",
       "acar": [
         "dilini",
         "saxlayan",
@@ -18253,7 +18253,7 @@
     {
       "id": 1262,
       "text": "Dilənçi salam almaz.",
-      "mena": "Dilənçi salam almaz.",
+      "mena": "Ehtiyacı olan adam qürur göstərmir.",
       "acar": [
         "dilenci",
         "salam",
@@ -18266,7 +18266,7 @@
     {
       "id": 1263,
       "text": "Dilənçinin torbası dolmaz.",
-      "mena": "Dilənçinin torbası dolmaz.",
+      "mena": "Acgöz adam nə qədər alsa da doymur.",
       "acar": [
         "dilencinin",
         "torbasi",
@@ -18336,7 +18336,7 @@
     {
       "id": 1268,
       "text": "Dirini öldürmək olar, ölünü diriltmək olmaz.",
-      "mena": "Dirini öldürmək olar, ölünü diriltmək olmaz.",
+      "mena": "Dağıtmaq asandır, itəni qaytarmaq mümkün deyil.",
       "acar": [
         "dirini",
         "oldurmek",
@@ -18380,7 +18380,7 @@
     {
       "id": 1271,
       "text": "Diş verən dişlik də verər.",
-      "mena": "Diş verən dişlik də verər.",
+      "mena": "Həyat verən ruzisini də verir.",
       "acar": [
         "dis",
         "veren",
@@ -18409,7 +18409,7 @@
     {
       "id": 1273,
       "text": "Dişdən artmaz, işdən artar.",
-      "mena": "Dişdən artmaz, işdən artar.",
+      "mena": "Var-dövlət qənaətlə yox, zəhmətlə artır.",
       "acar": [
         "disden",
         "artmaz",
@@ -18552,7 +18552,7 @@
     {
       "id": 1283,
       "text": "Doğru deyənin başı keçəl olar.",
-      "mena": "Doğru deyənin başı keçəl olar.",
+      "mena": "Düz danışan adam çox vaxt ziyan çəkir.",
       "acar": [
         "dogru",
         "deyenin",
@@ -18638,7 +18638,7 @@
     {
       "id": 1289,
       "text": "Doğru yolda yıxılan tez qalxar.",
-      "mena": "Doğru yolda yıxılan tez qalxar.",
+      "mena": "Haqq yolunda büdrəyən adam tez özünə gəlir.",
       "acar": [
         "dogru",
         "yolda",
@@ -18740,7 +18740,7 @@
     {
       "id": 1296,
       "text": "Dolunu yeyib boşa təpik atmazlar.",
-      "mena": "Dolunu yeyib boşa təpik atmazlar.",
+      "mena": "Faydasını gördüyün adama nankorluq etməzlər.",
       "acar": [
         "dolunu",
         "yeyib",
@@ -19034,7 +19034,7 @@
     {
       "id": 1316,
       "text": "Dostluqla tutub düşmənliklə yıxma.",
-      "mena": "Dostluqla tutub düşmənliklə yıxma.",
+      "mena": "Dostluqla başladığın işi düşmənliklə bitirmə.",
       "acar": [
         "dostluqla",
         "tutub",
@@ -19092,7 +19092,7 @@
     {
       "id": 1320,
       "text": "Dostun atdığı daş baş yarmaz.",
-      "mena": "Dostun atdığı daş baş yarmaz.",
+      "mena": "Dostun acı sözü də insana xətər yetirmir.",
       "acar": [
         "dostun",
         "atdigi",
@@ -19107,7 +19107,7 @@
     {
       "id": 1321,
       "text": "Dostunu ağladan özü gülməz.",
-      "mena": "Dostunu ağladan özü gülməz.",
+      "mena": "Dostunu üzən adam özü də xoşbəxt olmur.",
       "acar": [
         "dostunu",
         "agladan",
@@ -19194,7 +19194,7 @@
     {
       "id": 1327,
       "text": "Dövlət can odudur.",
-      "mena": "Dövlət can odudur.",
+      "mena": "Var-dövlət insanın canından əziz olur.",
       "acar": [
         "dovlet",
         "can",
@@ -19612,7 +19612,7 @@
     {
       "id": 1356,
       "text": "Düşə bilməyəcəyin yerə çıxma.",
-      "mena": "Düşə bilməyəcəyin yerə çıxma.",
+      "mena": "Sonra qorxacağın işə başlama.",
       "acar": [
         "duse",
         "bilmeyeceyin",
@@ -19626,7 +19626,7 @@
     {
       "id": 1357,
       "text": "Düşmən çox olanda qaçmaq da mərdlikdir.",
-      "mena": "Düşmən çox olanda qaçmaq da mərdlikdir.",
+      "mena": "Qüvvə bərabər olmayanda geri çəkilmək ağıllılıqdır.",
       "acar": [
         "dusmen",
         "cox",
@@ -19713,7 +19713,7 @@
     {
       "id": 1363,
       "text": "Düşmənə də qapında dost kimi bax.",
-      "mena": "Düşmənə də qapında dost kimi bax.",
+      "mena": "Qapına gələn düşmənə də qonaq kimi hörmət et.",
       "acar": [
         "dusmene",
         "qapinda",
@@ -19743,7 +19743,7 @@
     {
       "id": 1365,
       "text": "Düşməni dost elə, dostu düşmən eləmə.",
-      "mena": "Düşməni dost elə, dostu düşmən eləmə.",
+      "mena": "Düşməni yaxşılıqla özünə qazan, dostu isə itirmə.",
       "acar": [
         "dusmeni",
         "dost",
@@ -19758,7 +19758,7 @@
     {
       "id": 1366,
       "text": "Düşmənin gəlişi də tələdir, gülüşü də.",
-      "mena": "Düşmənin gəlişi də tələdir, gülüşü də.",
+      "mena": "Düşmənin hər addımında bir hiylə gizlənir.",
       "acar": [
         "dusmenin",
         "gelisi",
@@ -19772,7 +19772,7 @@
     {
       "id": 1367,
       "text": "Düz söz daşdan keçər.",
-      "mena": "Düz söz daşdan keçər.",
+      "mena": "Haqlı söz ən sərt ürəyə də təsir edir.",
       "acar": [
         "duz",
         "soz",
@@ -19786,7 +19786,7 @@
     {
       "id": 1368,
       "text": "Düz sözə boynum qıldan nazikdir.",
-      "mena": "Düz sözə boynum qıldan nazikdir.",
+      "mena": "Haqlı sözün qarşısında boyun əyirəm.",
       "acar": [
         "duz",
         "soze",
@@ -19816,7 +19816,7 @@
     {
       "id": 1370,
       "text": "Düz yol gedən yorulmaz.",
-      "mena": "Düz yol gedən yorulmaz.",
+      "mena": "Dürüst yaşayan adamın vicdanı rahat olur.",
       "acar": [
         "duz",
         "yol",
@@ -19872,7 +19872,7 @@
     {
       "id": 1374,
       "text": "Ehtiyatlı oğulun anası ağlamaz.",
-      "mena": "Ehtiyatlı oğulun anası ağlamaz.",
+      "mena": "Ehtiyatlı adam özünü də, ailəsini də dərddən qoruyur.",
       "acar": [
         "ehtiyatli",
         "ogulun",
@@ -20156,7 +20156,7 @@
     {
       "id": 1395,
       "text": "El ilə gələn qara gün toy-bayramdır.",
-      "mena": "El ilə gələn qara gün toy-bayramdır.",
+      "mena": "Camaatla birgə çəkilən dərd yüngül olur.",
       "acar": [
         "ile",
         "gelen",
@@ -20185,7 +20185,7 @@
     {
       "id": 1397,
       "text": "El köçər, adət köçməz.",
-      "mena": "El köçər, adət köçməz.",
+      "mena": "Xalq yerini dəyişsə də adətini saxlayır.",
       "acar": [
         "kocer",
         "adet",
@@ -20198,7 +20198,7 @@
     {
       "id": 1398,
       "text": "El qalxdı, sən də qalx.",
-      "mena": "El qalxdı, sən də qalx.",
+      "mena": "Camaat bir işə qalxanda sən də kənarda qalma.",
       "acar": [
         "qalxdi",
         "sen",
@@ -20309,7 +20309,7 @@
     {
       "id": 1406,
       "text": "El üçün ağlayan iki gözündən olar.",
-      "mena": "El üçün ağlayan iki gözündən olar.",
+      "mena": "Elin bütün dərdini çəkən adam özünü tükəndirir.",
       "acar": [
         "ucun",
         "aglayan",
@@ -20324,7 +20324,7 @@
     {
       "id": 1407,
       "text": "El üfürdü, sel köpürdü.",
-      "mena": "El üfürdü, sel köpürdü.",
+      "mena": "Xalq birləşəndə böyük güc yaranır.",
       "acar": [
         "ufurdu",
         "sel",
@@ -20410,7 +20410,7 @@
     {
       "id": 1413,
       "text": "Elin ağzına baxan ac qalar.",
-      "mena": "Elin ağzına baxan ac qalar.",
+      "mena": "Başqasının köməyinə bel bağlayan adam əliboş qalır.",
       "acar": [
         "elin",
         "agzina",
@@ -20424,7 +20424,7 @@
     {
       "id": 1414,
       "text": "Elin dilindən qurtarmaq olmaz.",
-      "mena": "Elin dilindən qurtarmaq olmaz.",
+      "mena": "Camaatın dilindən heç kəs qurtula bilmir.",
       "acar": [
         "elin",
         "dilinden",
@@ -20496,7 +20496,7 @@
     {
       "id": 1419,
       "text": "Ellər bizə, biz ellərə.",
-      "mena": "Ellər bizə, biz ellərə.",
+      "mena": "Biz elə kömək edirik, el də bizə.",
       "acar": [
         "eller",
         "bize",
@@ -20510,7 +20510,7 @@
     {
       "id": 1420,
       "text": "Ellər köçər, dağlar qalar.",
-      "mena": "Ellər köçər, dağlar qalar.",
+      "mena": "İnsanlar gəlib-gedir, torpaq yerində qalır.",
       "acar": [
         "eller",
         "kocer",
@@ -20554,7 +20554,7 @@
     {
       "id": 1423,
       "text": "Elçi çox olar, qismət bir.",
-      "mena": "Elçi çox olar, qismət bir.",
+      "mena": "İstəyən çox olsa da, nəsib olan bir nəfərdir.",
       "acar": [
         "elci",
         "cox",
@@ -20584,7 +20584,7 @@
     {
       "id": 1425,
       "text": "Elçiyə zaval yoxdur.",
-      "mena": "Elçiyə zaval yoxdur.",
+      "mena": "Elçiyə toxunmurlar, o, yalnız sözü çatdırır.",
       "acar": [
         "elciye",
         "zaval",
@@ -20657,7 +20657,7 @@
     {
       "id": 1430,
       "text": "Elə gül ki, biz də gülək.",
-      "mena": "Elə gül ki, biz də gülək.",
+      "mena": "Sənin sevincin ətrafındakılara da sevinc gətirsin.",
       "acar": [
         "ele",
         "gul",
@@ -20804,7 +20804,7 @@
     {
       "id": 1440,
       "text": "Erkək quşun yuvası olmaz.",
-      "mena": "Erkək quşun yuvası olmaz.",
+      "mena": "Qadın olmayan yerdə ev-eşik qurulmur.",
       "acar": [
         "erkek",
         "qusun",
@@ -20875,7 +20875,7 @@
     {
       "id": 1445,
       "text": "Eşqin tərs-avandı olmaz.",
-      "mena": "Eşqin tərs-avandı olmaz.",
+      "mena": "Sevginin hesab-kitabı, qaydası olmur.",
       "acar": [
         "esqin",
         "ters",
@@ -23157,7 +23157,7 @@
     {
       "id": 1604,
       "text": "Əvvəl düşün, sonra danış.",
-      "mena": "Əvvəl düşün, sonra danış.",
+      "mena": "Danışmazdan qabaq nə deyəcəyini fikirləş.",
       "acar": [
         "evvel",
         "dusun",
@@ -25059,7 +25059,7 @@
     {
       "id": 1736,
       "text": "Güc birlikdədir.",
-      "mena": "Güc birlikdədir.",
+      "mena": "Birləşən insanlar təkbaşına olandan güclü olurlar.",
       "acar": [
         "guc",
         "birlikdedir"
@@ -25489,7 +25489,7 @@
     {
       "id": 1766,
       "text": "Haqq batil olmaz.",
-      "mena": "Haqq batil olmaz.",
+      "mena": "Haqq gec-tez öz yerini tapır.",
       "acar": [
         "haqq",
         "batil",
@@ -27399,7 +27399,7 @@
     {
       "id": 1897,
       "text": "Hərəkət səndən, bərəkət Allahdan.",
-      "mena": "Hərəkət səndən, bərəkət Allahdan.",
+      "mena": "Sən çalış, bərəkət özü gələcək.",
       "acar": [
         "hereket",
         "senden",
@@ -30276,7 +30276,7 @@
     {
       "id": 2098,
       "text": "İt hürər, karvan keçər.",
-      "mena": "İt hürər, karvan keçər.",
+      "mena": "Boş sözə fikir vermə, işini davam etdir.",
       "acar": [
         "hurer",
         "karvan",
@@ -37976,7 +37976,7 @@
     {
       "id": 2632,
       "text": "Qorxaq gündə yüz yol ölər, igid ömründə bir yol.",
-      "mena": "Qorxaq gündə yüz yol ölər, igid ömründə bir yol.",
+      "mena": "Qorxaq ömrü boyu qorxu içində yaşayır, igid ölümdən bir dəfə qorxur.",
       "acar": [
         "qorxaq",
         "gunde",
@@ -49695,7 +49695,7 @@
     {
       "id": 3444,
       "text": "Tək əlin səsi çıxmaz.",
-      "mena": "Tək əlin səsi çıxmaz.",
+      "mena": "Tək adam böyük iş görə bilmir, birlik lazımdır.",
       "acar": [
         "tek",
         "elin",
@@ -54217,7 +54217,7 @@
     {
       "id": 3758,
       "text": "Yayı işlə, qışı ye.",
-      "mena": "Yayı işlə, qışı ye.",
+      "mena": "Vaxtında zəhmət çək ki, çətin gündə korluq çəkməyəsən.",
       "acar": [
         "yayi",
         "isle",
@@ -55994,7 +55994,7 @@
     {
       "id": 3881,
       "text": "Yüz ölç, bir biç.",
-      "mena": "Yüz ölç, bir biç.",
+      "mena": "Bir işə başlamazdan qabaq onu dəfələrlə ölçüb-biç.",
       "acar": [
         "yuz",
         "olc",
@@ -56125,7 +56125,7 @@
     {
       "id": 3890,
       "text": "Zəhmət çəkməyən bal yeməz.",
-      "mena": "Zəhmət çəkməyən bal yeməz.",
+      "mena": "Zəhmətsiz qazanc olmur.",
       "acar": [
         "zehmet",
         "cekmeyen",
