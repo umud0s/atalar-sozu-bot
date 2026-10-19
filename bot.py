@@ -30,12 +30,14 @@ from telegram.ext import (
     ConversationHandler,
     InlineQueryHandler,
     MessageHandler,
+    TypeHandler,
     filters,
 )
 from telegram.error import Forbidden, RetryAfter, TelegramError
 from telegram.request import HTTPXRequest
 
 from axtaris import concepts, stems
+from istifade import Usage, backup_zip, make_backup
 from kart import render_card
 
 load_dotenv()
@@ -66,6 +68,13 @@ STEM_INDEX = {item["id"]: stems(item["text"] + " " + item["mena"]) for item in P
 TEXT_STEMS = {item["id"]: stems(item["text"]) for item in PROVERBS}
 TAG_INDEX = {item["id"]: set(item["acar"]) for item in PROVERBS}
 REPORTS_PATH = Path(__file__).with_name("xetalar.jsonl")
+USAGE = Usage()
+ACTION_NAMES = {
+    "🔑 Açar söz": "Açar söz", "📖 Hekayə": "Hekayə", "🎲 Təsadüfi": "Təsadüfi",
+    "📚 Mövzular": "Mövzular", "🌅 Günün sözü": "Günün sözü", "🧩 Quiz": "Quiz",
+    "🔔 Hər gün söz": "Hər gün söz", "ℹ️ Kömək": "Kömək", "⏭ Pas": "Quiz",
+}
+CALLBACK_NAMES = {"t": "Mövzular", "k": "Kart şəkli", "o": "Oxşar sözlər", "x": "Səhv bildir"}
 _reports_lock = asyncio.Lock()
 BAKI = timezone(timedelta(hours=4))
 
@@ -542,6 +551,7 @@ async def handle_keyword(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if routed is not None:
         return routed
     query = (update.message.text or "").strip()
+    USAGE.query(query)
     results = search_by_keyword(query)
     text = result_text(
         f"«{query}» üçün tapılan atalar sözləri:",
@@ -671,6 +681,100 @@ async def post_weekly_poll(context: ContextTypes.DEFAULT_TYPE) -> None:
 def admin_id() -> int | None:
     raw = os.getenv("ADMIN_ID", "").strip()
     return int(raw) if raw.lstrip("-").isdigit() else None
+
+
+def action_name(update: Update) -> str:
+    if update.inline_query:
+        return "Inline axtarış"
+    if update.callback_query:
+        return CALLBACK_NAMES.get((update.callback_query.data or "?")[0], "Düymə")
+    message = update.effective_message
+    text = (message.text or "").strip() if message else ""
+    if text.startswith("/"):
+        return text.split()[0].split("@")[0]
+    if text in ACTION_NAMES:
+        return ACTION_NAMES[text]
+    return "Mətn" if text else "Digər"
+
+
+async def track(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    chat = update.effective_chat
+    if chat is not None and chat.type == "channel":
+        return
+    user = update.effective_user
+    try:
+        USAGE.hit(user.id if user else None, action_name(update), datetime.now(BAKI).date())
+    except Exception as exc:  # statistika botu dayandırmamalıdır
+        logger.warning("Statistika yazılmadı: %s", exc)
+
+
+async def flush_usage(context: ContextTypes.DEFAULT_TYPE | None = None) -> None:
+    try:
+        USAGE.save()
+    except OSError as exc:
+        logger.warning("istifade.json yazılmadı: %s", exc)
+
+
+def is_admin(update: Update) -> bool:
+    owner = admin_id()
+    return owner is not None and update.effective_user is not None and update.effective_user.id == owner
+
+
+def quiz_totals() -> dict:
+    if not STATS_PATH.exists():
+        return {}
+    try:
+        data = json.loads(STATS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    total = {"duz": 0, "sehv": 0, "pas": 0}
+    for row in data.values():
+        for key in total:
+            total[key] += int(row.get(key, 0))
+    return total
+
+
+async def stat_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    if not is_admin(update):
+        await update.message.reply_text("Bu əmr yalnız bot sahibi üçündür.", reply_markup=MENU_KEYBOARD)
+        return ConversationHandler.END
+    reports = 0
+    if REPORTS_PATH.exists():
+        reports = sum(1 for line in REPORTS_PATH.read_text(encoding="utf-8").splitlines() if line.strip())
+    text = USAGE.report(datetime.now(BAKI).date(), len(load_subscribers()), reports, quiz_totals())
+    await update.message.reply_text(text, reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def send_backup(context: ContextTypes.DEFAULT_TYPE, chat_id: int) -> bool:
+    await flush_usage()
+    archive = backup_zip(datetime.now(BAKI).date())
+    if archive is None:
+        return False
+    await context.bot.send_document(chat_id=chat_id, document=archive, caption="Botun ehtiyat nüsxəsi.")
+    return True
+
+
+async def backup_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    if not is_admin(update):
+        await update.message.reply_text("Bu əmr yalnız bot sahibi üçündür.", reply_markup=MENU_KEYBOARD)
+        return ConversationHandler.END
+    if not await send_backup(context, update.effective_chat.id):
+        await update.message.reply_text("Hələ yedəklənəcək fayl yoxdur.", reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def daily_backup(context: ContextTypes.DEFAULT_TYPE) -> None:
+    await flush_usage()
+    today = datetime.now(BAKI).date()
+    folder = make_backup(today)
+    logger.info("Serverdə ehtiyat nüsxə: %s", folder)
+    owner = admin_id()
+    if owner and today.weekday() == 0:
+        try:
+            await send_backup(context, owner)
+        except TelegramError as exc:
+            logger.warning("Ehtiyat nüsxə sahibə göndərilmədi: %s", exc)
 
 
 async def my_id(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -988,8 +1092,11 @@ def build_app(token: str) -> Application:
         .token(token)
         .request(request)
         .get_updates_request(updates)
+        .post_shutdown(flush_usage)
         .build()
     )
+
+    app.add_handler(TypeHandler(Update, track), group=-1)
 
     conv = ConversationHandler(
         entry_points=[
@@ -1034,6 +1141,8 @@ def build_app(token: str) -> Application:
     app.add_handler(CallbackQueryHandler(on_similar, pattern=r"^o:\d+$"))
     app.add_handler(CallbackQueryHandler(on_report, pattern=r"^x:\d+(:(m|i|geri))?$"))
     app.add_handler(CommandHandler("menim_id", my_id))
+    app.add_handler(CommandHandler("stat", stat_cmd))
+    app.add_handler(CommandHandler("yedek", backup_cmd))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_handler(
         MessageHandler(
@@ -1074,6 +1183,8 @@ def main() -> None:
             name="heftelik-quiz",
         )
         logger.info("Kanalda həftəlik quiz: bazar günü 12:00")
+        application.job_queue.run_repeating(flush_usage, interval=120, first=120, name="statistika")
+        application.job_queue.run_daily(daily_backup, time=time(3, 0, tzinfo=BAKI), name="yedek")
     application.run_polling(
         allowed_updates=Update.ALL_TYPES,
         bootstrap_retries=-1,
