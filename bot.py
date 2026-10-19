@@ -668,6 +668,21 @@ async def on_topic(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await query.edit_message_text(text, reply_markup=topic_nav(index, page, pages))
 
 
+async def reject_non_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    message = update.effective_message
+    if message is None:
+        return
+    try:
+        await message.delete()
+    except TelegramError as exc:
+        logger.info("Mətn olmayan mesaj silinmədi: %s", exc)
+    await context.bot.send_message(
+        chat_id=message.chat_id,
+        text="Bot yalnız mətn qəbul edir. Şəkil, fayl, səs və stiker göndərmək olmaz.",
+        reply_markup=MENU_KEYBOARD,
+    )
+
+
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     await update.message.reply_text("Axtarış dayandırıldı.", reply_markup=MENU_KEYBOARD)
     return ConversationHandler.END
@@ -771,6 +786,12 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("abune", toggle_subscription))
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
+    app.add_handler(
+        MessageHandler(
+            filters.ChatType.PRIVATE & ~filters.TEXT & ~filters.COMMAND & ~filters.StatusUpdate.ALL,
+            reject_non_text,
+        )
+    )
     app.add_error_handler(on_error)
     return app
 
