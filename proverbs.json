@@ -1,7 +1,7 @@
 {
   "meta": {
     "dil": "az",
-    "say": 3913,
+    "say": 3891,
     "menbe": "Atalar sözü, Öndər nəşriyyat, 2004, s.17-247"
   },
   "proverbs": [
@@ -13774,19 +13774,6 @@
       ]
     },
     {
-      "id": 942,
-      "text": "Cuhud qan görüb!",
-      "mena": "Xalq öyüdü.",
-      "acar": [
-        "cuhud",
-        "qan",
-        "gorub"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 943,
       "text": "Culfa kəfənsiz ölər.",
       "mena": "Səyyar adamın öz kefeni də olmaz.",
@@ -14916,21 +14903,6 @@
       "movzu": [
         "Ağıl",
         "Haqq və ədalət"
-      ]
-    },
-    {
-      "id": 1021,
-      "text": "Çox öyünmə, tat qızı, pendirindən qıl çıxır.",
-      "mena": "Öz nöqsanını görmədən öyünmə.",
-      "acar": [
-        "cox",
-        "oyunme",
-        "tat",
-        "qizi",
-        "pendirinden"
-      ],
-      "movzu": [
-        "Ailə"
       ]
     },
     {
@@ -21070,34 +21042,6 @@
       ]
     },
     {
-      "id": 1441,
-      "text": "Ermənidən bəy olmaz.",
-      "mena": "Xalq öyüdü.",
-      "acar": [
-        "ermeniden",
-        "bey",
-        "olmaz"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
-      "id": 1442,
-      "text": "Erməninin qocalanı köpəyə, müsəlmanın qocalanı ipəyə dönər.",
-      "mena": "Xalq öyüdü.",
-      "acar": [
-        "ermeninin",
-        "qocalani",
-        "kopeye",
-        "muselmanin",
-        "qocalani"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 1443,
       "text": "Ertəyə qalan bəladan qorxma.",
       "mena": "Hələ gəlməmiş bəladan qorxma.",
@@ -22873,35 +22817,6 @@
       ]
     },
     {
-      "id": 1565,
-      "text": "Ərəb iyirmi beşlik tapdı, dedi: nə olardı bir dava kağızı tapeydim.",
-      "mena": "Tamahkarın ehtiyacı heç vaxt bitmir.",
-      "acar": [
-        "ereb",
-        "iyirmi",
-        "beslik",
-        "tapdi",
-        "dedi"
-      ],
-      "movzu": [
-        "Tamah"
-      ]
-    },
-    {
-      "id": 1566,
-      "text": "Ərəb öldü, qan düşdü.",
-      "mena": "Kiçik bir hadisədən böyük qarışıqlıq yarandı.",
-      "acar": [
-        "ereb",
-        "oldu",
-        "qan",
-        "dusdu"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 1567,
       "text": "Ərənlər üçəcən deyiblər.",
       "mena": "Hər şeyin bir həddi var, üç dəfədən sonra səbir tükənir.",
@@ -24051,21 +23966,6 @@
       ],
       "movzu": [
         "Əxlaq"
-      ]
-    },
-    {
-      "id": 1646,
-      "text": "Gavur çörəyi yeyən gavur üçün qılınc çalar.",
-      "mena": "İnsan kimin çörəyini yeyirsə, onun xeyrinə çalışır.",
-      "acar": [
-        "gavur",
-        "coreyi",
-        "yeyen",
-        "gavur",
-        "ucun"
-      ],
-      "movzu": [
-        "İgidlik"
       ]
     },
     {
@@ -35039,34 +34939,6 @@
       ]
     },
     {
-      "id": 2400,
-      "text": "Qaraçı qaraçıya öpüş verməz.",
-      "mena": "Eyni mühitdən olanlar bir-birinə güzəştə getmir.",
-      "acar": [
-        "qaraci",
-        "qaraciya",
-        "opus",
-        "vermez"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
-      "id": 2401,
-      "text": "Qaraçının koyxası qaraçı olar.",
-      "mena": "Hər topluluğun başçısı öz içindən çıxır.",
-      "acar": [
-        "qaracinin",
-        "koyxasi",
-        "qaraci",
-        "olar"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 2402,
       "text": "Qaraquş sümüyü ölçər udar.",
       "mena": "Ağıllı adam gücünü ölçüb hərəkət edir.",
@@ -38132,21 +38004,6 @@
       ]
     },
     {
-      "id": 2611,
-      "text": "Qonşu qonşuynan boğuşdu, qaraçıya fürsət düşdü.",
-      "mena": "Qonşular dalaşanda kənar adam fürsətdən istifadə edir.",
-      "acar": [
-        "qonsu",
-        "qonsuynan",
-        "bogusdu",
-        "qaraciya",
-        "furset"
-      ],
-      "movzu": [
-        "El"
-      ]
-    },
-    {
       "id": 2612,
       "text": "Qonşu muncuğun oğurlayan gorda taxar.",
       "mena": "Qonşunun malını oğurlayan rüsvay olur.",
@@ -39988,36 +39845,6 @@
       ]
     },
     {
-      "id": 2739,
-      "text": "Ləzgiyə dedilər: can şirindi, bəkməz? Dedi: iki dostun arasına girmağ olmaz.",
-      "mena": "İki dostun arasına girmək olmaz.",
-      "acar": [
-        "lezgiye",
-        "dediler",
-        "can",
-        "sirindi",
-        "bekmez"
-      ],
-      "movzu": [
-        "Dostluq"
-      ]
-    },
-    {
-      "id": 2740,
-      "text": "Ləzgiyə dedilər: göyə çıxa bilərsənmi? Dedi: bəkməz yesəm çıxaram.",
-      "mena": "Ən böyük işi də öz arzusuna bağlayır.",
-      "acar": [
-        "lezgiye",
-        "dediler",
-        "goye",
-        "cixa",
-        "bilersenmi"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 2741,
       "text": "Loxma qarın doyurmaz, məhəbbət artırar.",
       "mena": "Kiçik hədiyyə ehtiyacı ödəməsə də, sevgini artırır.",
@@ -41628,22 +41455,6 @@
       ]
     },
     {
-      "id": 2850,
-      "text": "Musurmanın şərrindən, erməninin paxıllığından, rusun zavtrasından - Allah, sən irağ elə.",
-      "mena": "Xalq öyüdü.",
-      "acar": [
-        "musurmanin",
-        "serrinden",
-        "ermeninin",
-        "paxilligindan",
-        "rusun"
-      ],
-      "movzu": [
-        "Əxlaq",
-        "El"
-      ]
-    },
-    {
       "id": 2851,
       "text": "Muzdur, yerində düz dur.",
       "mena": "İşçi, öz işini dürüst gör.",
@@ -42260,21 +42071,6 @@
       ]
     },
     {
-      "id": 2893,
-      "text": "Nə dəvənin südün istə, nə ərəbin üzün gör.",
-      "mena": "Faydası olmayan işə qarışma ki, sonra peşman olmayasan.",
-      "acar": [
-        "devenin",
-        "sudun",
-        "iste",
-        "erebin",
-        "uzun"
-      ],
-      "movzu": [
-        "Əxlaq"
-      ]
-    },
-    {
       "id": 2894,
       "text": "Nə diriyə hay verər, nə ölüyə pay.",
       "mena": "Xəsis adam nə dirinin, nə də ölünün qayğısına qalır.",
@@ -42368,21 +42164,6 @@
       ],
       "movzu": [
         "Ağıl"
-      ]
-    },
-    {
-      "id": 2901,
-      "text": "Nə qədər eşşəyi vardı, palan axtarırdı, palanı tapan kimi eşşəyi kürd yedi.",
-      "mena": "Lazımsız şeyin dalınca qaçdı, əlindəkini də itirdi.",
-      "acar": [
-        "qeder",
-        "esseyi",
-        "vardi",
-        "palan",
-        "axtarirdi"
-      ],
-      "movzu": [
-        "Nəsihət"
       ]
     },
     {
@@ -49318,20 +49099,6 @@
       ]
     },
     {
-      "id": 3377,
-      "text": "Şah da bilir Şirvan sünnüdür.",
-      "mena": "Bu, hamının bildiyi həqiqətdir.",
-      "acar": [
-        "sah",
-        "bilir",
-        "sirvan",
-        "sunnudur"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 3378,
       "text": "Şah Xudabəndə, səninki səndə, mənimki məndə.",
       "mena": "Hər kəsin öz payı var.",
@@ -50180,21 +49947,6 @@
       ],
       "movzu": [
         "Qonaqpərvərlik"
-      ]
-    },
-    {
-      "id": 3436,
-      "text": "Tat ata mindi, Tanrısın tanımadı.",
-      "mena": "Birdən yüksələn adam özünü itirir.",
-      "acar": [
-        "tat",
-        "ata",
-        "mindi",
-        "tanrisin",
-        "tanimadi"
-      ],
-      "movzu": [
-        "Ailə"
       ]
     },
     {
@@ -51554,61 +51306,6 @@
       ]
     },
     {
-      "id": 3530,
-      "text": "Türk söydükcə qızar, durduqca bezər.",
-      "mena": "Hirsli adam söydükcə daha da qızışır.",
-      "acar": [
-        "turk",
-        "soydukce",
-        "qizar",
-        "durduqca",
-        "bezer"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
-      "id": 3531,
-      "text": "Türkün gəlişi, tatın görüşü.",
-      "mena": "Hər kəsin qonaqlığı öz adətinə görədir.",
-      "acar": [
-        "turkun",
-        "gelisi",
-        "tatin",
-        "gorusu"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
-      "id": 3532,
-      "text": "Türkün sonrakı ağlı.",
-      "mena": "Ağıl çox vaxt sonradan gəlir.",
-      "acar": [
-        "turkun",
-        "sonraki",
-        "agli"
-      ],
-      "movzu": [
-        "Ağıl"
-      ]
-    },
-    {
-      "id": 3533,
-      "text": "Türkü at yıxar, tatı ət.",
-      "mena": "Hər kəs öz zəif yerindən yıxılır.",
-      "acar": [
-        "turku",
-        "yixar",
-        "tati"
-      ],
-      "movzu": [
-        "Nəsihət"
-      ]
-    },
-    {
       "id": 3534,
       "text": "Tüstü kötükdən çıxar, budaqdan çıxmaz.",
       "mena": "Hər şey öz kökündən gəlir.",
@@ -52540,21 +52237,6 @@
       "movzu": [
         "El",
         "Dərd və səbr"
-      ]
-    },
-    {
-      "id": 3598,
-      "text": "Vaxt olar ki, şahın da qaraçıya işi düşər.",
-      "mena": "Ən güclü adamın da ən zəifə ehtiyacı düşə bilər.",
-      "acar": [
-        "vaxt",
-        "olar",
-        "sahin",
-        "qaraciya",
-        "isi"
-      ],
-      "movzu": [
-        "İş"
       ]
     },
     {
