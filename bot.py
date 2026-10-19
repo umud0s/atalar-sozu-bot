@@ -35,6 +35,8 @@ from telegram.ext import (
 from telegram.error import Forbidden, RetryAfter, TelegramError
 from telegram.request import HTTPXRequest
 
+from kart import render_card
+
 load_dotenv()
 
 LOGGING_FORMAT = "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
@@ -58,6 +60,7 @@ def load_proverbs() -> list[dict]:
 
 PROVERBS = load_proverbs()
 CHANNEL = "@atalarimizinsozu"
+PROVERB_BY_ID = {item["id"]: item for item in PROVERBS}
 BAKI = timezone(timedelta(hours=4))
 
 MENU_KEYBOARD = ReplyKeyboardMarkup(
@@ -139,6 +142,13 @@ def format_proverb(item: dict, sira: int | None = None) -> str:
         f"Məna: {item['mena']}\n"
         f"Mövzu: {', '.join(item['movzu'])}"
     )
+
+
+def share_markup(item: dict, card: bool = True) -> InlineKeyboardMarkup:
+    row = [InlineKeyboardButton("📤 Dosta göndər", switch_inline_query=f"#{item['id']}")]
+    if card:
+        row.append(InlineKeyboardButton("🖼 Kart şəkli", callback_data=f"k:{item['id']}"))
+    return InlineKeyboardMarkup([row])
 
 
 def search_by_keyword(query: str, limit: int = 8) -> list[tuple[int, dict]]:
@@ -256,6 +266,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/quiz — çatışmayan sözü tamamla\n"
         "/abune — hər gün saat 09:00-da günün sözünü al və ya dayandır\n"
         "/legv — axtarışı dayandır\n\n"
+        "Təsadüfi söz və günün sözü altında iki düymə var: «📤 Dosta göndər» sözü istənilən söhbətə göndərir, «🖼 Kart şəkli» paylaşmaq üçün şəkil hazırlayır.\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
         "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum.\n\n"
         "İstənilən söhbətdə @AtalarSozleri_bot yaz, arxasınca açar söz əlavə et və nəticəni ora göndər."
@@ -268,7 +279,7 @@ async def random_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     item = random.choice(PROVERBS)
     await update.message.reply_text(
         "Təsadüfi atalar sözü:\n\n" + format_proverb(item),
-        reply_markup=MENU_KEYBOARD,
+        reply_markup=share_markup(item),
     )
     return ConversationHandler.END
 
@@ -510,9 +521,14 @@ async def handle_story(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
     return ConversationHandler.END
 
 
+def daily_item(day: datetime.date | None = None) -> dict:
+    day = day or datetime.now(BAKI).date()
+    return PROVERBS[day.toordinal() % len(PROVERBS)]
+
+
 def daily_text(day: datetime.date | None = None) -> str:
     day = day or datetime.now(BAKI).date()
-    item = PROVERBS[day.toordinal() % len(PROVERBS)]
+    item = daily_item(day)
     return (
         f"Günün sözü, {day.strftime('%d.%m.%Y')}:\n\n"
         + format_proverb(item)
@@ -521,14 +537,105 @@ def daily_text(day: datetime.date | None = None) -> str:
 
 
 async def daily_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    await update.message.reply_text(daily_text(), reply_markup=MENU_KEYBOARD)
+    await update.message.reply_text(daily_text(), reply_markup=share_markup(daily_item()))
     return ConversationHandler.END
 
 
 async def post_daily_to_channel(context: ContextTypes.DEFAULT_TYPE) -> None:
     day = datetime.now(BAKI).date()
-    await context.bot.send_message(chat_id=CHANNEL, text=daily_text(day))
+    item = daily_item(day)
+    markup = share_markup(item, card=False)
+    try:
+        await context.bot.send_photo(
+            chat_id=CHANNEL,
+            photo=render_card(item["text"], item["mena"]),
+            caption=daily_text(day),
+            reply_markup=markup,
+        )
+    except Exception as exc:  # şəkil alınmasa, mətn yenə getsin
+        logger.warning("Kanal kartı göndərilmədi, mətn göndərilir: %s", exc)
+        await context.bot.send_message(chat_id=CHANNEL, text=daily_text(day), reply_markup=markup)
     logger.info("Kanala günün sözü göndərildi: %s", day.isoformat())
+
+
+POLL_LETTERS = str.maketrans({"I": "ı", "İ": "i"})
+
+
+def az_lower(word: str) -> str:
+    return word.translate(POLL_LETTERS).lower()
+
+
+def poll_word(item: dict) -> str | None:
+    match = _quiz_word(item)
+    if match is None:
+        return None
+    word = match.group()
+    return az_lower(word) if match.start() == 0 else word
+
+
+def make_channel_poll() -> tuple[str, list[str], int, str] | None:
+    for _ in range(50):
+        item = random.choice(PROVERBS)
+        made = make_quiz(item)
+        answer = poll_word(item)
+        if made is None or answer is None:
+            continue
+        shown = made[0]
+        options = [answer]
+        seen = {normalize(answer)}
+        for _ in range(200):
+            word = poll_word(random.choice(PROVERBS))
+            if word is None:
+                continue
+            key = normalize(word)
+            if key in seen or abs(len(word) - len(answer)) > 3:
+                continue
+            seen.add(key)
+            options.append(word)
+            if len(options) == 4:
+                break
+        if len(options) < 4:
+            continue
+        random.shuffle(options)
+        question = f"Atalar sözünü tamamla:\n«{shown}»"
+        if len(question) > 300:
+            continue
+        return question, options, options.index(answer), item["mena"][:200]
+    return None
+
+
+async def post_weekly_poll(context: ContextTypes.DEFAULT_TYPE) -> None:
+    made = make_channel_poll()
+    if made is None:
+        logger.warning("Həftəlik quiz hazırlanmadı.")
+        return
+    question, options, correct, explanation = made
+    await context.bot.send_poll(
+        chat_id=CHANNEL,
+        question=question,
+        options=options,
+        type="quiz",
+        correct_option_id=correct,
+        explanation=explanation,
+        is_anonymous=True,
+    )
+    logger.info("Kanala həftəlik quiz göndərildi.")
+
+
+async def on_card(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    try:
+        item = PROVERB_BY_ID[int((query.data or "").split(":")[1])]
+    except (IndexError, KeyError, ValueError):
+        await query.answer("Bu söz tapılmadı.")
+        return
+    await query.answer("Kart hazırlanır…")
+    await context.bot.send_photo(
+        chat_id=query.message.chat_id,
+        photo=render_card(item["text"], item["mena"]),
+        caption=f"«{item['text']}»\n\nDaha çoxu üçün: @AtalarSozleri_bot",
+        reply_markup=share_markup(item, card=False),
+    )
 
 
 def load_subscribers() -> set[int]:
@@ -570,17 +677,18 @@ async def toggle_subscription(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def send_daily_to_subscribers(context: ContextTypes.DEFAULT_TYPE) -> None:
     text = daily_text()
+    markup = share_markup(daily_item())
     async with _subs_lock:
         subs = load_subscribers()
     sent, gone = 0, set()
     for chat_id in sorted(subs):
         try:
-            await context.bot.send_message(chat_id=chat_id, text=text)
+            await context.bot.send_message(chat_id=chat_id, text=text, reply_markup=markup)
             sent += 1
         except RetryAfter as exc:
             await asyncio.sleep(exc.retry_after + 1)
             try:
-                await context.bot.send_message(chat_id=chat_id, text=text)
+                await context.bot.send_message(chat_id=chat_id, text=text, reply_markup=markup)
                 sent += 1
             except TelegramError as again:
                 logger.warning("Abunəçiyə göndərilmədi %s: %s", chat_id, again)
@@ -701,7 +809,10 @@ async def menu_text_router(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 async def inline_query(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = (update.inline_query.query or "").strip()
-    if query:
+    exact = re.fullmatch(r"#(\d+)", query)
+    if exact and int(exact.group(1)) in PROVERB_BY_ID:
+        found = [PROVERB_BY_ID[int(exact.group(1))]]
+    elif query:
         found = [item for _score, item in search_by_keyword(query, limit=8)]
     else:
         found = random.sample(PROVERBS, k=min(5, len(PROVERBS)))
@@ -785,6 +896,7 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("quiz", ask_quiz))
     app.add_handler(CommandHandler("abune", toggle_subscription))
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
+    app.add_handler(CallbackQueryHandler(on_card, pattern=r"^k:\d+$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_handler(
         MessageHandler(
@@ -818,6 +930,13 @@ def main() -> None:
             time=time(9, 0, 30, tzinfo=BAKI),
             name="abuneler",
         )
+        application.job_queue.run_daily(
+            post_weekly_poll,
+            time=time(12, 0, tzinfo=BAKI),
+            days=(0,),
+            name="heftelik-quiz",
+        )
+        logger.info("Kanalda həftəlik quiz: bazar günü 12:00")
     application.run_polling(
         allowed_updates=Update.ALL_TYPES,
         bootstrap_retries=-1,
