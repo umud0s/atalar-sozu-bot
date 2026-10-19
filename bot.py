@@ -777,6 +777,12 @@ async def daily_backup(context: ContextTypes.DEFAULT_TYPE) -> None:
             logger.warning("Ehtiyat nüsxə sahibə göndərilmədi: %s", exc)
 
 
+async def unknown_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text(
+        "Belə əmr yoxdur. Əmrlərin siyahısı üçün /komek yaz.", reply_markup=MENU_KEYBOARD
+    )
+
+
 async def my_id(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     await update.message.reply_text(f"Sənin Telegram ID-n: {update.effective_user.id}", reply_markup=MENU_KEYBOARD)
     return ConversationHandler.END
@@ -1140,7 +1146,7 @@ def build_app(token: str) -> Application:
     app.add_handler(CallbackQueryHandler(on_card, pattern=r"^k:\d+$"))
     app.add_handler(CallbackQueryHandler(on_similar, pattern=r"^o:\d+$"))
     app.add_handler(CallbackQueryHandler(on_report, pattern=r"^x:\d+(:(m|i|geri))?$"))
-    app.add_handler(CommandHandler("menim_id", my_id))
+    app.add_handler(CommandHandler(["menim_id", "menimid", "id"], my_id))
     app.add_handler(CommandHandler("stat", stat_cmd))
     app.add_handler(CommandHandler("yedek", backup_cmd))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
@@ -1150,6 +1156,7 @@ def build_app(token: str) -> Application:
             reject_non_text,
         )
     )
+    app.add_handler(MessageHandler(filters.COMMAND & filters.ChatType.PRIVATE, unknown_command))
     app.add_error_handler(on_error)
     return app
 
