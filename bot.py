@@ -35,6 +35,7 @@ from telegram.ext import (
 from telegram.error import Forbidden, RetryAfter, TelegramError
 from telegram.request import HTTPXRequest
 
+from axtaris import concepts, stems
 from kart import render_card
 
 load_dotenv()
@@ -61,6 +62,11 @@ def load_proverbs() -> list[dict]:
 PROVERBS = load_proverbs()
 CHANNEL = "@atalarimizinsozu"
 PROVERB_BY_ID = {item["id"]: item for item in PROVERBS}
+STEM_INDEX = {item["id"]: stems(item["text"] + " " + item["mena"]) for item in PROVERBS}
+TEXT_STEMS = {item["id"]: stems(item["text"]) for item in PROVERBS}
+TAG_INDEX = {item["id"]: set(item["acar"]) for item in PROVERBS}
+REPORTS_PATH = Path(__file__).with_name("xetalar.jsonl")
+_reports_lock = asyncio.Lock()
 BAKI = timezone(timedelta(hours=4))
 
 MENU_KEYBOARD = ReplyKeyboardMarkup(
@@ -146,9 +152,48 @@ def format_proverb(item: dict, sira: int | None = None) -> str:
 
 def share_markup(item: dict, card: bool = True) -> InlineKeyboardMarkup:
     row = [InlineKeyboardButton("📤 Dosta göndər", switch_inline_query=f"#{item['id']}")]
-    if card:
-        row.append(InlineKeyboardButton("🖼 Kart şəkli", callback_data=f"k:{item['id']}"))
-    return InlineKeyboardMarkup([row])
+    if not card:
+        return InlineKeyboardMarkup([row])
+    row.append(InlineKeyboardButton("🖼 Kart şəkli", callback_data=f"k:{item['id']}"))
+    return InlineKeyboardMarkup(
+        [
+            row,
+            [
+                InlineKeyboardButton("🔁 Oxşar sözlər", callback_data=f"o:{item['id']}"),
+                InlineKeyboardButton("⚠️ Səhv bildir", callback_data=f"x:{item['id']}"),
+            ],
+        ]
+    )
+
+
+def stem_score(query_roots: set[str], query_tags: set[str], item_id: int) -> int:
+    roots = STEM_INDEX[item_id]
+    score = 0
+    for root in query_roots:
+        if root in TEXT_STEMS[item_id]:
+            score += 6
+        elif root in roots:
+            score += 4
+        elif len(root) >= 4 and any(r.startswith(root) or root.startswith(r) for r in roots if len(r) >= 4):
+            score += 2
+    score += len(query_tags & TAG_INDEX[item_id])
+    return score
+
+
+def similar_items(item: dict, limit: int = 3) -> list[dict]:
+    mine = STEM_INDEX[item["id"]]
+    topics = set(item["movzu"])
+    scored = []
+    for other in PROVERBS:
+        if other["id"] == item["id"]:
+            continue
+        common = len(mine & STEM_INDEX[other["id"]])
+        if not common:
+            continue
+        score = 3 * common + 2 * len(topics & set(other["movzu"]))
+        scored.append((score, other["id"], other))
+    scored.sort(key=lambda x: (-x[0], x[1]))
+    return [other for _s, _i, other in scored[:limit]]
 
 
 def search_by_keyword(query: str, limit: int = 8) -> list[tuple[int, dict]]:
@@ -156,12 +201,12 @@ def search_by_keyword(query: str, limit: int = 8) -> list[tuple[int, dict]]:
     q_tokens = tokens(query)
     if not q_norm:
         return []
+    q_roots = stems(query)
+    q_tags = concepts(q_roots)
 
     scored: list[tuple[int, dict]] = []
     for item in PROVERBS:
-        haystack = " ".join(
-            [item["text"], item["mena"], " ".join(item["acar"]), " ".join(item["movzu"])]
-        )
+        haystack = " ".join([item["text"], item["mena"], " ".join(item["movzu"])])
         hay_norm = normalize(haystack)
         hay_tokens = tokens(haystack)
         score = 0
@@ -172,6 +217,7 @@ def search_by_keyword(query: str, limit: int = 8) -> list[tuple[int, dict]]:
             score += 8
         overlap = q_tokens & hay_tokens
         score += 3 * len(overlap)
+        score += stem_score(q_roots, q_tags, item["id"])
         for word in q_tokens:
             if len(word) < 4:
                 continue
@@ -622,6 +668,94 @@ async def post_weekly_poll(context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("Kanala həftəlik quiz göndərildi.")
 
 
+def admin_id() -> int | None:
+    raw = os.getenv("ADMIN_ID", "").strip()
+    return int(raw) if raw.lstrip("-").isdigit() else None
+
+
+async def my_id(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    await update.message.reply_text(f"Sənin Telegram ID-n: {update.effective_user.id}", reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def on_similar(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    try:
+        item = PROVERB_BY_ID[int((query.data or "").split(":")[1])]
+    except (IndexError, KeyError, ValueError):
+        await query.answer("Bu söz tapılmadı.")
+        return
+    found = similar_items(item)
+    await query.answer()
+    if not found:
+        await context.bot.send_message(chat_id=query.message.chat_id, text="Bu sözə oxşar söz tapılmadı.")
+        return
+    lines = [f"«{item['text']}» sözünə oxşar atalar sözləri:", ""]
+    for number, other in enumerate(found, start=1):
+        lines.append(format_proverb(other, sira=number))
+        lines.append("")
+    await context.bot.send_message(chat_id=query.message.chat_id, text="\n".join(lines).strip())
+
+
+REPORT_KINDS = {"m": "Mövzu səhvdir", "i": "İzah səhvdir"}
+
+
+async def on_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    parts = (query.data or "").split(":")
+    try:
+        item = PROVERB_BY_ID[int(parts[1])]
+    except (IndexError, KeyError, ValueError):
+        await query.answer("Bu söz tapılmadı.")
+        return
+    if len(parts) == 2:
+        await query.answer()
+        await query.edit_message_reply_markup(
+            InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("Mövzu səhvdir", callback_data=f"x:{item['id']}:m"),
+                        InlineKeyboardButton("İzah səhvdir", callback_data=f"x:{item['id']}:i"),
+                    ],
+                    [InlineKeyboardButton("← Geri", callback_data=f"x:{item['id']}:geri")],
+                ]
+            )
+        )
+        return
+    kind = parts[2]
+    if kind in REPORT_KINDS:
+        row = {
+            "vaxt": datetime.now(BAKI).isoformat(timespec="seconds"),
+            "id": item["id"],
+            "nov": REPORT_KINDS[kind],
+            "istifadeci": update.effective_user.id,
+            "text": item["text"],
+            "mena": item["mena"],
+            "movzu": item["movzu"],
+        }
+        async with _reports_lock:
+            with REPORTS_PATH.open("a", encoding="utf-8") as f:
+                f.write(json.dumps(row, ensure_ascii=False) + "\n")
+        await query.answer("Təşəkkür edirəm. Bildirişin qeydə alındı.", show_alert=True)
+        owner = admin_id()
+        if owner:
+            try:
+                await context.bot.send_message(
+                    chat_id=owner,
+                    text=(
+                        f"Səhv bildirişi: {REPORT_KINDS[kind]}\n"
+                        f"id {item['id']}: «{item['text']}»\n"
+                        f"Məna: {item['mena']}\n"
+                        f"Mövzu: {', '.join(item['movzu'])}"
+                    ),
+                )
+            except TelegramError as exc:
+                logger.warning("Admin bildirişi getmədi: %s", exc)
+    else:
+        await query.answer()
+    await query.edit_message_reply_markup(share_markup(item))
+
+
 async def on_card(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
     try:
@@ -897,6 +1031,9 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("abune", toggle_subscription))
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
     app.add_handler(CallbackQueryHandler(on_card, pattern=r"^k:\d+$"))
+    app.add_handler(CallbackQueryHandler(on_similar, pattern=r"^o:\d+$"))
+    app.add_handler(CallbackQueryHandler(on_report, pattern=r"^x:\d+(:(m|i|geri))?$"))
+    app.add_handler(CommandHandler("menim_id", my_id))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_handler(
         MessageHandler(
