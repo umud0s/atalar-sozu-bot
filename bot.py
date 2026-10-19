@@ -52,6 +52,9 @@ DATA_PATH = Path(__file__).with_name("proverbs.json")
 STATS_PATH = Path(__file__).with_name("quiz_stats.json")
 _stats_lock = asyncio.Lock()
 SUBS_PATH = Path(__file__).with_name("abuneler.json")
+FAV_PATH = Path(__file__).with_name("secilmisler.json")
+_fav_lock = asyncio.Lock()
+FAV_LIMIT = 300
 _subs_lock = asyncio.Lock()
 
 
@@ -73,8 +76,9 @@ ACTION_NAMES = {
     "🔑 Açar söz": "Açar söz", "📖 Hekayə": "Hekayə", "🎲 Təsadüfi": "Təsadüfi",
     "📚 Mövzular": "Mövzular", "🌅 Günün sözü": "Günün sözü", "🧩 Quiz": "Quiz",
     "🔔 Hər gün söz": "Hər gün söz", "ℹ️ Kömək": "Kömək", "⏭ Pas": "Quiz",
+    "⭐ Seçilmişlər": "Seçilmişlər", "🏆 Reytinq": "Reytinq",
 }
-CALLBACK_NAMES = {"t": "Mövzular", "k": "Kart şəkli", "o": "Oxşar sözlər", "x": "Səhv bildir"}
+CALLBACK_NAMES = {"t": "Mövzular", "k": "Kart şəkli", "o": "Oxşar sözlər", "x": "Səhv bildir", "f": "Seçilmişlər"}
 _reports_lock = asyncio.Lock()
 BAKI = timezone(timedelta(hours=4))
 
@@ -83,6 +87,7 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
         ["🔑 Açar söz", "📖 Hekayə"],
         ["🎲 Təsadüfi", "📚 Mövzular"],
         ["🌅 Günün sözü", "🧩 Quiz"],
+        ["⭐ Seçilmişlər", "🏆 Reytinq"],
         ["🔔 Hər gün söz", "ℹ️ Kömək"],
     ],
     resize_keyboard=True,
@@ -93,6 +98,7 @@ QUIZ_KEYBOARD = ReplyKeyboardMarkup(
         ["🔑 Açar söz", "📖 Hekayə"],
         ["🎲 Təsadüfi", "📚 Mövzular"],
         ["🌅 Günün sözü", "🧩 Quiz"],
+        ["⭐ Seçilmişlər", "🏆 Reytinq"],
         ["🔔 Hər gün söz", "ℹ️ Kömək"],
     ],
     resize_keyboard=True,
@@ -159,7 +165,7 @@ def format_proverb(item: dict, sira: int | None = None) -> str:
     )
 
 
-def share_markup(item: dict, card: bool = True) -> InlineKeyboardMarkup:
+def share_markup(item: dict, card: bool = True, saved: bool = False) -> InlineKeyboardMarkup:
     row = [InlineKeyboardButton("📤 Dosta göndər", switch_inline_query=f"#{item['id']}")]
     if not card:
         return InlineKeyboardMarkup([row])
@@ -170,6 +176,11 @@ def share_markup(item: dict, card: bool = True) -> InlineKeyboardMarkup:
             [
                 InlineKeyboardButton("🔁 Oxşar sözlər", callback_data=f"o:{item['id']}"),
                 InlineKeyboardButton("⚠️ Səhv bildir", callback_data=f"x:{item['id']}"),
+            ],
+            [
+                InlineKeyboardButton(
+                    "✅ Seçilmişlərdədir" if saved else "⭐ Yadda saxla", callback_data=f"f:{item['id']}"
+                )
             ],
         ]
     )
@@ -299,7 +310,9 @@ def main_menu_text() -> str:
         "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu.\n"
         "• Günün sözü — bu gün hamı üçün eyni bir atalar sözü.\n"
         "• Quiz — çatışmayan sözü tamamla. Cavabdan sonra sənin statistikən görünür.\n"
-        "• Hər gün söz — hər səhər saat 09:00-da günün sözünü sənə göndərim."
+        "• Hər gün söz — hər səhər saat 09:00-da günün sözünü sənə göndərim.\n"
+        "• Seçilmişlər — «⭐ Yadda saxla» ilə saxladığın sözlər.\n"
+        "• Reytinq — həftənin ən yaxşı quiz iştirakçıları."
     )
 
 
@@ -320,6 +333,8 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/gun — günün atalar sözü\n"
         "/quiz — çatışmayan sözü tamamla\n"
         "/abune — hər gün saat 09:00-da günün sözünü al və ya dayandır\n"
+        "/secilmisler — yadda saxladığın sözlər\n"
+        "/reytinq — həftəlik quiz reytinqi\n"
         "/legv — axtarışı dayandır\n\n"
         "Təsadüfi söz və günün sözü altında iki düymə var: «📤 Dosta göndər» sözü istənilən söhbətə göndərir, «🖼 Kart şəkli» paylaşmaq üçün şəkil hazırlayır.\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
@@ -334,7 +349,7 @@ async def random_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     item = random.choice(PROVERBS)
     await update.message.reply_text(
         "Təsadüfi atalar sözü:\n\n" + format_proverb(item),
-        reply_markup=share_markup(item),
+        reply_markup=share_markup(item, saved=item["id"] in user_favorites(update.effective_user.id)),
     )
     return ConversationHandler.END
 
@@ -424,10 +439,29 @@ def quiz_izah(item: dict) -> str:
 
 
 def stat_line(row: dict) -> str:
-    return f"Statistika: düzgün {row['duz']}, səhv {row['sehv']}, pas {row['pas']}"
+    return (
+        f"Statistika: düzgün {row['duz']}, səhv {row['sehv']}, pas {row['pas']}\n"
+        f"Seriya: {row.get('seriya', 0)} (ən uzun: {row.get('en_uzun', 0)}). "
+        f"Bu həftə xal: {row.get('hefte', {}).get(week_key(), 0)}"
+    )
 
 
-async def add_quiz_stat(user_id: int, kind: str) -> dict:
+def week_key(day: datetime.date | None = None) -> str:
+    day = day or datetime.now(BAKI).date()
+    year, week, _ = day.isocalendar()
+    return f"{year}-W{week:02d}"
+
+
+def read_quiz_stats() -> dict:
+    if not STATS_PATH.exists():
+        return {}
+    try:
+        return json.loads(STATS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+
+async def add_quiz_stat(user_id: int, kind: str, name: str = "") -> dict:
     async with _stats_lock:
         if STATS_PATH.exists():
             try:
@@ -438,6 +472,17 @@ async def add_quiz_stat(user_id: int, kind: str) -> dict:
             data = {}
         row = data.get(str(user_id)) or {"duz": 0, "sehv": 0, "pas": 0}
         row[kind] = int(row.get(kind, 0)) + 1
+        if name:
+            row["ad"] = name[:32]
+        if kind == "duz":
+            row["seriya"] = int(row.get("seriya", 0)) + 1
+            row["en_uzun"] = max(int(row.get("en_uzun", 0)), row["seriya"])
+            current = week_key()
+            weeks = {k: v for k, v in (row.get("hefte") or {}).items() if k >= f"{int(current[:4]) - 1}"}
+            weeks[current] = int(weeks.get(current, 0)) + 1
+            row["hefte"] = weeks
+        else:
+            row["seriya"] = 0
         data[str(user_id)] = row
         temporary = STATS_PATH.with_suffix(".json.tmp")
         temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -492,9 +537,10 @@ async def handle_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
     if not expected or not item:
         return await ask_quiz(update, context)
     user_id = update.effective_user.id if update.effective_user else 0
+    name = update.effective_user.first_name if update.effective_user else ""
     if answers_match(guess, expected):
         clear_quiz(context)
-        row = await add_quiz_stat(user_id, "duz")
+        row = await add_quiz_stat(user_id, "duz", name)
         await update.message.reply_text(
             "Düzdür. Təbrik edirəm.\n\n"
             f"«{item['text']}»\n"
@@ -505,7 +551,7 @@ async def handle_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
         return ConversationHandler.END
     if guess in {"⏭ Pas", "Pas", "pas"} or normalize(guess) == "pas":
         clear_quiz(context)
-        row = await add_quiz_stat(user_id, "pas")
+        row = await add_quiz_stat(user_id, "pas", name)
         await update.message.reply_text(
             "Pas.\n\n"
             f"Çatışmayan söz: {expected}\n"
@@ -515,7 +561,7 @@ async def handle_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
             reply_markup=MENU_KEYBOARD,
         )
         return ConversationHandler.END
-    row = await add_quiz_stat(user_id, "sehv")
+    row = await add_quiz_stat(user_id, "sehv", name)
     await update.message.reply_text(
         "Səhvdir. Çatışmayan sözü bir daha yaz.\n\n"
         + quiz_prompt(shown)
@@ -543,6 +589,10 @@ async def route_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int 
         return await ask_quiz(update, context)
     if text in {"🔔 Hər gün söz", "Hər gün söz"}:
         return await toggle_subscription(update, context)
+    if text in {"⭐ Seçilmişlər", "Seçilmişlər"}:
+        return await show_favorites(update, context)
+    if text in {"🏆 Reytinq", "Reytinq"}:
+        return await show_rating(update, context)
     return None
 
 
@@ -593,7 +643,9 @@ def daily_text(day: datetime.date | None = None) -> str:
 
 
 async def daily_proverb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    await update.message.reply_text(daily_text(), reply_markup=share_markup(daily_item()))
+    item = daily_item()
+    saved = item["id"] in user_favorites(update.effective_user.id)
+    await update.message.reply_text(daily_text(), reply_markup=share_markup(item, saved=saved))
     return ConversationHandler.END
 
 
@@ -864,6 +916,128 @@ async def on_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     else:
         await query.answer()
     await query.edit_message_reply_markup(share_markup(item))
+
+
+def load_favorites() -> dict[str, list[int]]:
+    if not FAV_PATH.exists():
+        return {}
+    try:
+        return json.loads(FAV_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        logger.warning("secilmisler.json oxunmadı.")
+        return {}
+
+
+def save_favorites(data: dict[str, list[int]]) -> None:
+    temporary = FAV_PATH.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(data) + "\n", encoding="utf-8")
+    temporary.replace(FAV_PATH)
+
+
+def user_favorites(user_id: int) -> list[int]:
+    return [i for i in load_favorites().get(str(user_id), []) if i in PROVERB_BY_ID]
+
+
+async def on_favorite(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    try:
+        item = PROVERB_BY_ID[int((query.data or "").split(":")[1])]
+    except (IndexError, KeyError, ValueError):
+        await query.answer("Bu söz tapılmadı.")
+        return
+    key = str(update.effective_user.id)
+    async with _fav_lock:
+        data = load_favorites()
+        ids = data.get(key, [])
+        if item["id"] in ids:
+            ids.remove(item["id"])
+            saved, note = False, "Seçilmişlərdən çıxarıldı."
+        elif len(ids) >= FAV_LIMIT:
+            await query.answer(f"Ən çox {FAV_LIMIT} söz saxlamaq olar.", show_alert=True)
+            return
+        else:
+            ids.append(item["id"])
+            saved, note = True, "Seçilmişlərə əlavə olundu."
+        data[key] = ids
+        save_favorites(data)
+    await query.answer(note)
+    try:
+        await query.edit_message_reply_markup(share_markup(item, saved=saved))
+    except TelegramError:
+        pass
+
+
+FAV_PAGE = 10
+
+
+def favorites_page(user_id: int, page: int) -> tuple[str, InlineKeyboardMarkup | None]:
+    ids = list(reversed(user_favorites(user_id)))
+    if not ids:
+        return (
+            "Seçilmişlər siyahın boşdur.\n"
+            "Xoşuna gələn sözün altında «⭐ Yadda saxla» düyməsinə bas.",
+            None,
+        )
+    pages = (len(ids) + FAV_PAGE - 1) // FAV_PAGE
+    page = max(0, min(page, pages - 1))
+    start = page * FAV_PAGE
+    lines = [f"Seçilmişlər: {len(ids)} söz. Səhifə {page + 1}/{pages}.", ""]
+    for number, pid in enumerate(ids[start : start + FAV_PAGE], start=start + 1):
+        lines.append(format_proverb(PROVERB_BY_ID[pid], sira=number))
+        lines.append("")
+    nav = []
+    if page > 0:
+        nav.append(InlineKeyboardButton("← Geri", callback_data=f"fs:{page - 1}"))
+    if page + 1 < pages:
+        nav.append(InlineKeyboardButton("İrəli →", callback_data=f"fs:{page + 1}"))
+    return "\n".join(lines).strip(), InlineKeyboardMarkup([nav]) if nav else None
+
+
+async def show_favorites(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    text, markup = favorites_page(update.effective_user.id, 0)
+    await update.message.reply_text(text, reply_markup=markup or MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def on_favorites_page(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    await query.answer()
+    try:
+        page = int((query.data or "").split(":")[1])
+    except (IndexError, ValueError):
+        page = 0
+    text, markup = favorites_page(update.effective_user.id, page)
+    await query.edit_message_text(text, reply_markup=markup)
+
+
+def rating_text(user_id: int) -> str:
+    current = week_key()
+    rows = []
+    for uid, row in read_quiz_stats().items():
+        points = int((row.get("hefte") or {}).get(current, 0))
+        if points > 0:
+            rows.append((points, int(row.get("en_uzun", 0)), uid, row.get("ad") or "İştirakçı"))
+    rows.sort(key=lambda r: (-r[0], -r[1], r[2]))
+    lines = ["🏆 Bu həftənin quiz reytinqi", "Hər düzgün cavab 1 xaldır. Reytinq hər bazar ertəsi sıfırlanır.", ""]
+    if not rows:
+        lines.append("Bu həftə hələ heç kim xal toplamayıb. Birinci sən ol: 🧩 Quiz.")
+    medals = {1: "🥇", 2: "🥈", 3: "🥉"}
+    for place, (points, best, _uid, name) in enumerate(rows[:10], start=1):
+        lines.append(f"{medals.get(place, f'{place}.')} {name} — {points} xal")
+    mine = next((i for i, r in enumerate(rows, start=1) if r[2] == str(user_id)), None)
+    me = read_quiz_stats().get(str(user_id), {})
+    lines.append("")
+    if mine:
+        lines.append(f"Sənin yerin: {mine}, xalın: {rows[mine - 1][0]}.")
+    else:
+        lines.append("Bu həftə hələ xalın yoxdur.")
+    lines.append(f"Sənin seriyan: {me.get('seriya', 0)}, ən uzun seriyan: {me.get('en_uzun', 0)}.")
+    return "\n".join(lines)
+
+
+async def show_rating(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    await update.message.reply_text(rating_text(update.effective_user.id), reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
 
 
 async def on_card(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -1145,6 +1319,10 @@ def build_app(token: str) -> Application:
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
     app.add_handler(CallbackQueryHandler(on_card, pattern=r"^k:\d+$"))
     app.add_handler(CallbackQueryHandler(on_similar, pattern=r"^o:\d+$"))
+    app.add_handler(CallbackQueryHandler(on_favorite, pattern=r"^f:\d+$"))
+    app.add_handler(CallbackQueryHandler(on_favorites_page, pattern=r"^fs:\d+$"))
+    app.add_handler(CommandHandler("secilmisler", show_favorites))
+    app.add_handler(CommandHandler("reytinq", show_rating))
     app.add_handler(CallbackQueryHandler(on_report, pattern=r"^x:\d+(:(m|i|geri))?$"))
     app.add_handler(CommandHandler(["menim_id", "menimid", "id"], my_id))
     app.add_handler(CommandHandler("stat", stat_cmd))

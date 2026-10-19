@@ -16,7 +16,7 @@ logger = logging.getLogger("atalar")
 BASE = Path(__file__).parent
 USAGE_PATH = BASE / "istifade.json"
 BACKUP_DIR = BASE / "yedekler"
-BACKUP_FILES = ("quiz_stats.json", "abuneler.json", "istifade.json", "xetalar.jsonl")
+BACKUP_FILES = ("quiz_stats.json", "abuneler.json", "istifade.json", "xetalar.jsonl", "secilmisler.json")
 KEEP_DAYS = 14
 TOP_QUERIES = 300
 
