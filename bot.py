@@ -32,6 +32,7 @@ from telegram.ext import (
     MessageHandler,
     filters,
 )
+from telegram.error import Forbidden, RetryAfter, TelegramError
 from telegram.request import HTTPXRequest
 
 load_dotenv()
@@ -45,6 +46,8 @@ ACAR, HEKAYE, QUIZ = range(3)
 DATA_PATH = Path(__file__).with_name("proverbs.json")
 STATS_PATH = Path(__file__).with_name("quiz_stats.json")
 _stats_lock = asyncio.Lock()
+SUBS_PATH = Path(__file__).with_name("abuneler.json")
+_subs_lock = asyncio.Lock()
 
 
 def load_proverbs() -> list[dict]:
@@ -62,7 +65,7 @@ MENU_KEYBOARD = ReplyKeyboardMarkup(
         ["🔑 Açar söz", "📖 Hekayə"],
         ["🎲 Təsadüfi", "📚 Mövzular"],
         ["🌅 Günün sözü", "🧩 Quiz"],
-        ["ℹ️ Kömək"],
+        ["🔔 Hər gün söz", "ℹ️ Kömək"],
     ],
     resize_keyboard=True,
 )
@@ -72,7 +75,7 @@ QUIZ_KEYBOARD = ReplyKeyboardMarkup(
         ["🔑 Açar söz", "📖 Hekayə"],
         ["🎲 Təsadüfi", "📚 Mövzular"],
         ["🌅 Günün sözü", "🧩 Quiz"],
-        ["ℹ️ Kömək"],
+        ["🔔 Hər gün söz", "ℹ️ Kömək"],
     ],
     resize_keyboard=True,
 )
@@ -230,7 +233,8 @@ def main_menu_text() -> str:
         "• Təsadüfi — təsadüfi bir atalar sözü oxu.\n"
         "• Mövzular — dostluq, zəhmət, elm kimi bölmədən oxu.\n"
         "• Günün sözü — bu gün hamı üçün eyni bir atalar sözü.\n"
-        "• Quiz — çatışmayan sözü tamamla. Cavabdan sonra sənin statistikən görünür."
+        "• Quiz — çatışmayan sözü tamamla. Cavabdan sonra sənin statistikən görünür.\n"
+        "• Hər gün söz — hər səhər saat 09:00-da günün sözünü sənə göndərim."
     )
 
 
@@ -250,6 +254,7 @@ async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         "/movzu — mövzuya görə bax\n"
         "/gun — günün atalar sözü\n"
         "/quiz — çatışmayan sözü tamamla\n"
+        "/abune — hər gün saat 09:00-da günün sözünü al və ya dayandır\n"
         "/legv — axtarışı dayandır\n\n"
         "Nümunə açar söz: dost, zəhmət, vaxt, elm, ana\n"
         "Nümunə hekayə: İşimi sabaha saxladım, sonra peşman oldum.\n\n"
@@ -470,6 +475,8 @@ async def route_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int 
         return await help_cmd(update, context)
     if text in {"🧩 Quiz", "Quiz"}:
         return await ask_quiz(update, context)
+    if text in {"🔔 Hər gün söz", "Hər gün söz"}:
+        return await toggle_subscription(update, context)
     return None
 
 
@@ -522,6 +529,70 @@ async def post_daily_to_channel(context: ContextTypes.DEFAULT_TYPE) -> None:
     day = datetime.now(BAKI).date()
     await context.bot.send_message(chat_id=CHANNEL, text=daily_text(day))
     logger.info("Kanala günün sözü göndərildi: %s", day.isoformat())
+
+
+def load_subscribers() -> set[int]:
+    if not SUBS_PATH.exists():
+        return set()
+    try:
+        return {int(x) for x in json.loads(SUBS_PATH.read_text(encoding="utf-8"))}
+    except (json.JSONDecodeError, TypeError, ValueError):
+        logger.warning("abuneler.json oxunmadı, boş siyahı götürülür.")
+        return set()
+
+
+def save_subscribers(subs: set[int]) -> None:
+    temporary = SUBS_PATH.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(sorted(subs)) + "\n", encoding="utf-8")
+    temporary.replace(SUBS_PATH)
+
+
+async def toggle_subscription(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    chat_id = update.effective_chat.id
+    async with _subs_lock:
+        subs = load_subscribers()
+        if chat_id in subs:
+            subs.discard(chat_id)
+            text = (
+                "Gündəlik göndəriş dayandırıldı.\n"
+                "Yenidən başlamaq üçün «🔔 Hər gün söz» düyməsini bas."
+            )
+        else:
+            subs.add(chat_id)
+            text = (
+                "Hazırdır. Hər gün saat 09:00-da günün sözünü sənə göndərəcəyəm.\n"
+                "Dayandırmaq üçün «🔔 Hər gün söz» düyməsini yenidən bas."
+            )
+        save_subscribers(subs)
+    await update.message.reply_text(text, reply_markup=MENU_KEYBOARD)
+    return ConversationHandler.END
+
+
+async def send_daily_to_subscribers(context: ContextTypes.DEFAULT_TYPE) -> None:
+    text = daily_text()
+    async with _subs_lock:
+        subs = load_subscribers()
+    sent, gone = 0, set()
+    for chat_id in sorted(subs):
+        try:
+            await context.bot.send_message(chat_id=chat_id, text=text)
+            sent += 1
+        except RetryAfter as exc:
+            await asyncio.sleep(exc.retry_after + 1)
+            try:
+                await context.bot.send_message(chat_id=chat_id, text=text)
+                sent += 1
+            except TelegramError as again:
+                logger.warning("Abunəçiyə göndərilmədi %s: %s", chat_id, again)
+        except Forbidden:
+            gone.add(chat_id)
+        except TelegramError as exc:
+            logger.warning("Abunəçiyə göndərilmədi %s: %s", chat_id, exc)
+        await asyncio.sleep(0.05)
+    if gone:
+        async with _subs_lock:
+            save_subscribers(load_subscribers() - gone)
+    logger.info("Abunəçilərə günün sözü: göndərildi %s, botu bloklayan %s", sent, len(gone))
 
 
 def topic_items(name: str) -> list[dict]:
@@ -684,6 +755,7 @@ def build_app(token: str) -> Application:
             CommandHandler("movzu", show_topics),
             CommandHandler("gun", daily_proverb),
             CommandHandler("quiz", ask_quiz),
+            CommandHandler("abune", toggle_subscription),
         ],
         allow_reentry=True,
     )
@@ -696,6 +768,7 @@ def build_app(token: str) -> Application:
     app.add_handler(CommandHandler("movzu", show_topics))
     app.add_handler(CommandHandler("gun", daily_proverb))
     app.add_handler(CommandHandler("quiz", ask_quiz))
+    app.add_handler(CommandHandler("abune", toggle_subscription))
     app.add_handler(CallbackQueryHandler(on_topic, pattern=r"^t:(menu|\d+:\d+)$"))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, menu_text_router))
     app.add_error_handler(on_error)
@@ -719,6 +792,11 @@ def main() -> None:
             name="gunun-sozu",
         )
         logger.info("Kanal: %s, hər gün 09:00", CHANNEL)
+        application.job_queue.run_daily(
+            send_daily_to_subscribers,
+            time=time(9, 0, 30, tzinfo=BAKI),
+            name="abuneler",
+        )
     application.run_polling(
         allowed_updates=Update.ALL_TYPES,
         bootstrap_retries=-1,
