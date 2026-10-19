@@ -90,6 +90,14 @@ TOPICS = [
     "Bərəkət",
     "Adət-ənənə",
     "El",
+    "Dil və söz",
+    "Var-dövlət",
+    "Dərd və səbr",
+    "Haqq və ədalət",
+    "Sevgi",
+    "Qonaqpərvərlik",
+    "İgidlik",
+    "Tamah",
 ]
 
 
